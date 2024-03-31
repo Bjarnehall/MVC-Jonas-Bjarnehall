@@ -3,9 +3,16 @@
 {% block title %}Magic number{% endblock %}
 
 {% block body %}
-<h1>Om</h1>
-<p>Information om denna sida</p>
+<div class="presentation">
+<h1>Om MVC</h1><hr>
+<p>Kursen MVC handlar i grunden om objektorienterad programmering i PHP, i kursen används ett ramverk som heter Symfony
+vilket är ett av de mer populära ramverken i PHP världen. Ämnen som kommer behandlas runt detta är kodkvalitet, enhetstestning
+och databaskopllingar med ORM. Kursansvarig är Mikael Roos.</p>
+</div>
+        <div class="protratt3">
+        <img src="{{ asset('img/symfony2.png') }}" alt="picture of jonas" width="280">
+        </div>
         <div class="protratt2">
-        <img src="{{ asset('img/office.jpg') }}" alt="picture of jonas" width="600">
+        <img src="{{ asset('img/php-scaled.jpg') }}" alt="picture of jonas" width="780">
         </div>
 {% endblock %}
