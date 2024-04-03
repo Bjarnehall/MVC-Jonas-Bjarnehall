@@ -1,0 +1,160 @@
+
+.presentation {
+    grid-column: 2/ span 5;
+}
+
+@media (max-width: 1050px) {
+    .presentation {
+        grid-column: 1/span 10;
+    }
+}
+
+@media (max-width: 750px) {
+    .presentation {
+        grid-column: 1/span 12;
+        margin-left: -6%;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+.presentation2 {
+    grid-column: 2/ span 6;
+}
+
+@media (max-width: 1050px) {
+    .presentation2 {
+        grid-column: 1/span 10;
+    }
+}
+
+@media (max-width: 750px) {
+    .presentation2 {
+        grid-column: 1/span 12;
+        margin-left: -6%;
+    }
+}
+
+.presentationlucky {
+    grid-column: 3/ span 4;
+    background-color: rgba(198, 142, 250, 0.76);
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+@media (max-width: 1050px) {
+    .presentationlucky {
+        grid-column: 1/span 10;
+    }
+}
+
+.protratt {
+    margin-top: 3rem;
+    padding: 8%;
+}
+
+.protratt {
+    grid-column: 8/ span 2;
+    grid-row: 1;
+}
+
+.protratt img {
+    border-radius: 0.385rem;
+}
+
+@media (max-width: 1050px) {
+    .protratt {
+        grid-column: 3/span 9;
+        grid-row: 2;
+        margin-left: 0%;
+        margin-top: 1rem;
+    }
+}
+
+
+.protratt2 {
+    grid-column: 2/ span 6;
+    grid-row: 2;
+}
+
+.protratt2 img {
+    border-radius: 0.385rem;
+    max-width: 90%;
+}
+
+@media (max-width: 1050px) {
+    .protratt2 {
+        grid-column: 2/span 9;
+        grid-row: 2;
+        margin-top: 2.5rem;
+    }
+}
+
+.protratt3 {
+    margin-top: 3rem;
+    padding: 8%;
+}
+
+.protratt3 {
+    grid-column: 8/ span 2;
+    grid-row: 1;
+}
+
+.protratt3 img {
+    border-radius: 0.385rem;
+}
+
+@media (max-width: 1050px) {
+    .protratt3 {
+        grid-column: 6/ span3;
+        grid-row: 3;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .protratt3 img {
+        max-width: 100%;
+    }
+}
+
+.protratt4 {
+    grid-column: 7/ span 4;
+    grid-row: 1;
+    background-color: rgba(114, 235, 194, 0.658);
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+.protratt4 img {
+    max-width: 90%;
+    margin-left: 5%;
+}
+
+@media (max-width: 1050px) {
+    .protratt4 {
+        grid-column: 1/span 10;
+        grid-row: 2;
+        margin-top: 2.5rem;
+    }
+}
+
+.gitlink {
+    grid-column: 8/span 3;
+    background-color: rgba(232, 175, 255, 0.315);
+    height: 110px;
+    width: 280px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+@media (max-width: 1050px) {
+    .gitlink {
+        grid-column: 1/span 5;
+        margin-top: 15%;
+    }
+}

@@ -1,3 +1,5 @@
+@import "grid.css";
+
 html {
     font-family: sans-serif;
     margin: 0;
@@ -57,6 +59,10 @@ h4 {
 }
 
 header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
     background: #FFF;
     height: 7rem;
     display: grid;
@@ -78,119 +84,30 @@ main {
 }
 
 main {
+    margin-top: 200px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
 }
 
-.presentation {
-    grid-column: 2/ span 5;
-}
-
-@media (max-width: 1050px) {
-    .presentation {
-        grid-column: 1/span 10;
-    }
-}
-
-@media (max-width: 750px) {
-    .presentation {
-        grid-column: 1/span 12;
-        margin-left: -6%;
-    }
-}
-
-@media (max-width: 640px) {
-    h1 {
-        font-size: 1.3rem;
-    }
-}
-
-.presentation2 {
-    grid-column: 2/ span 6;
-}
-
-@media (max-width: 1050px) {
-    .presentation2 {
-        grid-column: 1/span 10;
-    }
-}
-
-@media (max-width: 750px) {
-    .presentation2 {
-        grid-column: 1/span 12;
-        margin-left: -6%;
-    }
-}
-
-
-.protratt {
-    margin-top: 3rem;
-    padding: 8%;
-}
-.protratt {
-    grid-column: 8/ span 2;
-    grid-row: 1;
-}
-
-.protratt img {
-    border-radius: 0.385rem;
-}
-
-@media (max-width: 1050px) {
-    .protratt {
-        grid-column: 3/span 9;
-        grid-row: 2;
-        margin-left: 0%;
-        margin-top: 1rem;
-    }
-}
-
-
-.protratt2 {
-    grid-column: 2/ span 6;
-    grid-row: 2;
-}
-
-.protratt2 img {
-    border-radius: 0.385rem;
-    max-width: 90%;
-}
-
-@media (max-width: 1050px) {
-    .protratt2 {
-        grid-column: 2/span 9;
-        grid-row: 2;
-        margin-top: 2.5rem;
-    }
-}
-
-.protratt3 {
-    margin-top: 3rem;
-    padding: 8%;
-}
-
-.protratt3 {
-    grid-column: 8/ span 2;
-    grid-row: 1;
-}
-
-.protratt3 img {
-    border-radius: 0.385rem;
-}
-
-@media (max-width: 1050px) {
-    .protratt3 {
-        display: none;
-    }
-}
-
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #FFF;
     padding: 2rem;
     padding-left: 6rem;
 }
-/* .protratt img {
-    max-width: 250px;
-    max-height: 250px;
-} */
+
+.menu {
+    position: fixed;
+    left: 130px;
+    top: 220px;
+}
+
+@media (max-width: 1150px) {
+    .menu {
+        display: none;
+    }
+}
