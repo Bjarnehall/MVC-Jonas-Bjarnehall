@@ -6,9 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
-       
-       
-       
+
 class Api extends AbstractController
 {
     #[Route('/api', name: 'api_overview')]
@@ -23,7 +21,7 @@ class Api extends AbstractController
     }
 
     #[Route('/api/quote', name: 'api_quote')]
-    public function dailyQuote():Response
+    public function dailyQuote(): Response
     {
         $quotes = [
             "Åh lakrits båtar! Få man ta.",
