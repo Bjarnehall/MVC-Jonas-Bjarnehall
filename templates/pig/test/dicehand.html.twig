@@ -1,23 +1,22 @@
 {% extends "base2.html.twig" %}
 
-{% block title %}Pig Game{% endblock %}
-
 {% block main %}
+
 <div class="presentation">
-<h1>Roll many dice</h1>
+<h1>Roll dice hand</h1>
 
 <p>You rolled {{ num_dices }} dices. Here is the value of the dices.</p>
-<div class="dices">
-<ul>
+
+<ul class="dicearea">
 {% for roll in diceRoll %}
-    <li>{{ roll }}</li>
+    <li><span class="die">{{ roll }}</span></li>
 {% endfor %}
 </ul>
-</div>
+
 <p>Try to roll 
-    <a href="{{ path('test_roll_num_dices', {num: 5}) }}">5</a>
+    <a href="{{ path('test_dicehand', {num: 5}) }}">5</a>
     or 
-    <a href="{{ path('test_roll_num_dices', {num: 10}) }}">10</a>
+    <a href="{{ path('test_dicehand', {num: 10}) }}">10</a>
     dices.
 </p>
 </div>

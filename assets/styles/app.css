@@ -140,3 +140,43 @@ input {
 .presentation {
     margin-bottom: 20px;
 }
+
+/* .dices li {
+    font-size: 2rem;
+} */
+
+.die {
+    font-size: 3rem;
+}
+
+ul.dicearea {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.dicearea li {
+    display: inline;
+}
+
+.flash-notice {
+    padding: 0.5em;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+
+.flash-notice:before {
+    content: "ⓘ";
+}
+
+.flash-warning {
+    padding: 0.5em;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.flash-warning:before {
+    content: "⚠";
+}
