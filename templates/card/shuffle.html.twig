@@ -1,0 +1,26 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block main %}
+<div class="cardpresentation">
+
+<h1>All Cards  <a href="{{ path('shuffle') }}"><i class="fas fa-random" style="color: #007bff;"></i></a></h1>
+<h4>
+<a href="{{ path('draw_card') }}">Draw 1 |</a>
+<a href="{{ path('draw_cards', {'number': 2}) }}">Draw 2 |</a>
+<a href="{{ path('draw_cards', {'number': 3}) }}">Draw 3 |</a>
+<a href="{{ path('draw_cards', {'number': 4}) }}">Draw 4 |</a>
+<a href="{{ path('draw_cards', {'number': 5}) }}">Draw 5 |</a>
+</h4>
+
+<div class="deck">
+<ul>
+    {% for card in cards %}
+        <li>{{ card.getGraphicalRepresentation()|raw }}</li>
+    {% endfor %}
+</ul>
+</div>
+
+</div>
+{% endblock %}

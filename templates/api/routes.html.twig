@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Api{% endblock %}
+
+{% block body %}
+<div class="presentation">
+
+<h1>API routes</h1>
+
+    
+    <h3><a href="{{ path('api_quote') }}">Quotes</a><br></h3>
+    <p>Visar upp slumpmässiga härliga qoutes! </p>
+
+    <h3><a href="{{ path('api_deck') }}">Deck</a><br></h3>
+    <p>Visar upp korleken sorterad i Json struktur </p>
+
+    <h3><a href="{{ path('api_deck_shuffle') }}">Shuffle</a><br></h3>
+    <p>Visar upp korleken blandad i Json struktur </p>
+
+    
+
+
+
+{% endblock %}
+

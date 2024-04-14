@@ -1,0 +1,18 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block main %}
+<div class="cardpresentation">
+
+<div class="deck">
+<ul>
+    {% for card in card %}
+        <li>{{ card.getGraphicalRepresentation()|raw }}</li>
+    {% endfor %}
+</ul>
+</div>
+    <h4>Cards Remaining in Deck: {{ remaining }}</h4>
+</div>
+
+{% endblock %}

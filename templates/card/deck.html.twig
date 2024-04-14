@@ -1,0 +1,20 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block main %}
+<div class="cardpresentation">
+
+<h1>All Cards  <a href="{{ path('shuffle') }}"><i class="fas fa-random" style="color: #007bff;"></i></a></h1>
+
+
+<div class="deck">
+<ul>
+    {% for card in cards %}
+        <li>{{ card.getGraphicalRepresentation()|raw }}</li>
+    {% endfor %}
+</ul>
+</div>
+
+</div>
+{% endblock %}

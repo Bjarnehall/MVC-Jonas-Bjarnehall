@@ -1,0 +1,61 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block main %}
+<div class="mininav">
+<nav>
+    <ul>
+        <h4>
+        <li><a href="{{ path('session') }}">Session |</a></li>
+        <li><a href="{{ path('session_destroy') }}">Destroy session |</a></li>
+        <li><a href="{{ path('deck') }}">Kortlek |</a></li>
+        <li><a href="{{ path('shuffle') }}">Shuffle Cards |</a></li>
+        <li><a href="{{ path('draw_card') }}">Dra ett kort |</a></li>
+        <li><a href="{{ path('draw_cards', {'number': 3}) }}">Dra tre kort </a></li></h4>
+    </ul>
+</nav>
+</div>
+<div class="presentationGame">
+
+<h2>Card game</h2><hr>
+
+<p>Här kommer ett kortspel att presenteras snart under tiden
+kika gärna in <a href="{{ path('deck') }}">kortleken!</a>
+under tiden spelet utvecklas.</p>
+
+
+<h2>Pig game</h2><hr>
+
+<p>Här kan du spela det klassiska spelet kasta gris, rulla
+en näve tärningar och nå hundra poäng! Läs mer 
+<a href="https://en.wikipedia.org/wiki/Pig_(dice_game)"> 
+om spelet på Wikipedia</a> eller spela spelet 
+<a href="{{ path('pig_init_get') }}">Pig Game!</a></p>
+</div>
+
+<div class="classtext">
+
+<h2>Klasser</h2><hr>
+
+
+<p>
+Jag har tre klasser inom samma namnrymd 'App\Card' och de tre klasserna är
+DeckofCards, CardHand, och Card.<br><br>
+Card: Hanterar ett enskilt kort och kan med hjälp av funktioner visa klädseln eller
+värdet på ett enskilt kort.<br><br>
+DeckOfCards: Hanterar en hel korlek och använder sig av klassen Card för 
+att skapa kort. I denna klass finns funktioner som kan initiera en ny
+kortlek, blanda korten samt sortera dem.<br><br>
+
+CardHand: Används för att hantera en giv med kort genom en samling av Card objekt.
+I denna klass finns funktioner för att hantera kort i handen.
+Tillsammans hjälper relationen mellan klasserna till att skapa en helhet där ett
+kortspel kan byggas och hanteras.<br>
+
+<img src="{{ asset('img/CardUML.png') }}" alt="picture of jonas" width="600">
+
+</div>
+
+
+{% endblock %}

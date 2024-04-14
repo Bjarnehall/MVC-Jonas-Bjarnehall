@@ -13,7 +13,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-
 class DiceGameController extends AbstractController
 {
     #[Route("/game/pig", name: "pig_start")]
@@ -35,7 +34,7 @@ class DiceGameController extends AbstractController
         return $this->render('pig/test/roll.html.twig', $data);
     }
 
-        #[Route("/game/pig/test/roll/{num<\d+>}", name: "test_roll_num_dices")]
+    #[Route("/game/pig/test/roll/{num<\d+>}", name: "test_roll_num_dices")]
     public function testRollDices(int $num): Response
     {
         if ($num > 99) {
@@ -97,8 +96,7 @@ class DiceGameController extends AbstractController
     public function initCallback(
         Request $request,
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $numDice = $request->request->get('num_dices');
 
         $hand = new DiceHand();
@@ -118,8 +116,7 @@ class DiceGameController extends AbstractController
     #[Route("/game/pig/play", name: "pig_play", methods: ['GET'])]
     public function play(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $dicehand = $session->get("pig_dicehand");
 
         $data = [
@@ -132,35 +129,11 @@ class DiceGameController extends AbstractController
         return $this->render('pig/play.html.twig', $data);
     }
 
-    // #[Route("/game/pig/roll", name: "pig_roll", methods: ['POST'])]
-    // public function roll(
-    //     SessionInterface $session
-    // ): Response
-    // {
-    //     $hand = $session->get("pig_dicehand");
-    //     $hand->roll();
 
-    //     $roundTotal = $session->get("pig_round");
-    //     $round = 0;
-    //     $values = $hand->getValues();
-    //     foreach ($values as $value) {
-    //         if ($value === 1) {
-    //             $round = 0;
-    //             $roundTotal = 0;
-    //             break;
-    //         }
-    //         $round += $values;
-    //     }
-
-    //     $session->set("pig_round", $roundTotal + $round);
-    
-    //     return $this->redirecrtToRoute('pig_play');
-    // }
     #[Route("/game/pig/roll", name: "pig_roll", methods: ['POST'])]
     public function roll(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $hand = $session->get("pig_dicehand");
         $hand->roll();
 
@@ -171,32 +144,31 @@ class DiceGameController extends AbstractController
             if ($value === 1) {
                 $round = 0;
                 $roundTotal = 0;
-                        $this->addFlash(
-            'warning',
-            'You got a 1 and you lost the round points!'
-        );
+                $this->addFlash(
+                    'warning',
+                    'You got a 1 and you lost the round points!'
+                );
                 break;
             }
             $round += $value;
         }
 
         $session->set("pig_round", $roundTotal + $round);
-        
+
         return $this->redirectToRoute('pig_play');
     }
 
     #[Route("/game/pig/save", name: "pig_save", methods: ['POST'])]
     public function save(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $roundTotal = $session->get("pig_round");
         $gameTotal = $session->get("pig_total");
 
         $session->set("pig_round", 0);
         $session->set("pig_total", $roundTotal + $gameTotal);
 
-                $this->addFlash(
+        $this->addFlash(
             'notice',
             'Your round was saved to the total!'
         );

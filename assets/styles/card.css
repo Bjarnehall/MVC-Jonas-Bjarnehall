@@ -1,0 +1,62 @@
+
+.deck ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.deck li {
+    display: inline-block;
+    margin: 10px;
+    width: 68px;
+    height: 95px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    vertical-align: top;
+    line-height: 140px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    position: relative;
+}
+
+
+.card-suit {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.card-value {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.card-suit.hearts,
+.card-suit.diamonds {
+    color: red;
+}
+
+.card-suit.clubs,
+.card-suit.spades {
+    color: black;
+}
+
+.cardpresentation {
+    grid-column: 2/ span 10;
+}
+
+@media (max-width: 1050px) {
+    .cardpresentation {
+        grid-column: 1/span 10;
+    }
+}
+
+@media (max-width: 750px) {
+    .cardpresentation {
+        grid-column: 1/span 12;
+        margin-left: -6%;
+    }
+}

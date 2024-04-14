@@ -17,7 +17,8 @@ class Api extends AbstractController
             'quote' => '/api/qoute',
         ];
 
-        return new JsonResponse($apiRoutes);
+        // return new JsonResponse($apiRoutes);
+        return $this->render('api/routes.html.twig');
     }
 
     #[Route('/api/quote', name: 'api_quote')]

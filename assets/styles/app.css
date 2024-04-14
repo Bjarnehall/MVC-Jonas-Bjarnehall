@@ -1,4 +1,7 @@
+
 @import "grid.css";
+@import "card.css";
+
 
 html {
     font-family: sans-serif;
@@ -49,14 +52,7 @@ a {
     text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    letter-spacing: 0.1rem;
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
-}
+
 
 header {
     position: fixed;
@@ -64,27 +60,30 @@ header {
     top: 0;
     width: 100%;
     background: #FFF;
-    height: 7rem;
+    height: 6.75rem;
     display: grid;
     align-items: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     padding-left: 6%;
+    z-index: 1000;
 }
 
 nav a {
     color: hsl(205, 86%, 17%);
 }
 
+
 nav a:hover {
     color: hsl(206, 78%, 60%);
 }
+
 
 main {
     padding-left: 9.6%;
 }
 
 main {
-    margin-top: 200px;
+    margin-top: 190px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
@@ -114,24 +113,11 @@ footer {
 
 
 
-/**
-* kmom02
-*/
-
-/* body {
-    margin: 0 auto;
-    max-width: 800px;
-    background-color: #eee;
-    font-size: 2em;
-} */
-
 input {
     font-size: 1em;
 }
 
-/* h1 {
-    border-bottom: 4px double green;
-} */
+
 
 .die {
     font-size: 2em;
@@ -141,9 +127,7 @@ input {
     margin-bottom: 20px;
 }
 
-/* .dices li {
-    font-size: 2rem;
-} */
+
 
 .die {
     font-size: 3rem;
@@ -179,4 +163,9 @@ ul.dicearea li {
 
 .flash-warning:before {
     content: "⚠";
+}
+
+
+.gitlink {
+    margin-bottom: 80px;
 }
