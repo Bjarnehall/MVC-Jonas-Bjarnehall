@@ -2,6 +2,9 @@
 
 namespace App\Card;
 
+/**
+ * Represents a hand of cards.
+ */
 class CardHand
 {
     private $cards = [];

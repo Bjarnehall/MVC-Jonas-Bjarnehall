@@ -2,6 +2,9 @@
 
 namespace App\Card;
 
+/**
+ * Represents a single playing card with a suit and value.
+ */
 class Card
 {
     private $suit;
@@ -22,7 +25,11 @@ class Card
     {
         return $this->value;
     }
-
+    /**
+     * Generates a HTML representation of the card.
+     * 
+     * @return string
+     */
     public function getGraphicalRepresentation()
     {
         $suitSymbol = match($this->suit) {

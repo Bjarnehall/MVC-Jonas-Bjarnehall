@@ -7,6 +7,7 @@
                 <h3>Gå till</h3>            
             <ul> 
                 <p><li><a href="#kmom01"><p>kmom01</p></a></li></p>
+                <p><li><a href="#kmom02"><p>kmom02</p></a></li></p>
             </ul>
 </div>
 <div class="presentation">
@@ -21,7 +22,7 @@ En klass i PHP är en typ av kategori medans ett objekt är en underkategori ell
 kan en klass vara "ost" så kan "prästost" vara ett objekt. Objektet i sin tur kan ha olika attribut så som exempel 
 lagringstid.
 <br>I artiklen PHP the right way så tyckte jag delen med namesspaces var intressant och förklarade på ett bra sätt
-som jag kunde förstå, liknelsen till filstruktur i en windows maskin var bra jämförelse. Jag har även fått en bättre 
+som jag kunde förstå, liknelsen till filstruktur i en windows maskin var en bra jämförelse. Jag har även fått en bättre 
 förståelse varför vi använder templates och hur composer fungerar. Mycket av vad som behandlades i artiklen förstod jag 
 inte fullt ut men ser fram emot att det ska klarna vidare i kursen. 
 <br>
@@ -30,6 +31,34 @@ Jag får en känsla av att Symfony är ett mer "komplett" ramverk, och jag gilla
 <br>
 Min TIL för detta kursmoment är att få lära känna ramverket Symfony och ta upp PHP programmeringen ifrån Webtec kursen
 igen!
+</p>
+<br>
+<h2 id="kmom02">kmom02</h2>
+<br>
+<p>
+Kursmoment två har varit både utmanande och roligt, att få programmera en kortlek och få utmanas i det logiska tänkandet
+uppskattas även om det varit svårt! Jag har fått en betydligt djupare förståelse för objektorienterad programmering och 
+hur man bygger upp ett program med klasser. Att få repetera och bygga vidare på kunskaperna från databasen då vi ritade UML
+diagram kändes nyttigt och gav mig en djupare förståelse. Ramverket Symfony gillar jag starkt och är något jag ser som ett 
+potentiellt verktyg att använda i mitt framtida yrkesliv.<br>
+
+Objektorienterade konstruktioner så som arv, komposition, interface och traits används i huvudsak för att skapa kod som 
+är lättare att underhålla och inte behövs upprepas i större utsräckning. Dessa begrepp är fortfarande något jag försöker lära
+mig om men skulle kunna beskrivas enligt följande.<br>
+Arv: Tillåter en klass att använda metoder från andra klasser.
+Komposition: Ett alternativ till arv där där genom att inkludera objekt från andra klasser som en egenskap i en ny klass.
+Interface: Definerar krav som klasser ska uppfylla genom vissa metoder.
+Trait: Liknas vid arv men är mer fristående och kan användas av/delas mellan flera klasser.<br><br>
+
+Jag löste uppgiften genom att först skapa tre klasser: Card, CardHand och DeckOfCards som alla har de methoder som behövs för
+att skapa en kortlek (metoderna beskrivs i mitt uml diagram). Jag fortsatte senare med att skapa route och template till den 
+sorterade kortleken och när jag fått den att fungera jobbade jag vidare med CSS för att kunna presentera korten visuellt vilket
+var ganska knepigt och tidskrävande men jag är väldigt nöjd med resultatet. Senare fortsatte jag att utföra ett krav i taget tills 
+uppgiften var löst på samma tillvägagångssätt. Jag är överlag nöjd med uppgiften men jag funderar på om det kanske finns ett smidigare
+sätt att lösa alla routes på framöver då det blir ganska mycket kod i denna fil.<br>
+
+Att välja ut en TIL för detta kursmoment är svårt då det varit så mycket men en sak jag fått klämm på är hur och varför man egentligen
+använder DocBlocks vilket varit lite förvirrande för mig tidigare så får nog säga DocBlocks!
 </p>
 </div>
 {% endblock %}
