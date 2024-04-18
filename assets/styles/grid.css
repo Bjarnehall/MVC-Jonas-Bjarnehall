@@ -232,3 +232,32 @@
         margin-left: -6%;
     }
 }
+
+.game21Begin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 8/span 6;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttonPlay {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttonPlay:hover {
+    background-color: #d51414;
+}
