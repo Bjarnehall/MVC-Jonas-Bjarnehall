@@ -60,11 +60,11 @@ class DeckOfCards
     public function getSortedCards()
     {
         $sortedCards = $this->cards;
-        usort($sortedCards, function ($a, $b) {
-            if ($a->getSuit() == $b->getSuit()) {
-                return $a->getValue() <=> $b->getValue();
+        usort($sortedCards, function ($cardOne, $cardTwo) {
+            if ($cardOne->getSuit() == $cardTwo->getSuit()) {
+                return $cardOne->getValue() <=> $cardTwo->getValue();
             }
-            return $a->getSuit() <=> $b->getSuit();
+            return $cardOne->getSuit() <=> $cardTwo->getSuit();
         });
         return $sortedCards;
     }

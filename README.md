@@ -18,4 +18,24 @@ php -S localhost:8888 -t public
 
 Vid problem med repot eller om det är första gången du använder ramverket Symfony finns här en guide för att komma igång:
 https://symfony.com/doc/current/setup.html
+
+
+kör konfiguerad linter for projektet
+tools/phpmd/vendor/bin/phpmd . text tools/phpmd/phpmd.xml
+
+kör phpstan exempel (kan köras i skalan 1-9)
+tools/phpstan/vendor/bin/phpstan analyse -l 9 src
+kör phpstan utifrån konfigurations fil
+tools/phpstan/vendor/bin/phpstan analyse -c tools/phpstan/phpstan.neon
+
+Köra verktygen som scripts
+composer phpmd
+composer phpstan
+Kör alla
+composer lint
+
+Fixa fel
+composer csfix
+Visa fel
+composer csfix:dry
  

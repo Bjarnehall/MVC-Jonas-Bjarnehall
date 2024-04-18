@@ -5,17 +5,12 @@ namespace App\Controller;
 use App\Card\Card;
 use App\Card\CardHand;
 use App\Card\DeckOfCards;
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-
 use Symfony\Component\HttpFoundation\RedirectResponse;
-
 use Symfony\Component\Routing\Annotation\Route;
-
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CardGame extends AbstractController
@@ -94,7 +89,7 @@ class CardGame extends AbstractController
      *
      * @return JsonResponse
      */
-    #[route("/api/deck/shuffle", name: "api_deck_shuffle")]
+    #[route("/api/deck/shuffle", name: "api_deck_shuffle", methods: ["POST"])]
     public function apiDeckShuffle(): Response
     {
         $deck = new DeckOfCards();
@@ -110,21 +105,21 @@ class CardGame extends AbstractController
 
         return new JsonResponse($data);
     }
-    /**
-     * Display all session variables.
-     *
-     * @param SessionInterface
-     * @return Response
-     */
-    #[Route("/session", name: "session")]
-    public function showSessionVariables(SessionInterface $session): Response
-    {
-        $sessionVariables = $session->all();
+    // /**
+    //  * Display all session variables.
+    //  *
+    //  * @param SessionInterface
+    //  * @return Response
+    //  */
+    // #[Route("/session", name: "session")]
+    // public function showSessionVariables(SessionInterface $session): Response
+    // {
+    //     $sessionVariables = $session->all();
 
-        return $this->render('session.html.twig', [
-            'sessionVariables' => $sessionVariables,
-        ]);
-    }
+    //     return $this->render('session.html.twig', [
+    //         'sessionVariables' => $sessionVariables,
+    //     ]);
+    // }
     /**
      * Clear all session variables and redirect to session display.
      *
@@ -176,7 +171,7 @@ class CardGame extends AbstractController
      *
      * @return JsonResponse
      */
-    #[Route("/api/deck/draw", name: "api_deck_draw")]
+    #[Route("/api/deck/draw", name: "api_deck_draw", methods: ["POST"])]
     public function apiDrawCard(SessionInterface $session): Response
     {
         if (!$session->has('shuffledDeck')) {
@@ -232,12 +227,12 @@ class CardGame extends AbstractController
         ]);
     }
     /**
-     * Displays a multiple cards as a JSON response.
+     * Displays multiple cards as a JSON response.
      *
      * @return JsonResponse
      */
-    #[Route("api/deck/draw/{number}", name: "api_card_draw_cards")]
-    public function apiDrawCards(SessionInterface $session, int $number): Response
+    #[Route("api/deck/draw/{number}", name: "api_card_draw_cards", methods: ["POST"])]
+    public function apiDrawCards(SessionInterface $session, int $number): JsonResponse
     {
         if (!$session->has('shuffledDeck')) {
             $deck = new DeckOfCards();

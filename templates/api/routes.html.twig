@@ -7,21 +7,26 @@
 
 <h1>API routes</h1>
 
-    
     <h3><a href="{{ path('api_quote') }}">Citat</a><br></h3>
     <p>Visar upp slumpmässiga härliga qoutes! </p>
 
     <h3><a href="{{ path('api_deck') }}">Kortlek</a><br></h3>
     <p>Visar upp korleken sorterad i Json struktur. </p>
 
-    <h3><a href="{{ path('api_deck_shuffle') }}">Blanda</a><br></h3>
-    <p>Visar upp korleken blandad i Json struktur. </p>
+    <h3>Blanda korten</h3>
+    <form action="{{ path('api_deck_shuffle') }}" method="post">
+        <button type="submit">Blanda korten</button>
+    </form>
+    <p>Blandar korten och visar upp dem i Json struktur. </p>
 
-    <h3><a href="{{ path('api_deck_draw') }}">Dra ett kort</a><br></h3>
+    <h3>Dra ett kort</h3>
+    <form action="{{ path('api_deck_draw') }}" method="post">
+        <button type="submit">Dra ett kort</button>
+    </form>
     <p>Drar ett enskilt kort ur leken, visas upp i Json struktur. </p>
 
     <h3>Dra flera kort</h3>
-    <form id="drawCardsForm" action="#" method="get">
+    <form id="drawCardsForm" action="#" method="post">
         <label for="number">Hur många kort?</label>
         <input type="number" id="number" name="number" value="1" min="1">
         <button type="submit">Dra kort</button>
@@ -31,8 +36,9 @@
     <script>
     document.getElementById('drawCardsForm').addEventListener('submit', function(event) {
         var number = document.getElementById('number').value;
-        this.action = '/api/deck/draw/' + number;
+        this.action = 'api/deck/draw/' + number;
     });
+
     </script>
 
 {% endblock %}

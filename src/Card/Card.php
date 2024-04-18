@@ -27,7 +27,7 @@ class Card
     }
     /**
      * Generates a HTML representation of the card.
-     * 
+     *
      * @return string
      */
     public function getGraphicalRepresentation()

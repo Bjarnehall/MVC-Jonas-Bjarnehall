@@ -6,18 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use DateTime;
+use DateTimeZone;
 
 class Api extends AbstractController
 {
     #[Route('/api', name: 'api_overview')]
     public function apiOverview(): Response
     {
-        $apiRoutes = [
-            'routes' => '/api',
-            'quote' => '/api/qoute',
-        ];
-
-        // return new JsonResponse($apiRoutes);
         return $this->render('api/routes.html.twig');
     }
 
@@ -32,7 +28,7 @@ class Api extends AbstractController
 
         $quote = $quotes[array_rand($quotes)];
 
-        $date = new \DateTime('now', new \DateTimeZone('Europe/Stockholm'));
+        $date = new DateTime('now', new DateTimeZone('Europe/Stockholm'));
 
         $responseData = [
             'quote' => $quote,
