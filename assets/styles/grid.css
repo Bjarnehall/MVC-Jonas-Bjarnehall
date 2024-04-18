@@ -214,3 +214,21 @@
 .hand {
     grid-column: 2/span 8;
 }
+
+.presentation21 {
+    grid-column: 1/ span 6;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1050px) {
+    .presentation21 {
+        grid-column: 1/span 10;
+    }
+}
+
+@media (max-width: 750px) {
+    .presentation21 {
+        grid-column: 1/span 12;
+        margin-left: -6%;
+    }
+}

@@ -1,0 +1,44 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block main %}
+
+<div class="presentation21">
+<h1>21</h1>
+
+<p>
+<h4>Regler för spel:</h4>
+
+Värde:<br>
+Essen        värd 1 eller 14 (spelarens val)<br>
+Kung         värd 13<br>
+Dam          värd 12<br>
+knekt        värd 11<br>
+övriga kort  värde = med kortnummer<br><br>
+
+Spelet:<br>
+Bank:       Bankiren läger en insats i banken (potten) som spelas om<br>
+
+Spelare:    Ges ett kort och spelar mot bankiren.
+            Spelaren tittar på sitt kort och satsar ett valfritt belopp 
+            som inte får vara större än vad som finns i banken.
+            Spelaren får sedan ett nytt kort.<br>
+
+21:         Om summan av korten är 21 vinner spelaren från banken ett belopp
+            lika med insats.<br>
+
+Över 21:    Om summan av korten överstiger 21 förlorar spelaren och insats går
+            till banken. (Detta kallas tjock).<br>
+
+Under 21:   Om summan av korten är under 21 kan spelaren välja att stanna.
+            Bankiren får möjlighet att spela mot spelaren.
+            Bankiren drar sina kort och visar dessa samtidigt.
+            Om bankiren får 21 förlorar spelaren.
+            Om bankiren får över 21 Vinner spelaren.
+            Om bankiren och spelaren har lika vinner banken.
+            I annat fall vinner den som är närmast 21.<br>
+</p>
+</div>
+
+{% endblock %}
