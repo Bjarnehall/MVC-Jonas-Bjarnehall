@@ -216,13 +216,14 @@
 }
 
 .presentation21 {
-    grid-column: 1/ span 6;
+    grid-column: 1/ span 4;
     margin-bottom: 100px;
 }
 
 @media (max-width: 1050px) {
     .presentation21 {
         grid-column: 1/span 10;
+        margin-bottom: 5px;
     }
 }
 
@@ -234,15 +235,26 @@
 }
 
 .game21Begin {
+    margin-top: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column: 8/span 6;
+    grid-column: 6/span 6;
     height: 500px;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1050px) {
+    .game21Begin {
+        grid-column: 1/span 10;
+        grid-row: 2;
+        margin-top: 0.5rem;
+        margin-bottom: 100px;
+        height: 200px;
+    }
 }
 
 .buttonPlay {

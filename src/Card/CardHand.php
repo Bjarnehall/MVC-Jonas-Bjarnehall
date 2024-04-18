@@ -7,14 +7,23 @@ namespace App\Card;
  */
 class CardHand
 {
-    private $cards = [];
+    /**
+     * Array of Card
+     * 
+     * @var Card[]
+     */
+    private array $cards = [];
 
-    public function addCard(Card $card)
+    public function addCard(Card $card): void
     {
         $this->cards[] = $card;
     }
-
-    public function getCards()
+    /**
+     * Returns the cards
+     * 
+     * @return Card[]
+     */
+    public function getCards(): array
     {
         return $this->cards;
     }

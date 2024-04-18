@@ -7,21 +7,31 @@ namespace App\Card;
  */
 class Card
 {
-    private $suit;
-    private $value;
+    /**
+     * Suit of the card.
+     * 
+     * @var string
+     */
+    private string $suit;
+    /**
+     * Value of the card.
+     * 
+     * @var string|int
+     */
+    private string|int $value;
 
-    public function __construct($suit, $value)
+    public function __construct(string $suit, string|int $value)
     {
         $this->suit = $suit;
         $this->value = $value;
     }
 
-    public function getSuit()
+    public function getSuit(): string
     {
         return $this->suit;
     }
 
-    public function getValue()
+    public function getValue(): string|int
     {
         return $this->value;
     }
@@ -30,7 +40,7 @@ class Card
      *
      * @return string
      */
-    public function getGraphicalRepresentation()
+    public function getGraphicalRepresentation(): string
     {
         $suitSymbol = match($this->suit) {
             'Hearts' => '♥',

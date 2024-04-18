@@ -90,18 +90,20 @@ class CardGame extends AbstractController
      * @return JsonResponse
      */
     #[route("/api/deck/shuffle", name: "api_deck_shuffle", methods: ["POST"])]
-    public function apiDeckShuffle(): Response
+    public function apiDeckShuffle(SessionInterface $session): JsonResponse
     {
         $deck = new DeckOfCards();
         $deck->shuffle();
-        $cards = $deck->getShuffledCards();
+        // $cards = $deck->getShuffledCards();
+        $shuffledCards = $deck->getShuffledCards();
+        $session->set('shuffledDeck', serialize($shuffledCards));
 
         $data = array_map(function ($card) {
             return [
                 'suit' => $card->getSuit(),
                 'value' => $card->getValue()
             ];
-        }, $cards);
+        }, $shuffledCards);
 
         return new JsonResponse($data);
     }
@@ -167,7 +169,8 @@ class CardGame extends AbstractController
 
         $deck = unserialize($session->get('shuffledDeck'));
         if (empty($deck)) {
-            return $this->redirectToRoute('api_deck_shuffle');
+            return new JsonResponse(['error' => 'No cards left to draw'], 400);
+            // return $this->redirectToRoute('api_deck_shuffle');
         }
 
         $card = array_shift($deck);
@@ -181,7 +184,6 @@ class CardGame extends AbstractController
 
         return new JsonResponse($cardData);
     }
-
     /**
      * Draws multiple cards from the deck.
      *
@@ -227,7 +229,8 @@ class CardGame extends AbstractController
 
         $deck = unserialize($session->get('shuffledDeck'));
         if (count($deck) < $number) {
-            return $this->redirectToRoute('api_deck_shuffle');
+            // return $this->redirectToRoute('api_deck_shuffle');
+            return new JsonResponse(['error' => 'Not enough cards to draw'], 400);
         }
 
         $cardsDrawn = array_splice($deck, 0, $number);
