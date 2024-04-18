@@ -13,7 +13,7 @@ class SessionController extends AbstractController
     /**
      * Display all session variables.
      *
-     * @param SessionInterface
+     * @param SessionInterface $session
      * @return Response
      */
     #[Route("/session", name: "session")]

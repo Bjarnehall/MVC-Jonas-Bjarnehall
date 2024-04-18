@@ -13,13 +13,12 @@ class Lucky extends AbstractController
     public function lucky(): Response
     {
         $timeH = date("G");
+        $greeting ="God kväll!";
 
         if ($timeH < 12) {
             $greeting = "God morgon!";
         } elseif ($timeH < 18) {
             $greeting = "God middag!";
-        } else {
-            $greeting = "God kväll!";
         }
 
         $weekDayTranslation = [
@@ -54,10 +53,10 @@ class Lucky extends AbstractController
             return $filesystem->exists($imagePath . $image);
         });
 
+        $randomPetImage ='pet3.jpg';
+
         if (count($availablePetImages) > 0) {
             $randomPetImage = $availablePetImages[array_rand($availablePetImages)];
-        } else {
-            $randomPetImage = 'pet3.jpg';
         }
 
         return $this->render('lucky.html.twig', [

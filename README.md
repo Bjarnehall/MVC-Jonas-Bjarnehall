@@ -38,4 +38,8 @@ Fixa fel
 composer csfix
 Visa fel
 composer csfix:dry
+
+Rensa cache
+php bin/console cache:clear
+
  

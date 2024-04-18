@@ -18,7 +18,7 @@ class CardGame extends AbstractController
     /**
      * Display the card game start page.
      *
-     * @param SessionInterface
+     * @param SessionInterface $session
      * @return Response
      */
     #[Route("/card", name: "card")]
@@ -69,7 +69,7 @@ class CardGame extends AbstractController
     /**
      * Shuffle the deck and update the session.
      *
-     * @param SessionInterface
+     * @param SessionInterface $session
      * @return Response
      */
     #[Route("/card/deck/shuffle", name: "shuffle")]
@@ -105,25 +105,10 @@ class CardGame extends AbstractController
 
         return new JsonResponse($data);
     }
-    // /**
-    //  * Display all session variables.
-    //  *
-    //  * @param SessionInterface
-    //  * @return Response
-    //  */
-    // #[Route("/session", name: "session")]
-    // public function showSessionVariables(SessionInterface $session): Response
-    // {
-    //     $sessionVariables = $session->all();
-
-    //     return $this->render('session.html.twig', [
-    //         'sessionVariables' => $sessionVariables,
-    //     ]);
-    // }
     /**
      * Clear all session variables and redirect to session display.
      *
-     * @param SessionInterface
+     * @param SessionInterface $session
      * @return RedirectResponse
      */
     #[Route("/session/delete", name: "session_destroy")]
@@ -141,7 +126,7 @@ class CardGame extends AbstractController
     /**
      * Draw a single card from the deck.
      *
-     * @param SessionInterface
+     * @param SessionInterface $session
      * @return Response
      */
     #[Route("/card/deck/draw", name: "draw_card")]
@@ -200,8 +185,8 @@ class CardGame extends AbstractController
     /**
      * Draws multiple cards from the deck.
      *
-     * @param SessionInterface
-     * @param int
+     * @param SessionInterface $session
+     * @param int $number
      * @return Response
      */
     #[Route("/card/deck/draw/{number}", name: "draw_cards", )]
