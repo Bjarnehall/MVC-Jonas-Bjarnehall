@@ -21,4 +21,23 @@ class Game21 extends AbstractController
     {
         return $this->render('card/game21.html.twig');
     }
+
+    #[Route("/play21", name: "play21")]
+    public function play21(SessionInterface $session): Response
+    {
+        $deck = new DeckOfCards();
+        $deck->shuffle();
+        $session->set('shuffledDeck', serialize($deck->getShuffledCards()));
+        return $this->redirectToRoute('game21_play');
+    }
+
+    #[Route("/game21/play", name: "game21_play")]
+    public function gamePlay(SessionInterface $session): Response
+    {
+        $deck = unserialize($session->get('shuffledDeck'));
+        return $this->render('card/game21_play.html.twig', [
+            'cards' => $deck,
+            'sessionData' => $session->all()
+        ]);
+    }
 }

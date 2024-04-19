@@ -273,3 +273,7 @@
 .buttonPlay:hover {
     background-color: #d51414;
 }
+
+.buttonPlay a {
+    color: #FFF;
+}
