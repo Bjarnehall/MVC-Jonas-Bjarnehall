@@ -4,6 +4,27 @@
 
 {% block main %}
 
-{{ dump(sessionData) }}
+<div class="presentationCasino">
+<h1>Player</h1>
+
+
+<h2>Score: {{ score }}</h2>
+<form action="{{ path('game21_draw') }}" method="post">
+    <button type="submit">Draw Card</button>
+</form>
+{# <a href="{{ path('game21_draw') }}">Draw Another Card</a> #}
+
+<div class="deck">
+<ul>
+    {% for card in cards %}
+        <li>{{ card.getGraphicalRepresentation()|raw }}</li>
+    {% endfor %}
+</ul>
+</div>
+
+
+
+{# {{ dump(sessionData) }} #}
+</div>
 
 {% endblock %}

@@ -52,6 +52,13 @@ Spelaren vinner om banken får över 21.
 Därefter kan man påbörja en ny omgång.
 
 
+player:
+drar kort värde läggs till summan av handen.
+väljer att stanna eller dra ett kort till värde läggs till summan av handen.
+
+korten och värdet av handen sparas i session.
+
+
 
 
 

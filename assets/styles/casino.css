@@ -168,3 +168,22 @@ ul.dicearea li {
 .gitlink {
     margin-bottom: 80px;
 }
+
+.presentationCasino {
+    grid-column: 2/ span 4;
+    background-color: #121832;
+    padding: 2rem;
+}
+
+@media (max-width: 1050px) {
+    .presentationCasino {
+        grid-column: 1/span 10;
+    }
+}
+
+@media (max-width: 750px) {
+    .presentationCasino {
+        grid-column: 1/span 12;
+        margin-left: -6%;
+    }
+}
