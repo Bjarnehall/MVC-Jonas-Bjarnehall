@@ -170,14 +170,17 @@ ul.dicearea li {
 }
 
 .presentationCasino {
-    grid-column: 2/ span 4;
+    grid-column: 2/ span 6;
     background-color: #121832;
     padding: 2rem;
+    margin-top: -35px;
+    min-height: 650px;
 }
 
 @media (max-width: 1050px) {
     .presentationCasino {
         grid-column: 1/span 10;
+        min-height: 800px;
     }
 }
 
@@ -185,5 +188,28 @@ ul.dicearea li {
     .presentationCasino {
         grid-column: 1/span 12;
         margin-left: -6%;
+        min-height: 800px;
     }
+}
+
+.button {
+    background-color: #393939;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+
+.button:hover {
+    background-color: #f21b1b;
+}
+
+.button a {
+    color: #FFF;
 }

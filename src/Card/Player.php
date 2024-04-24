@@ -25,34 +25,41 @@ class Player
     public function drawCard(Card $card): void
     {
         // $card = $deck->dealCard();
-        if($card) {
+        // if($card) {
             $this->hand->addCard($card);
-        }
+        // }
     }
 
     public function getHand(): CardHand
     {
         return $this->hand;
     }
-
+/**
+ * 
+ * @return int
+ */
     public function calculateScore(): int
     {
         $score = 0;
-        $aces =  0;
+        $aces = 0;
+
         foreach ($this->hand->getCards() as $card) {
-            if ($card->getValue() === 14) {
-                $aces += 1;
-                $score += 14;
-            }else {
+            if ($card->getValue() == 14) {
+                $aces++;
+            } else {
                 $score += $card->getValue();
             }
         }
 
-        while ($score > 21 && $aces > 0) {
-            $score -= 13;
-            $aces-= 1;
+        for ($i = 0; $i < $aces; $i++) {
+            if ($score + 14 <= 21) {
+                $score += 14;
+            } else {
+                $score += 1;
+            }
         }
 
         return $score;
     }
+
 }

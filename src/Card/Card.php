@@ -9,13 +9,13 @@ class Card
 {
     /**
      * Suit of the card.
-     * 
+     *
      * @var string
      */
     private string $suit;
     /**
      * Value of the card.
-     * 
+     *
      * @var string|int
      */
     private string|int $value;

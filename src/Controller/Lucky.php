@@ -13,7 +13,7 @@ class Lucky extends AbstractController
     public function lucky(): Response
     {
         $timeH = date("G");
-        $greeting ="God kväll!";
+        $greeting = "God kväll!";
 
         if ($timeH < 12) {
             $greeting = "God morgon!";
@@ -53,7 +53,7 @@ class Lucky extends AbstractController
             return $filesystem->exists($imagePath . $image);
         });
 
-        $randomPetImage ='pet3.jpg';
+        $randomPetImage = 'pet3.jpg';
 
         if (count($availablePetImages) > 0) {
             $randomPetImage = $availablePetImages[array_rand($availablePetImages)];

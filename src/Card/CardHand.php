@@ -9,7 +9,7 @@ class CardHand
 {
     /**
      * Array of Card
-     * 
+     *
      * @var Card[]
      */
     private array $cards = [];
@@ -20,11 +20,12 @@ class CardHand
     }
     /**
      * Returns the cards
-     * 
+     *
      * @return Card[]
      */
     public function getCards(): array
     {
         return $this->cards;
     }
+
 }

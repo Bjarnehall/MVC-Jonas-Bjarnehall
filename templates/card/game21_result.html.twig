@@ -1,0 +1,53 @@
+
+{% extends "baseCasino.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block main %}
+
+<div class="presentationCasino">
+
+
+    <div class="deck">
+        <h2>Spelares kort:</h2>
+        <ul>
+            {% for card in player.getHand().getCards() %}
+                <li>{{ card.getGraphicalRepresentation()|raw }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Dina poäng: {{ player.calculateScore() }}</h4>
+    </div>
+
+
+    <div class="deck">
+        <h2>Bankens kort:</h2>
+        <ul>
+            {% for card in bank.getHand().getCards() %}
+                <li>{{ card.getGraphicalRepresentation()|raw }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Bankens poäng: {{ bank.calculateScore() }}</h4>
+    </div>
+
+  
+    {% if player.calculateScore() > 21 %}
+        <h3>Tyvärr du förlorade!</h3>
+    {% elseif bank.calculateScore() > 21 %}
+        <h3>Gratulerar du vann!</h3>
+    {% else %}
+        {% if player.calculateScore() > bank.calculateScore() %}
+            <h3>Grattis du vann!</h3>
+        {% elseif player.calculateScore() < bank.calculateScore() %}
+            <h3>Tyvärr du förlorade!</h3>
+        {% else %}
+            <h3>Tyvärr du förlorade!</h3>
+        {% endif %}
+    {% endif %}
+
+    <div class="buttonPlay">
+    <h1>
+    <a href="{{ path('play21') }}">Spela igen</a></h1>
+    </div>
+</div>
+
+{% endblock %}

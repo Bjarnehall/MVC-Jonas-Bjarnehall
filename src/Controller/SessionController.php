@@ -9,7 +9,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SessionController extends AbstractController
 {
-    
     /**
      * Display all session variables.
      *
