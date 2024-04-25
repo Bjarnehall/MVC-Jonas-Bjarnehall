@@ -33,8 +33,12 @@ class Game21 extends AbstractController
         $deck = new DeckOfCards();
         $deck->shuffle();
         $player = new Player();
+        $bank = new Player();
+
         $session->set('shuffledDeck', serialize($deck));
         $session->set('player', serialize($player));
+
+        $session->set('bank', serialize($bank));
 
         return $this->redirectToRoute('game21_play');
     }
@@ -42,14 +46,13 @@ class Game21 extends AbstractController
     /**
      * Initiate the game by shuffle deck and save to session and,
      * inititing player.
-     * 
+     *
      * @param SessionInterface $session
      * @return Response
      */
     #[Route("/game21/play", name: "game21_play")]
     public function gamePlay(SessionInterface $session): Response
     {
-        $deck = unserialize($session->get('shuffledDeck'));
         $player = unserialize($session->get('player'));
         $score = $player->calculateScore();
         return $this->render('card/game21_play.html.twig', [
@@ -67,7 +70,7 @@ class Game21 extends AbstractController
      * @return Response
      */
     #[Route("/game21/draw", name: "game21_draw", methods: ["POST"])]
-    public function game21_draw(SessionInterface $session): Response
+    public function game21Draw(SessionInterface $session): Response
     {
         $deckSerialized = $session->get('shuffledDeck');
         $playerSerialized = $session->get('player');
@@ -84,13 +87,9 @@ class Game21 extends AbstractController
             $player->drawCard($card);
             $session->set('shuffledDeck', serialize($deck));
             $session->set('player', serialize($player));
-
-            // if ($player->calculateScore() > 21) {
-            //     return $this->redirectToRoute('game21_game_over');
-            // }
         }
-            return $this->redirectToRoute('game21_play');
-        }
+        return $this->redirectToRoute('game21_play');
+    }
     /**
      * Lets the player know game is lost and chance to start over.
      *
@@ -103,7 +102,7 @@ class Game21 extends AbstractController
     }
     /**
      * Lets the player stop and let the bank play against the player.
-     * 
+     *
      * @return Response
      */
     #[Route("/game21/stop", name: "game21_stop", methods: ["POST"])]
@@ -115,7 +114,7 @@ class Game21 extends AbstractController
     }
     /**
      * Lets the bank play
-     * 
+     *
      * @return Response
      */
     #[Route("/game21/bank_play", name: "game21_bank_play")]
@@ -140,5 +139,32 @@ class Game21 extends AbstractController
             'bank' => $bank,
             'deck' => $deck
         ]);
+    }
+
+    #[Route("game/doc", name: "game_doc")]
+    public function doc(): Response
+    {
+        return $this->render('card/game21_doc.html.twig');
+    }
+
+
+
+    #[Route("/api/game", name: "api_game")]
+    public function apiGame(SessionInterface $session): Response
+    {
+        $playerSerialized = $session->get('player');
+        $player = unserialize($playerSerialized);
+        $bankSerialized = $session->get('bank');
+        $bank = $bankSerialized ? unserialize($bankSerialized) : null;
+        $data = [
+            'player' => [
+            'score' => $player->calculateScore(),
+        ],
+            'bank' => $bank ? [
+                'score' =>$bank->calculateScore(),
+            ] : null
+    ];
+
+        return new JsonResponse($data);
     }
 }

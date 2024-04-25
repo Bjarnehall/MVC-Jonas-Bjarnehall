@@ -26,7 +26,7 @@ class Player
     {
         // $card = $deck->dealCard();
         // if($card) {
-            $this->hand->addCard($card);
+        $this->hand->addCard($card);
         // }
     }
 
@@ -34,10 +34,10 @@ class Player
     {
         return $this->hand;
     }
-/**
- * 
- * @return int
- */
+    /**
+     *
+     * @return int
+     */
     public function calculateScore(): int
     {
         $score = 0;

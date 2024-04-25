@@ -1,0 +1,51 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}Game
+{% endblock %}
+
+{% block main %}
+
+
+
+	<div class="presentationGame">
+
+    <p>Initiera session.<br>
+    Skapa en länk för att gå till spel.<br>
+    När länken används initeras en session.<br>
+    Blanda kortleken.<br>
+    I session ska blandad kortlek och spelare finnas.<br></p>
+
+    <p>Starta spel.<br>
+    spelet startas genom att spelare drar sitt första kort.<br>
+    Spelare drar första kort.<br>
+    Kortet visas upp grafiskt genom att hämta kort från spelare i session<br>
+    Värdet av kortet lägg i en poängsumma för spelare som sparas i session.<br>
+    Spelare har valmöjlighet att stanna spelet eller forstsätta.<br>
+    Om spelare drar ytterligare ett kort forstsätter spelet och nya kortets värde läggs till summa.<br>
+    I spelet måste värdet av ess hanteras genom att låta ess lägga 1 poäng till summan om summan redan är över 7 i annat fall ska ess ge 14 poäng.<br></p>
+
+    <p>Stoppa spel.<br>
+    Spelare kan när som helst stoppa spel genom att stanna.<br>
+    När spelare stannar skickas request till route för att låta banken spela.<br>
+    När banken spelat retuneras template för resultatsida.<br>
+    På resultat sidan hämtas värden från session.<br>
+    Värden från spalare och bank jämförs för att utse vinnare.<br>
+    Vinnare/förlorare avgörs enligt spelreglerna och resultat visas för spelare.<br>
+    Request kan göras för att spela igen.<br>
+
+
+
+
+
+	</div>
+
+	<div class="classtext">
+
+
+			<img src="{{ asset('img/flöde21.png') }}" alt="picture of flowchart" width="600">
+		</p>
+	</div>
+
+
+{% endblock %}
+
