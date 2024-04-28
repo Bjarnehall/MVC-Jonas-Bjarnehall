@@ -6,6 +6,7 @@ use App\Card\Card;
 use App\Card\CardHand;
 use App\Card\DeckOfCards;
 use App\Card\Player;
+use App\Card\DeckManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -34,14 +35,13 @@ class Game21 extends AbstractController
         $deck->shuffle();
         $player = new Player();
         $bank = new Player();
-
         $session->set('shuffledDeck', serialize($deck));
         $session->set('player', serialize($player));
-
         $session->set('bank', serialize($bank));
 
         return $this->redirectToRoute('game21_play');
     }
+
     //Game play page
     /**
      * Initiate the game by shuffle deck and save to session and,
@@ -56,8 +56,6 @@ class Game21 extends AbstractController
         $player = unserialize($session->get('player'));
         $score = $player->calculateScore();
         return $this->render('card/game21_play.html.twig', [
-            // 'cards' => $deck,
-            // 'sessionData' => $session->all()
             'cards' => $player->getHand()->getCards(),
             'score' => $score,
             'sessionData' => $session->all()
@@ -147,8 +145,6 @@ class Game21 extends AbstractController
         return $this->render('card/game21_doc.html.twig');
     }
 
-
-
     #[Route("/api/game", name: "api_game")]
     public function apiGame(SessionInterface $session): Response
     {
@@ -161,7 +157,7 @@ class Game21 extends AbstractController
             'score' => $player->calculateScore(),
         ],
             'bank' => $bank ? [
-                'score' =>$bank->calculateScore(),
+                'score' => $bank->calculateScore(),
             ] : null
     ];
 

@@ -42,4 +42,20 @@ composer csfix:dry
 Rensa cache
 php bin/console cache:clear
 
+run phpdoc
+composer phpdoc
+
+kör phpdoc config
+tools/phpdoc/phpdoc --config=tools/phpdoc/phpdoc.xml
  
+
+kör test
+bin/phpunit
+
+exempel på generera code covarage report text
+XDEBUG_MODE=coverage bin/phpunit --coverage-text tests/Dice/DiceTest.php
+
+generera code coverage html 
+XDEBUG_MODE=coverage bin/phpunit
+eller
+composer phpunit
