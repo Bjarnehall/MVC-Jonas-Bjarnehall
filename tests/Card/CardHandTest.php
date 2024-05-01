@@ -1,13 +1,16 @@
 <?php
 
 namespace App\Card;
+
 use App\Card\CardHand;
 
 use PHPUnit\Framework\TestCase;
 
-
 class CardHandTest extends TestCase
 {
+    /**
+     * Test the function GetCards
+     */
     public function testGetCards()
     {
         $hand = new CardHand();
@@ -23,6 +26,9 @@ class CardHandTest extends TestCase
         $this->assertSame($card1, $cards[0]);
         $this->assertSame($card2, $cards[1]);
     }
+    /**
+     * Test the function AddCard
+     */
     public function testAddCard()
     {
         $hand = new CardHand();
