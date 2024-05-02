@@ -5,6 +5,7 @@ namespace App\Card;
 use App\Card\Card;
 use App\Card\CardHand;
 use App\Card\DeckOfCards;
+use App\Card\Game;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,10 +25,7 @@ class Player
 
     public function drawCard(Card $card): void
     {
-        // $card = $deck->dealCard();
-        // if($card) {
         $this->hand->addCard($card);
-        // }
     }
 
     public function getHand(): CardHand
@@ -61,5 +59,14 @@ class Player
 
         return $score;
     }
-
+    /**
+     * Draw card from deck
+     */
+    public function drawCardFromDeck(DeckOfCards $deck): void
+    {
+        $card = $deck->dealCard();
+        if ($card) {
+            $this->drawCard($card);
+        }
+    }
 }

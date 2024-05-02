@@ -6,7 +6,7 @@ use App\Card\Card;
 use App\Card\CardHand;
 use App\Card\DeckOfCards;
 use App\Card\Player;
-use App\Card\DeckManager;
+use App\Card\Game;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -31,14 +31,8 @@ class Game21 extends AbstractController
     #[Route("/play21", name: "play21")]
     public function play21(SessionInterface $session): Response
     {
-        $deck = new DeckOfCards();
-        $deck->shuffle();
-        $player = new Player();
-        $bank = new Player();
-        $session->set('shuffledDeck', serialize($deck));
-        $session->set('player', serialize($player));
-        $session->set('bank', serialize($bank));
-
+        $game = new Game($session);
+        $game->initializeGame();
         return $this->redirectToRoute('game21_play');
     }
 
@@ -122,12 +116,7 @@ class Game21 extends AbstractController
         $bank = new Player();
 
         while ($bank->calculateScore()  < 17) {
-            $card = $deck->dealCard();
-            if ($card) {
-                $bank->drawCard($card);
-            } else {
-                break;
-            }
+            $bank->drawCardFromDeck($deck);
         }
 
         $session->set('bank', serialize($bank));
@@ -138,6 +127,7 @@ class Game21 extends AbstractController
             'deck' => $deck
         ]);
     }
+
 
     #[Route("game/doc", name: "game_doc")]
     public function doc(): Response

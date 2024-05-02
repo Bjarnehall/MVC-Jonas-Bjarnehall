@@ -4,7 +4,10 @@ namespace App\Dice;
 
 class DiceGraphic extends Dice
 {
-    private $representation = [
+    /**
+     * @var string[] Array of Unicode characters for dice faces
+     */
+    private array $representation = [
         '⚀',
         '⚁',
         '⚂',

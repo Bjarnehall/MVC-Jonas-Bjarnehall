@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class DeckOfCardsTest extends TestCase
 {
-    private $deck;
+    private DeckOfCards $deck;
 
     protected function setUp(): void
     {
@@ -18,7 +18,7 @@ class DeckOfCardsTest extends TestCase
     /**
      * Test the constructor for initialising a deck of cards.
      */
-    public function testDeckInit()
+    public function testDeckInit(): void
     {
         $deck = new DeckOfCards();
 
@@ -40,7 +40,7 @@ class DeckOfCardsTest extends TestCase
     /**
      * Test of shuffling the cards
      */
-    public function testShuffle()
+    public function testShuffle(): void
     {
         $deck = new DeckOfCards();
         $sortedCards = $deck->getSortedCards();
@@ -56,7 +56,7 @@ class DeckOfCardsTest extends TestCase
     /**
      * Test of dealCard deck
      */
-    public function testDealCardFromDeck()
+    public function testDealCardFromDeck(): void
     {
         $initialCount = count($this->deck->getSortedCards());
         $card = $this->deck->dealCard();

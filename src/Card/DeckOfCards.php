@@ -7,7 +7,10 @@ namespace App\Card;
  */
 class DeckOfCards
 {
-    private $cards = [];
+    /**
+     * @var Card[] Array holding the card objects
+     */
+    private array $cards = [];
     /**
      * Initializes the deck
      */
@@ -15,7 +18,7 @@ class DeckOfCards
     {
         $this->initialize();
     }
-    private function initialize()
+    private function initialize(): void
     {
         $suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
         $values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14'];
@@ -29,16 +32,16 @@ class DeckOfCards
     /**
      * Shuffles cards in deck
      */
-    public function shuffle()
+    public function shuffle(): void
     {
         shuffle($this->cards);
     }
     /**
-     * Gets and returns an array of cards
+     * Get the shuffled cards from the deck.
      *
-     * @return array The shuffled cards
+     * @return Card[] Array of shuffled card objects.
      */
-    public function getShuffledCards()
+    public function getShuffledCards(): array
     {
         $this->shuffle();
         return $this->cards;
@@ -53,11 +56,11 @@ class DeckOfCards
         return array_shift($this->cards);
     }
     /**
-     * Gets and returns an array of cards
+     * Get the sorted cards from the deck.
      *
-     * @return array The sorted cards
+     * @return Card[] Array of card objects sorted in some order.
      */
-    public function getSortedCards()
+    public function getSortedCards(): array
     {
         $sortedCards = $this->cards;
         usort($sortedCards, function ($cardOne, $cardTwo) {

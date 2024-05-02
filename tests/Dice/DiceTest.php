@@ -13,7 +13,7 @@ class DiceTest extends TestCase
      * construct object and verify that the object has the expected
      * properties, use no arguments.
      */
-    public function testcreateDice()
+    public function testcreateDice(): void
     {
         $die = new Dice();
         $this->assertInstanceOf("\App\Dice\Dice", $die);

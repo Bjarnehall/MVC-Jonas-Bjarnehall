@@ -11,7 +11,7 @@ class CardHandTest extends TestCase
     /**
      * Test the function GetCards
      */
-    public function testGetCards()
+    public function testGetCards(): void
     {
         $hand = new CardHand();
         $card1 = new Card('Hearts', '10');
@@ -29,7 +29,7 @@ class CardHandTest extends TestCase
     /**
      * Test the function AddCard
      */
-    public function testAddCard()
+    public function testAddCard(): void
     {
         $hand = new CardHand();
         $card = new Card('Hearts', '10');

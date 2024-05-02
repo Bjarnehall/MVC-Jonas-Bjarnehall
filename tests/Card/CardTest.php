@@ -11,7 +11,7 @@ class CardTest extends TestCase
     /**
      * Test the constructor, getSuit and getValue
      */
-    public function testConstructor()
+    public function testConstructor(): void
     {
         $card = new Card('Hearts', 'King');
 
@@ -21,7 +21,7 @@ class CardTest extends TestCase
     /**
      * Test graphical representation
      */
-    public function testgetGrapichalRepresentation()
+    public function testgetGrapichalRepresentation(): void
     {
         $card = new Card('Hearts', '13');
         $result = $card->getGraphicalRepresentation();

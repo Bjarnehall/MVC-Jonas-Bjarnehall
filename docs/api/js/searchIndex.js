@@ -96,6 +96,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Card-DeckOfCards.html#property_cards"
         },                {
+            "fqsen": "\\App\\Card\\Game",
+            "name": "Game",
+            "summary": "",
+            "url": "classes/App-Card-Game.html"
+        },                {
+            "fqsen": "\\App\\Card\\Game\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Card-Game.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Card\\Game\u003A\u003AinitializeGame\u0028\u0029",
+            "name": "initializeGame",
+            "summary": "",
+            "url": "classes/App-Card-Game.html#method_initializeGame"
+        },                {
+            "fqsen": "\\App\\Card\\Game\u003A\u003A\u0024session",
+            "name": "session",
+            "summary": "",
+            "url": "classes/App-Card-Game.html#property_session"
+        },                {
             "fqsen": "\\App\\Card\\Player",
             "name": "Player",
             "summary": "",
