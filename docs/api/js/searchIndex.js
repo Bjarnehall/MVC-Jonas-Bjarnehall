@@ -78,7 +78,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003AgetShuffledCards\u0028\u0029",
             "name": "getShuffledCards",
-            "summary": "Gets\u0020and\u0020returns\u0020an\u0020array\u0020of\u0020cards",
+            "summary": "Get\u0020the\u0020shuffled\u0020cards\u0020from\u0020the\u0020deck.",
             "url": "classes/App-Card-DeckOfCards.html#method_getShuffledCards"
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003AdealCard\u0028\u0029",
@@ -88,7 +88,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003AgetSortedCards\u0028\u0029",
             "name": "getSortedCards",
-            "summary": "Gets\u0020and\u0020returns\u0020an\u0020array\u0020of\u0020cards",
+            "summary": "Get\u0020the\u0020sorted\u0020cards\u0020from\u0020the\u0020deck.",
             "url": "classes/App-Card-DeckOfCards.html#method_getSortedCards"
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003A\u0024cards",
@@ -113,7 +113,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Game\u003A\u003A\u0024session",
             "name": "session",
-            "summary": "",
+            "summary": "Session\u0020management\u0020for\u0020the\u0020game.",
             "url": "classes/App-Card-Game.html#property_session"
         },                {
             "fqsen": "\\App\\Card\\Player",
@@ -140,6 +140,11 @@ Search.appendIndex(
             "name": "calculateScore",
             "summary": "",
             "url": "classes/App-Card-Player.html#method_calculateScore"
+        },                {
+            "fqsen": "\\App\\Card\\Player\u003A\u003AdrawCardFromDeck\u0028\u0029",
+            "name": "drawCardFromDeck",
+            "summary": "Draw\u0020card\u0020from\u0020deck",
+            "url": "classes/App-Card-Player.html#method_drawCardFromDeck"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A\u0024hand",
             "name": "hand",
@@ -308,7 +313,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\Game21\u003A\u003Adoc\u0028\u0029",
             "name": "doc",
-            "summary": "",
+            "summary": "Renders\u0020documentation\u0020page\u0020for\u0020the\u0020game.",
             "url": "classes/App-Controller-Game21.html#method_doc"
         },                {
             "fqsen": "\\App\\Controller\\Game21\u003A\u003AapiGame\u0028\u0029",
@@ -383,7 +388,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Dice\\Dice\u003A\u003A\u0024value",
             "name": "value",
-            "summary": "",
+            "summary": "The\u0020value\u0020of\u0020the\u0020dice\u0020roll.",
             "url": "classes/App-Dice-Dice.html#property_value"
         },                {
             "fqsen": "\\App\\Dice\\DiceGraphic",
@@ -428,12 +433,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003AgetValues\u0028\u0029",
             "name": "getValues",
-            "summary": "",
+            "summary": "Get\u0020the\u0020values\u0020of\u0020the\u0020dice\u0020in\u0020the\u0020hand.",
             "url": "classes/App-Dice-DiceHand.html#method_getValues"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003AgetString\u0028\u0029",
             "name": "getString",
-            "summary": "",
+            "summary": "Get\u0020the\u0020string\u0020representations\u0020of\u0020the\u0020dice\u0020in\u0020the\u0020hand.",
             "url": "classes/App-Dice-DiceHand.html#method_getString"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003A\u0024hand",
@@ -445,6 +450,36 @@ Search.appendIndex(
             "name": "Kernel",
             "summary": "",
             "url": "classes/App-Kernel.html"
+        },                {
+            "fqsen": "\\App\\Lucky\\Luck",
+            "name": "Luck",
+            "summary": "",
+            "url": "classes/App-Lucky-Luck.html"
+        },                {
+            "fqsen": "\\App\\Lucky\\Luck\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Lucky-Luck.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Lucky\\Luck\u003A\u003AgetGreeting\u0028\u0029",
+            "name": "getGreeting",
+            "summary": "",
+            "url": "classes/App-Lucky-Luck.html#method_getGreeting"
+        },                {
+            "fqsen": "\\App\\Lucky\\Luck\u003A\u003AgetTranslatedDayOfWeek\u0028\u0029",
+            "name": "getTranslatedDayOfWeek",
+            "summary": "",
+            "url": "classes/App-Lucky-Luck.html#method_getTranslatedDayOfWeek"
+        },                {
+            "fqsen": "\\App\\Lucky\\Luck\u003A\u003AgetWordForToday\u0028\u0029",
+            "name": "getWordForToday",
+            "summary": "",
+            "url": "classes/App-Lucky-Luck.html#method_getWordForToday"
+        },                {
+            "fqsen": "\\App\\Lucky\\Luck\u003A\u003A\u0024dateTime",
+            "name": "dateTime",
+            "summary": "",
+            "url": "classes/App-Lucky-Luck.html#property_dateTime"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -470,5 +505,10 @@ Search.appendIndex(
             "name": "App",
             "summary": "",
             "url": "namespaces/app.html"
+        },                {
+            "fqsen": "\\App\\Lucky",
+            "name": "Lucky",
+            "summary": "",
+            "url": "namespaces/app-lucky.html"
         }            ]
 );

@@ -65,14 +65,6 @@ class DiceGameController extends AbstractController
             throw new Exception("Can not roll more than 99 dices!");
         }
 
-        // $hand = new DiceHand();
-        // for ($i = 1; $i <= $num; $i++) {
-        //     if ($i % 2 === 1) {
-        //         $hand->add(new DiceGraphic());
-        //     } else {
-        //         $hand->add(new Dice());
-        //     }
-        // }
         $hand = new DiceHand();
         for ($i = 1; $i <= $num; $i++) {
             $diceToAdd = $i % 2 === 1 ? new DiceGraphic() : new Dice();

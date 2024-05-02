@@ -35,7 +35,6 @@ class Game21 extends AbstractController
         $game->initializeGame();
         return $this->redirectToRoute('game21_play');
     }
-
     //Game play page
     /**
      * Initiate the game by shuffle deck and save to session and,
@@ -127,8 +126,12 @@ class Game21 extends AbstractController
             'deck' => $deck
         ]);
     }
-
-
+    /**
+     * Renders documentation page for the game.
+     *
+     * @Route("/game/doc", name="game_doc")
+     * @return Response
+     */
     #[Route("game/doc", name: "game_doc")]
     public function doc(): Response
     {

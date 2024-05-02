@@ -38,20 +38,4 @@ class Game {
         $this->session->set('player', serialize($player));
         $this->session->set('bank', serialize($bank));
     }
-
-    public function bankPlay(): void
-    {
-        $deck = unserialize($this->session->get('shuffledDeck'));
-        $bank = unserialize($this->session->get('bank'));
-
-        while ($bank->calculateScore() < 17) {
-            $card = $deck->dealCard();
-            if ($card) {
-                $bank->drawCard($card);
-            } else {
-                break;
-            }
-        }
-        $this->session->set('bank', serialize($bank));
-    }
 }
