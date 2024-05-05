@@ -277,3 +277,25 @@
 .buttonPlay a {
     color: #FFF;
 }
+
+.presentationbooks {
+    grid-column: 2/ span 5;
+}
+
+@media (max-width: 1050px) {
+    .presentationbooks {
+        grid-column: 1/span 10;
+    }
+}
+
+@media (max-width: 750px) {
+    .presentationbooks {
+        grid-column: 1/span 12;
+        margin-left: -6%;
+    }
+}
+
+.spaceblock {
+    grid-column: 2/ span 8;
+    min-height: 100px;
+}

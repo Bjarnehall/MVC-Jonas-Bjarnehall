@@ -169,3 +169,32 @@ ul.dicearea li {
 .gitlink {
     margin-bottom: 80px;
 }
+
+.books {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+.book {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+.book-details {
+    display: flex;
+    margin-top: 10px;
+}
+    
+.book img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+        }
+    
+.book p {
+    margin: 5px 0;
+}

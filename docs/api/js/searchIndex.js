@@ -118,32 +118,32 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Player",
             "name": "Player",
-            "summary": "",
+            "summary": "Class\u0020Player",
             "url": "classes/App-Card-Player.html"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Initializes\u0020a\u0020new\u0020empty\u0020hand\u0020of\u0020cards\u0020for\u0020the\u0020player.",
             "url": "classes/App-Card-Player.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AdrawCard\u0028\u0029",
             "name": "drawCard",
-            "summary": "",
+            "summary": "Draws\u0020a\u0020card\u0020and\u0020adds\u0020it\u0020to\u0020the\u0020player\u0027s\u0020hand.",
             "url": "classes/App-Card-Player.html#method_drawCard"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AgetHand\u0028\u0029",
             "name": "getHand",
-            "summary": "",
+            "summary": "Get\u0020the\u0020hand\u0020of\u0020cards.",
             "url": "classes/App-Card-Player.html#method_getHand"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AcalculateScore\u0028\u0029",
             "name": "calculateScore",
-            "summary": "",
+            "summary": "Calculates\u0020the\u0020total\u0020score\u0020of\u0020the\u0020hand.",
             "url": "classes/App-Card-Player.html#method_calculateScore"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AdrawCardFromDeck\u0028\u0029",
             "name": "drawCardFromDeck",
-            "summary": "Draw\u0020card\u0020from\u0020deck",
+            "summary": "Draws\u0020a\u0020card\u0020from\u0020the\u0020deck\u0020and\u0020adds\u0020it\u0020to\u0020the\u0020hand.",
             "url": "classes/App-Card-Player.html#method_drawCardFromDeck"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A\u0024hand",

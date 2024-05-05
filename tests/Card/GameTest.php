@@ -9,7 +9,15 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use PHPUnit\Framework\TestCase;
 
 class GameTest extends TestCase
+/**
+ * Class GameTest
+ * 
+ * This class contains tests for the Game class.
+ */
 {
+    /**
+     * Test the initialization of a game instance.
+     */
     public function testInitializeGame(): void
     {
         $sessionMock = $this->createMock(SessionInterface::class);

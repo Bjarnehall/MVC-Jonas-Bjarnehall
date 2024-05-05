@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!
+{% endblock %}
+
+{% block body %}
+
+	<h1>Välkommen till MVC Bibliotek!</h1><br><hr>
+
+	<h2>
+<a href="{{ path('show_library') }}">Våra böcker</a><br><hr>
+<a href="{{ path('add_library') }}">Lägg till bok</a>
+
+
+	</h2>
+
+{% endblock %}
+
