@@ -299,3 +299,7 @@
     grid-column: 2/ span 8;
     min-height: 100px;
 }
+
+.books a {
+    color: hsl(209, 61%, 16%);
+}

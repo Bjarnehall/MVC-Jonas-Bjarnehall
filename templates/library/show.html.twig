@@ -6,6 +6,7 @@
 	<h1>Våra böcker</h1>
 	<div class="books">
 		{% for book in books %}
+			<a href="{{ path('show_library_by_id', {'id': book.id}) }}">
 			<div class="book">
 				<h2>{{ book.title }}</h2>
 				<p>Author:
@@ -16,7 +17,7 @@
 					{% else %}
 						<p>No img for book</p>
 					{% endif %}
-					<p>{{ book.description }}</p>
+					{# <p>{{ book.description }}</p> #}
 				</div>
 				<p>ISBN:
 					{{ book.isbn }}</p>
