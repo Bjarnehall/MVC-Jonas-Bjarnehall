@@ -31,6 +31,7 @@ class LibraryController extends AbstractController
      * Create
      */
     #[Route('library/create', name: 'library_create', methods: ['POST'])]
+    
     public function createBooks(
         Request $request,
         ManagerRegistry $doctrine
@@ -40,11 +41,12 @@ class LibraryController extends AbstractController
         $books = new Books();
 
         $books->setTitle($request->request->get('title'));
-        $books->setIsbn($request->request->getInt('isbn'));
+        // $books->setIsbn($request->request->getInt('isbn'));
+        $books->setIsbn($request->request->get('isbn'));
         $books->setAuthor($request->request->get('author'));
         $books->setDescription($request->request->get('description'));
 
-        // handle file upload
+        // file upload
         $file = $request->files->get('image');
         if ($file && $file->isValid()) {
             $blob = file_get_contents($file->getPathname());
@@ -66,35 +68,16 @@ class LibraryController extends AbstractController
         $entityManager = $doctrine->getManager();
         $booksRepository = $entityManager->getRepository(Books::class);
         $books = $booksRepository->findAll();
-
+        // img
         foreach ($books as $book) {
-            if ($book->getImg()) {
-                $imgData = stream_get_contents($book->getImg());
-                $book->imgBase64 = base64_encode($imgData);
+            $imgData = $book->getImg();
+            if ($imgData !== null) {
+                $imgData = stream_get_contents($imgData);
+                $book->setImgBase64(base64_encode($imgData));
             }
         }
-
         return $this->render('library/show.html.twig', [
             'books' => $books
         ]);
     }
-    // #[Route('/library/create', 'library_create')]
-    // public function createBooks(
-    //     ManageRegistry $doctrine
-    // ): Response {
-    //     $entityManager = $doctrine->getManager();
-
-    //     $books = new Books();
-    //     $books->setTitle('Dune');
-    //     $books->setIsbn(9780441013593);
-    //     $books->setAuthor("Frank Herbert");
-    //     $books->setImg();
-    //     $books->setDescription("Set on the desert planet Arrakis, Dune is the story of Paul Atreides--who would become known as Muad'Dib--and of a great family's ambition to bring to fruition humankind's most ancient and unattainable dream.");
-
-    //     $entityManager->persist($books);
-
-    //     $entityManager->flush();
-
-    //     return new Response('Saved new book with id' .$books->getId());
-    // }
 }

@@ -7,9 +7,9 @@
 
 	<h1>Välkommen till MVC Bibliotek!</h1><br><hr>
 
-<form method="post" action="/library/create" enctype="multipart/form-data">
+<form method="post" action="{{ path('library_create') }}" enctype="multipart/form-data">
 	<input type="text" name="title" placeholder="Book title">
-	<input type="number" name="isbn" placeholder="ISBN">
+	<input type="text" name="isbn" placeholder="ISBN">
 	<input type="text" name="author" placeholder="Author">
 	<textarea name="description" placeholder="Description"></textarea>
 	<input type="file" name="image">

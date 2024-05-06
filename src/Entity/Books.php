@@ -18,7 +18,7 @@ class Books
     private ?string $title = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $isbn = null;
+    private ?string $isbn = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $author = null;
@@ -46,12 +46,12 @@ class Books
         return $this;
     }
 
-    public function getIsbn(): ?int
+    public function getIsbn(): ?string
     {
         return $this->isbn;
     }
 
-    public function setIsbn(?int $isbn): static
+    public function setIsbn(?string $isbn): static
     {
         $this->isbn = $isbn;
 
@@ -92,5 +92,19 @@ class Books
         $this->description = $description;
 
         return $this;
+    }
+    /**
+     *Handle blobs
+     */
+    private ?string $imgBase64 = null;
+
+    public function getImgBase64(): ?string
+    {
+        return $this->imgBase64;
+    }
+    
+    public function setImgBase64(?string $imgBase64): void
+    {
+        $this->imgBase64 = $imgBase64;
     }
 }

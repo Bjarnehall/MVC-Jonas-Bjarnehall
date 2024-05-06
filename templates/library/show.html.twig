@@ -14,7 +14,7 @@
 					{% if book.imgBase64 %}
 						<img src="data:image/jpeg;base64,{{ book.imgBase64 }}" alt="Book Image" style="width: 200px; float: left; margin-right: 20px;">
 					{% else %}
-						<img src="/path/to/default/image.jpg" alt="Default Image" style="width: 200px; float: left; margin-right: 20px;">
+						<p>No img for book</p>
 					{% endif %}
 					<p>{{ book.description }}</p>
 				</div>
