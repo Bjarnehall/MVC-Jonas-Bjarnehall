@@ -15,8 +15,10 @@ class ProductRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Product::class);
     }
-
-    public function findByMinimumValue($value): array
+/**
+ * @return Product[]
+ */
+    public function findByMinimumValue(int $value): array
     {
         return $this->createQueryBuilder('p')
         ->andWhere('p.value >= :value')
@@ -27,7 +29,11 @@ class ProductRepository extends ServiceEntityRepository
         ;
     }
 
-    public function findByMinimumValue2($value): array
+    /**
+    * @param int $value
+    * @return Product[] Returns an array of Product objects
+    */
+    public function findByMinimumValue2(int $value): array
     {
         $conn = $this->getEntityManager()->getConnection();
 
@@ -37,10 +43,12 @@ class ProductRepository extends ServiceEntityRepository
             ORDER BY p.value ASC
             ';
 
-            $resultSet = $conn->executeQuery($sql, ['value' => $value]);
-
-            return $resultSet->fetchAllAssociative();
+        $resultSet = $conn->executeQuery($sql, ['value' => $value]);
+/** @phpstan-ignore-next-line */
+        return $resultSet->fetchAllAssociative();
+        // return $query->getResult();
     }
+
     //    /**
     //     * @return Product[] Returns an array of Product objects
     //     */

@@ -12,8 +12,8 @@ use Symfony\Component\Routing\Attribute\Route;
 class LibraryTestController extends AbstractController
 {
     #[Route('/library_welcome', name: 'library_welcome')]
-     public function welcomeLibrary(): Response
-     {
+    public function welcomeLibrary(): Response
+    {
         return $this->render('library/library.html.twig');
-     }
+    }
 }

@@ -14,13 +14,13 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-
-class Game {
+class Game
+{
     /**
      * Session management for the game.
      *
      * @var SessionInterface
-     */ 
+     */
     private SessionInterface $session;
 
     public function __construct(SessionInterface $session)

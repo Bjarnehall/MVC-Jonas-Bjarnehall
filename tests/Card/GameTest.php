@@ -5,15 +5,15 @@ namespace App\Card;
 use App\Card\Card;
 use App\Card\DeckOfCards;
 use App\Card\CardHand;
-use Symfony\Component\HttpFoundation\Session\SessionInterface; 
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use PHPUnit\Framework\TestCase;
 
 class GameTest extends TestCase
-/**
- * Class GameTest
- * 
- * This class contains tests for the Game class.
- */
+    /**
+     * Class GameTest
+     *
+     * This class contains tests for the Game class.
+     */
 {
     /**
      * Test the initialization of a game instance.

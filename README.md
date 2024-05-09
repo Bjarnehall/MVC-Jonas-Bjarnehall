@@ -103,7 +103,7 @@ Författare: Christer Lundberg
 Bild: ??
 
 Beskrivning:
-Den 34-åriga Jimmy förlorade för 15 år sen sin bästa vän och är fast i det förflutna. Större delen av sin tid sitter han på sitt rum och spelar WoW. Han bor fortfarande hos sin mamma och kan knappt ta hand om sig själv, men efter att ha fått en praktikplats på Sjöfartsmuseet i Göteborg blir ingenting sig likt. Där möter han Lisa, och där gömmer han också den lilla bläckfisk som han får i sin vård. Bläckfisken är dock inte så söt och ofarlig och den växer med oroande hastighet. Bläckfisken är en vidunderligt galen skröna av ett oemotståndligt berättarsnille. Christer Lundberg lyckas med konstycket att förena det vardagliga med det bisarra i det Göteborg han känner så väl.
+Den 34-åriga Jimmy förlorade för 15 år sen sin bästa vän och är fast i det förflutna. Större delen av sin tid sitter han på sitt rum och spelar WoW. Han bor fortfarande hos sin mamma och kan knappt ta hand om sig själv, men efter att ha fått en praktikplats på Sjöfartsmuseet i Göteborg blir ingenting sig likt. Där möter han Lisa, och där gömmer han också den lilla bläckfisk som han får i sin vård. Bläckfisken är dock inte så söt och ofarlig och den växer med oroande hastighet.
 
 Bok 4:
 Titel: Harry Potter och fången från Azkaban

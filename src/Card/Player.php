@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
+
 /**
  * Class Player
  */
@@ -31,7 +32,7 @@ class Player
     }
     /**
      * Draws a card and adds it to the player's hand.
-     * 
+     *
      * @param Card $card card added to the hand.
      */
     public function drawCard(Card $card): void
@@ -40,7 +41,7 @@ class Player
     }
     /**
      * Get the hand of cards.
-     * 
+     *
      * @return CardHand The current hand of cards.
      */
     public function getHand(): CardHand

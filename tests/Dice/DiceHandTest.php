@@ -7,6 +7,7 @@ use App\Dice\Dice;
 use App\Dice\DiceGraphic;
 
 use PHPUnit\Framework\TestCase;
+
 /**
  * Class DiceHandTest
  *

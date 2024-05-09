@@ -9,8 +9,6 @@ use DateTime;
 
 class LuckTest extends TestCase
 {
-
-
     public function testGetGreetingMorning(): void
     {
         $mockedTime = new DateTime("2024-01-01 08:00:00");

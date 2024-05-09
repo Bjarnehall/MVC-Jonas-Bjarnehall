@@ -8,7 +8,7 @@ class DiceHand
 {
     /**
      * @var Dice[]
-     * 
+     *
      * Hand store an array of Dice objects.
      */
     private array $hand = [];

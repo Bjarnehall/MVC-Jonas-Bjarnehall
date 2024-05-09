@@ -23,8 +23,9 @@ class Books
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $author = null;
 
+
     #[ORM\Column(type: Types::BLOB, nullable: true)]
-    private $img = null;
+    private mixed $img = null;
 
     #[ORM\Column(length: 500, nullable: true)]
     private ?string $description = null;
@@ -70,12 +71,12 @@ class Books
         return $this;
     }
 
-    public function getImg()
+    public function getImg(): mixed
     {
         return $this->img;
     }
 
-    public function setImg($img): static
+    public function setImg(mixed $img): static
     {
         $this->img = $img;
 
@@ -102,7 +103,7 @@ class Books
     {
         return $this->imgBase64;
     }
-    
+
     public function setImgBase64(?string $imgBase64): void
     {
         $this->imgBase64 = $imgBase64;

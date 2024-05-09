@@ -279,10 +279,12 @@
 }
 
 .presentationbooks {
-    grid-column: 2/ span 5;
+    grid-column: 2/ span 8;
+    background-color: #ffffffe3;
+    padding-left: 40px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1450px) {
     .presentationbooks {
         grid-column: 1/span 10;
     }
@@ -291,13 +293,18 @@
 @media (max-width: 750px) {
     .presentationbooks {
         grid-column: 1/span 12;
-        margin-left: -6%;
+        margin-left: -12%;
     }
 }
 
 .spaceblock {
     grid-column: 2/ span 8;
     min-height: 100px;
+}
+
+.spaceblockSmall {
+    grid-column: 2/ span 8;
+    min-height: 10px;
 }
 
 .books a {

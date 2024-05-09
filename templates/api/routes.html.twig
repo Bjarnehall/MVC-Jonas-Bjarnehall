@@ -6,22 +6,37 @@
 <div class="presentation">
 
 <h1>API routes</h1><hr>
+<h3>
+<button>
+	<a href="{{ path('api_library_books') }}" style="color: #fff;">Våra böcker</a><br></h3></button>
+<p>Visar upp samtliga böcker från biblioteket i json format.</p>
 
-    <h3><a href="{{ path('api_game') }}">21 poäng ställning</a><br></h3>
+<button>
+	<a href="{{ path('api_library_book_by_isbn', {'isbn': '9789129704211'}) }}" style="color: #fff;">Exempel länk bok ISBN</a><br></button>
+<p>Visar upp en bok från biblioteket i jsonformat hämtad från isbn kod.</p>
+<div class="spaceblockSmall"></div>
 
-    <h3><a href="{{ path('api_quote') }}">Citat</a><br></h3>
+
+<button>
+	<a href="{{ path('api_game') }}" style="color: #fff;">21 poäng ställning</a><br></button>
+
+<p>Visar upp ställningen mellan spelare och bank i spelet 21</p>
+<div class="spaceblockSmall"></div>
+
+<button>
+	<a href="{{ path('api_quote') }}" style="color: #fff;">Citat</a><br></button>
+
     <p>Visar upp slumpmässiga härliga qoutes! </p>
 
-    <h3><a href="{{ path('api_deck') }}">Kortlek</a><br></h3>
+    <button><a href="{{ path('api_deck') }}" style="color: #fff;">Kortlek</a><br></button>
     <p>Visar upp korleken sorterad i Json struktur. </p>
 
-    <h3>Blanda korten</h3>
     <form action="{{ path('api_deck_shuffle') }}" method="post">
         <button type="submit">Blanda korten</button>
     </form>
     <p>Blandar korten och visar upp dem i Json struktur. </p>
 
-    <h3>Dra ett kort</h3>
+
     <form action="{{ path('api_deck_draw') }}" method="post">
         <button type="submit">Dra ett kort</button>
     </form>

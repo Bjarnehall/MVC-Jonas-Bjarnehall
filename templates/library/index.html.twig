@@ -4,13 +4,19 @@
 {% endblock %}
 
 {% block body %}
+<div class="presentationbooks">
 
-	<h1>Välkommen till MVC Bibliotek!</h1><br><hr>
+	<h1>Välkommen till MVC Bibliotek!</h1><br>
 
-	<h2>
-	<a href="{{ path('show_library') }}">Våra böcker</a><br><hr>
-	<a href="{{ path('add_library') }}">Lägg till bok</a>
-	</h2>
+
+<h2><a href="{{ path('show_library') }}">📚</a> Se våra böcker</h2>
+<h2><a href="{{ path('add_library') }}">📙</a> Lägg till en bok</h2>
+
+</div>
+<script>
+document.body.style.backgroundImage = "url({{ asset('img/biliotek.jpg') }})";
+</script>
+
 
 {% endblock %}
 
