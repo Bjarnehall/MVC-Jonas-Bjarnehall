@@ -7,31 +7,31 @@
 	<a href="{{ path('show_library') }}">Tillbaka</a><br>
 </h2>
 
-		<div class="book">
-			<h2>{{ book.title }}</h2>
-			<p>Author:
-				{{ book.author }}</p>
-			<div class="book-details">
-				{% if book.imgBase64 %}
-					<img src="data:image/jpeg;base64,{{ book.imgBase64 }}" alt="Bild på bok" style="width: 200px; float: left; margin-right: 20px;">
-				{% else %}
-					<p>No image for this book</p>
-				{% endif %}
-				<p>{{ book.description }}</p>
-			</div>
-			<p>ISBN:
-				{{ book.isbn }}</p>
-                <button><a href="{{ path('update_book', {'id': book.id}) }}" style="color: #fff;"> Redigera </a></button>
-<div class="spaceblockSmall"></div>
-
+<div class="book">
+	<h2>{{ book.title }}</h2>
+	<p>Author:
+		{{ book.author }}</p>
+	<div class="book-details">
+		{% if book.imgBase64 %}
+			<img src="data:image/jpeg;base64,{{ book.imgBase64 }}" alt="Bild på bok" style="width: 200px; float: left; margin-right: 20px;">
+		{% else %}
+			<p>No image for this book</p>
+		{% endif %}
+			<p>{{ book.description }}</p>
+	</div>
+		<p>ISBN:
+		{{ book.isbn }}</p>
+        <button>
+			<a href="{{ path('update_book', {'id': book.id}) }}" style="color: #fff;"> Redigera </a>
+		</button>
+		<div class="spaceblockSmall"></div>
 			<form action="{{ path('delete_library_by_id', {'id': book.id}) }}" method="POST">
 				<input type="hidden" name="_method" value="DELETE">
 				<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ book.id) }}">
 				<button type="submit">Ta bort</button>
 			</form>
-
 		</div>
-	</div>
+</div>
 	<div class="spaceblock"></div>
 <script>
 	document.body.style.backgroundImage = "url(  {{ asset('img/biliotek.jpg') }})";

@@ -60,7 +60,6 @@ class LibraryController extends AbstractController
         $entityManager->persist($books);
         $entityManager->flush();
 
-        // return new Response('Saved new book with id ' . $books->getId());
         return $this->render('library/index.html.twig', [
         'controller_name' => 'LibraryController',
         ]);
@@ -124,7 +123,7 @@ class LibraryController extends AbstractController
         $entityManager = $doctrine->getManager();
         $booksRepository = $entityManager->getRepository(Books::class);
         $books = $booksRepository->findAll();
-        // img
+
         foreach ($books as $book) {
             $imgData = $book->getImg();
             if ($imgData !== null) {
@@ -149,7 +148,6 @@ class LibraryController extends AbstractController
         if (!$book) {
             throw $this->createNotFoundException('Kan inte hitta boken');
         }
-
 
         $imgData = $book->getImg();
         if ($imgData !== null) {

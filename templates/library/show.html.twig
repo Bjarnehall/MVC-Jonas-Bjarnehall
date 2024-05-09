@@ -6,33 +6,26 @@
 	<h1>Våra böcker</h1>
 	<div class="books">
 		{% for book in books %}
-			<a href="{{ path('show_library_by_id', {'id': book.id}) }}">
-			<div class="book">
-				<h2>{{ book.title }}</h2>
-				<p>Author:
-					{{ book.author }}</p>
-				<div class="book-details">
-					{% if book.imgBase64 %}
-						{# <img src="data:image/jpeg;base64,{{ book.imgBase64 }}" alt="Book Image" float: left; margin-right: 10px;"> #}
-						<img src="data:image/jpeg;base64,{{ book.imgBase64 }}" alt="Book Image" style="float: left; margin-right: 10px;">
-
-
-					{% else %}
-						<p>No img for book</p>
-					{% endif %}
-					{# <p>{{ book.description }}</p> #}
-				</div>
-				<p>ISBN:
-					{{ book.isbn }}</p>
+		<a href="{{ path('show_library_by_id', {'id': book.id}) }}">
+		<div class="book">
+			<h2>{{ book.title }}</h2>
+			<p>Author:
+			{{ book.author }}</p>
+		<div class="book-details">
+			{% if book.imgBase64 %}
+				<img src="data:image/jpeg;base64,{{ book.imgBase64 }}" alt="Book Image" style="float: left; margin-right: 10px;">
+			{% else %}
+				<p>No img for book</p>
+			{% endif %}
+		</div>
+			<p>ISBN:
+			{{ book.isbn }}</p>
 			</div>
-		{% endfor %}
-	</div>
+			{% endfor %}
+		</div>
 </div>
 <div class="spaceblock">
-
 </div>
-
-
 <script>
 	document.body.style.backgroundImage = "url( {{ asset('img/biliotek.jpg') }})";
 </script>

@@ -10,6 +10,7 @@
                 <p><li><a href="#kmom02"><p>kmom02</p></a></li></p>
                 <p><li><a href="#kmom03"><p>kmom03</p></a></li></p>
                 <p><li><a href="#kmom04"><p>kmom04</p></a></li></p>
+                <p><li><a href="#kmom05"><p>kmom05</p></a></li></p>
             </ul>
 </div>
 <div class="presentation">
@@ -120,6 +121,34 @@ att återanvända kod om man måste skriva test för all kod.</p>
 Avslutningsvis så tycker jag att detta kursmomentet har varit roligt och enhetstestning är absolut något jag vill lära mig mer om kanske kan
 det till och med bli ett framtida arbete. Min TIL för detta kursmoment är PHPUnit!</p>
 
+<br>
+<h2 id="kmom05">kmom05</h2>
+<br>
+<p>
+Jag är särskilt intresserad när vi jobbar med databaser och har därför uppskattat denna veckas övning och uppgift med ORM. Det är nytt för mig 
+att arbeta med databaser på detta sätt och det har varit intressant att arbeta med databaser från en ny vinkel. Det gick förvånansvärt smärtfritt 
+att komma igång, att ha databasen som objekt i en fil  där förfrågningar hanteras som funktioner tycker jag känns smart och smidigt.</p>
+<p>
+Utformningen av mitt bibliotek är så att användaren möts av en sida där denne kan välja att se utbudet eller lägga till en ny bok. Om användaren 
+väljer att lägga till en ny bok möts denne av ett formulär där information om boken kan läggas till, om användaren väljer att lägga upp en bild 
+sparas denna direkt i databasen via datatypen BLOB. Detta är något jag valt att göra trots att det inte anses som det mest optimala 
+tillvägagångssättet. Jag tycker att det är kul att prova nya sätt att arbeta med databasen och i denna uppgift där mindre bilder används i 
+applikationen har det fungerat väl. När användaren lagt till en ny bok skickas användaren tillbaka till startsidan för biblioteket.</p>
+<p>
+När användaren klickar på “Se våra böcker” kommer denne till en sida som visar upp alla böcker och här kan varje bok klickas på för att se detaljer 
+om boken, i detta fallet är det beskrivningen som visas utöver vad som visas i översikten. Även möjligheten att ta bort en bok eller redigera en 
+bok finns på sidan som visar detaljer om boken. Beskrivning av boken stod inte i uppgiften utan är något jag la till för en intressantare sida.</p>
+<p>
+Något jag hade problem med och som tog lång tid av felsökning var att jag valde att spara ISBN numret som en integer i databasen vilket gav mig 
+mycket huvudvärk. Efter ett antal svordomar senare upptäckte jag att värdet av ISBN numret var alldeles för stort för att kunnas lagras på detta 
+sätt och jag ändrade så att det lagras som en string istället.</p>
+<p>
+Min uppfattning av att arbeta med ORM i jämförelse med hur vi arbetade med databaser i databas kursen är att det går snabbare och smidigare och 
+för många webbapplikationer är detta ett sätt att föredra. Men vid mer avancerade/större projekt kan jag uppleva att det så småningom blir en 
+enda stor röra och ett traditionellt sätt att arbeta direkt med databasen som vi gjort tidigare är att föredra.</p>
+<p>
+Min TIL för detta kursmomentet är introduktionen till Doctrine!
+</p>
 
 
 
