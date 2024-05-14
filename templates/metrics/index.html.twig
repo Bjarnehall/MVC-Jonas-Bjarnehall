@@ -141,10 +141,12 @@ Börja med att skriva om förbättringarna, vad du tänker göra, varför du vä
 kommer påverka mätvärdena för kvalitet.
 
 Implementera sedan förbättringarna.<br>
-test/Card/DeckOfCardsTest.php | I denna class fanns två kodrader som upprepades och kunde därför städas bort.
+test/Card/DeckOfCardsTest.php | I denna kod finns två kodrader som upprepades och kunde därför städas bort.
 Jag testkör mitt test med composer php unit för att kontrollera att inget gick sönder och pushar sedan förändringar
-till git.
-Resultatet av detta i Scrutinizer blev att klassen gick från. size 59 complexity 4 
+till git. Jag stämmer sedan av i scrutinizer och kan se att dessa issues nu är lösta och ligger under fliken "fixed".
+<br>
+Jag tar bort controller filen LibraryTestController.php som ej används av min webbplats utan blivit kvar sedan
+utvecklingen. Stämmer av i phpmetrics och kan se att en klass försvann.
 
 
 Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
