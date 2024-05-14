@@ -113,3 +113,13 @@ Bild: ??
 
 Beskrivning:
 De fantastiska, och makalöst framgångsrika, böckerna om Harry Potter har sålt i hundratals miljoner exemplar världen över. Den föräldralöse pojken som visar sig vara en trollkarl tog världen med storm, och lämnade ingen oberörd. Böckerna har blivit klassiker, och de fortsätter att förtrolla nya generationer.
+
+Scrutinizer
+--------------
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/?branch=main)
+
+[![Code Coverage](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/?branch=main)
+
+[![Build Status](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/build-status/main)
+
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/code-intelligence)

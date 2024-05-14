@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Metrics
+{% endblock %}
+
+{% block body %}
+<div class="presentationkmom06">
+<h1>Metrics analys</h1>
+
+<h2>
+Introduktion
+</h2>
+<p>
+Börja med en rubrik “Introduktion” där du förklarar de sex C:na och hur de kan påverka kodens kvalitet. 
+Exemplifiera, där det passar, med några mätvärden som är kopplad till din egen kod och ge en kort förklaring 
+av mätvärdet relaterat till kodkvalitet.
+Codestyle
+Coverage
+Complexity
+Cohesion
+Coupling
+CRAP
+<br><br>
+I sammanhang av kodkvalitet och begreppet "snygg" kod finns något som vi benämner de sex styken C:na vilka
+lyder.<br>
+
+<h4>Codestyle:</h4> Genom att skriva kod med en konsistent stil och anpassa sig till de normer som finns gör man det enklare
+för sig själv då man lättare kommer att kunna läsa annans kod men framförallt så gör man det enklare för andra att 
+läsa ens egen kod vilket är värdefullt.<br>
+
+<h4>Covergare:</h4> En måttstock på hur mycket av koden som omfattas av testning, ju mer kod teckning som
+koden har destå mer arbtete har lagts ner på att skriva tester för koden vilket i sin tur bör vara en indikation
+på att koden håller en hög kvalite men behöver inte nödvändigtvis vara så.<br>
+
+<h4>Complexity:</h4> En kodbas med hög komplexitet betyder inte nödvändigtvis att den är bra eller dålig, dock kan en hög 
+komplexitet antyda att koden är svår att underhålla och bygga ut särkilt för en kodare som ska fortsätta på 
+ett redan båbörjat projekt. Med tanke på nackdelarna med hög komplexitet ska det försökas att undvikas i den mån 
+som är rimligt, en del uppgifter är väldigt komplexa och kan därför vara svåra att göra på ett enkelt sätt och i
+dessa fall är det helt okej men "keep it simple" är ett bra mantra att ha för sig själv när man arbetar med sin 
+kod så att man inte krånglar till det i onödan vilket kan vara lätt hänt.<br>
+
+<h4>Cohesion</h4><br>
+
+<h4>Coupling:</h4> Ett begrepp som ändvänds i samband med hur starkt kopplad en funktion eller metod kopplad till andra.
+En funktion som är stark kopplad genom att vara beroende av andra funktioner är inte modulär och kan därför ställa
+till med problem i framtiden när projektet tar en annan riktning eller implementationer som inte var förutsädda 
+från början dyker upp.<br>
+
+<h4>CRAP</h4><br>
+
+</p>
+<h3>
+Phpmetrics
+</h3>
+<p>
+Skapa en rubrik “Phpmetrics” och analysera dess rapport för din kod. Använd mätvärdena för att hitta 
+flaskhalsar och svaga punkter i din kod (minst 3 stycken). Du vill hitta kod som har förbättringspotential. 
+Visualisera med någon representativ bild från rapporten.<br><br><br>
+
+Genom rapporten från php metrics har jag hittat vissa svagheter med min kod.
+<br>
+Class Violations / App\Controller\Library\Controller<br>
+Här finns förbättringspotential då för mycket funktionallitet ligger i denna controller, genom att dela upp 
+koden i flera klasser skulle min kod bli mer mobil.<br>
+
+Via rapporten finner jag även att det är många av mina classer som inte omfattas av enhetstester och här finns
+därför en stor potenial för förbättring. Metrics talar dessutom om att klasser med en hög kompleitet bör 
+omfattas av enhetstester och här återkommmer LibraryController som en svaghet. Efter refaktorering av denna kod
+bör även enhetstester skrivas.<br>
+
+Det finns flera klasser som visar på en hög komplexitet och lågt maintainibillty index varav flera kommer ifrån 
+övningsuppgifter som jag gjort under kursen. Efter som att detta är kod som skrivits i syfte att träna så skulle 
+det vara lämpligt att städa bort en del av denna kod då onödig kod orsakar en kod som är svår att underhålla.<br>
+
+Sammanfattningsvis så är det främst LibraryController och LuckyController de punkterna där jag ser störst möjlighet
+till förbättring genom refaktorering och enhetstestning. Utöver detta finns det kod som inte har något användnings
+område alls i mitt repository och kan därför "städas" bort alternativt exkluderas från rapporten.
+</p>
+<h3>
+Scrutinizer
+</h3>
+<p>
+Skapa en rubrik “Scrutinizer” och analysera dess rapport för din kod. Gör på samma sätt som du gjorde med 
+Phpmetrics.<br>
+
+Betyget för min kod i Scrutinizer får rating 10 vid en första kontroll vilket ger en antydan till att koden är bra,
+men däremot är kodtäckningen dålig endast på 15% vilket leder mig till att ifrågasätta det bra betyget på koden. 
+När jag undersöker fliken "Issues" set jag här att jag har tre classer som inte används alls och är onödiga filer 
+som skapats under kursens gång när jag provat mig fram med uppgifterna. Här finns en chans att genom att plocka bort
+dessa tre klasser som omfattas att få en överlag bättre kodteckning.<br>
+
+Tidigare nämda problem ifrån Metrics rapporten bekräftas i Scrutinizer där LibraryController visar en hög komplexitet
+och en 0% Coverage här finns med andra ord att arbeta med refaktorering samt enhetstestning. I övrigt finns även en del 
+filer från övnings uppgifter som till exempel ProductController som skulle kunnas "Städas" bort eller exkluderas ifrån 
+testet då det inte är kod som tillför något till webbplatsen skulle detta skapa en mindre kodbas och leda till en högre
+total kodtäckning.
+
+</p>
+<p>
+Inkludera klickbara Scrutinizer badges i din rapport för build, coverage och quality.
+Placera samma badges i din README.md.
+</p>
+<p>
+I ovan analys så kopplar du dina “findings” till 6C. Använd gärna något ytterligare mättal som du 
+finner relevant och intressant.
+</p>
+<p>
+Skapa en ny rubrik “Förbättringar” där du väljer minst 3 förbättringar som du vill göra med din kod 
+gärna fler.
+</p>
+<p>
+Exempel på förbättringar kan vara:
+
+Fixa issues
+Öka kodtäckning
+Fokusera på kvalitetsindex i Scrutinizer
+Minska komplexiteten i class/metod
+Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det 
+kommer påverka mätvärdena för kvalitet.
+
+Implementera sedan förbättringarna.
+Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
+Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar
+</p>
+<h3>
+Diskussion
+</h3>
+<p>
+Avsluta med ett stycke “Diskussion” där du diskuterar kort kring det du nyss gjort.
+Kan man aktivt jobba med kodkvalitet och “clean code” på detta sättet?
+Finns det fördelar och kanske nackdelar?
+Ser du andra möjligheter att jobba mot “clean code”?
+</p>
+</div>
+{% endblock %}
+

@@ -310,3 +310,20 @@
 .books a {
     color: hsl(209, 61%, 16%);
 }
+
+.presentationkmom06 {
+    grid-column: 1/ span 9;
+}
+
+@media (max-width: 1050px) {
+    .presentationkmom06 {
+        grid-column: 1/span 10;
+    }
+}
+
+@media (max-width: 750px) {
+    .presentationkmom06 {
+        grid-column: 1/span 12;
+        margin-left: -6%;
+    }
+}
