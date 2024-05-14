@@ -312,7 +312,7 @@
 }
 
 .presentationkmom06 {
-    grid-column: 1/ span 9;
+    grid-column: 1/ span 8;
 }
 
 @media (max-width: 1050px) {
@@ -326,4 +326,8 @@
         grid-column: 1/span 12;
         margin-left: -6%;
     }
+}
+
+.presentationkmom06 img {
+    max-width: 100%;
 }

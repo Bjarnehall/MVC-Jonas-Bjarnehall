@@ -39,23 +39,27 @@ som är rimligt, en del uppgifter är väldigt komplexa och kan därför vara sv
 dessa fall är det helt okej men "keep it simple" är ett bra mantra att ha för sig själv när man arbetar med sin 
 kod så att man inte krånglar till det i onödan vilket kan vara lätt hänt.<br>
 
-<h4>Cohesion</h4><br>
+<h4>Cohesion:</h4>
+<p>En klass med hög Cohesion indikerar att methoderna relaterar till varandra i hög grad. Detta i sin tur indikerar att
+classen har ett tydligt syfte och gör i bästa fall endast en sak. I motsats till detta innebär en låg cohesion att classen 
+har en lösare relation och gör många olika saker.
 
 <h4>Coupling:</h4> Ett begrepp som ändvänds i samband med hur starkt kopplad en funktion eller metod kopplad till andra.
 En funktion som är stark kopplad genom att vara beroende av andra funktioner är inte modulär och kan därför ställa
 till med problem i framtiden när projektet tar en annan riktning eller implementationer som inte var förutsädda 
 från början dyker upp.<br>
 
-<h4>CRAP</h4><br>
+<h4>CRAP:</h4>Är en kombination av complexitet i förhållande till kodtäckning. Genom att väga komplexitet mot hur väl testad
+koden är kommer CRAP till nytta då vi får ett riktmärke kring hur mycket arbete med enhetstester för en metod som är rimligt
+att sträva efter. En komplicerad kod kan behöva mer testning än en kod med låg komplexitet.<br>
 
 </p>
 <h3>
 Phpmetrics
 </h3>
+
 <p>
-Skapa en rubrik “Phpmetrics” och analysera dess rapport för din kod. Använd mätvärdena för att hitta 
-flaskhalsar och svaga punkter i din kod (minst 3 stycken). Du vill hitta kod som har förbättringspotential. 
-Visualisera med någon representativ bild från rapporten.<br><br><br>
+
 
 Genom rapporten från php metrics har jag hittat vissa svagheter med min kod.
 <br>
@@ -75,7 +79,11 @@ det vara lämpligt att städa bort en del av denna kod då onödig kod orsakar e
 Sammanfattningsvis så är det främst LibraryController och LuckyController de punkterna där jag ser störst möjlighet
 till förbättring genom refaktorering och enhetstestning. Utöver detta finns det kod som inte har något användnings
 område alls i mitt repository och kan därför "städas" bort alternativt exkluderas från rapporten.
+
 </p>
+<img src="{{ asset('img/metrics-start.png') }}" alt="picture of metrics" width="920">
+
+
 <h3>
 Scrutinizer
 </h3>
@@ -84,27 +92,41 @@ Skapa en rubrik “Scrutinizer” och analysera dess rapport för din kod. Gör 
 Phpmetrics.<br>
 
 Betyget för min kod i Scrutinizer får rating 10 vid en första kontroll vilket ger en antydan till att koden är bra,
-men däremot är kodtäckningen dålig endast på 15% vilket leder mig till att ifrågasätta det bra betyget på koden. 
-När jag undersöker fliken "Issues" set jag här att jag har tre classer som inte används alls och är onödiga filer 
-som skapats under kursens gång när jag provat mig fram med uppgifterna. Här finns en chans att genom att plocka bort
-dessa tre klasser som omfattas att få en överlag bättre kodteckning.<br>
+däremot är kodtäckningen låg endast 15% vilket leder mig till att ifrågasätta det betyget på koden. 
+När jag undersöker fliken "Issues" ser jag att det finns tre klasser som inte används alls. Dessa klasser är 
+skapade under kursens gång när jag provat mig fram samt arbetat med övningsuppgifterna. Det finns en möjlighet att städa bort
+kod och få en överlag bättre kodteckning samtidigt som några issues försvinner.<br>
 
 Tidigare nämda problem ifrån Metrics rapporten bekräftas i Scrutinizer där LibraryController visar en hög komplexitet
-och en 0% Coverage här finns med andra ord att arbeta med refaktorering samt enhetstestning. I övrigt finns även en del 
-filer från övnings uppgifter som till exempel ProductController som skulle kunnas "Städas" bort eller exkluderas ifrån 
-testet då det inte är kod som tillför något till webbplatsen skulle detta skapa en mindre kodbas och leda till en högre
-total kodtäckning.
+med en 0% Coverage, här finns en möjlighet att arbeta med refaktorering och enhetstestning.<br>
+
+
+<img src="{{ asset('img/scrutinizer-start.png') }}" alt="picture of scrutinizer" width="920">
 
 </p>
 <p>
-Inkludera klickbara Scrutinizer badges i din rapport för build, coverage och quality.
-Placera samma badges i din README.md.
+Nuvarane värden från badges.
+<br>
+<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/quality-score.png?b=main" alt="Scrutinizer Code Quality"/><br>
+<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/coverage.png?b=main" alt="Code Coverage"/><br>
+<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/build.png?b=main" alt="Build Status"/><br>
+<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/code-intelligence.svg?b=main" alt="Code Intelligence Status"/><br>
+
+
 </p>
 <p>
 I ovan analys så kopplar du dina “findings” till 6C. Använd gärna något ytterligare mättal som du 
 finner relevant och intressant.
 </p>
+<h3>Förbättringar</h3>
 <p>
+Den första förbättring jag vill göra är att städa bort alternativt exkludera kod som inte är relevatn
+för min webbplats. Genom att göra detta blir jag av med issues så som "unused classes" men jag kommer
+även att förbättra min totala kodtäckning.
+
+Min LibraryConroller ska jag bryta ner i flera klasser då denna fil är allt för komplex. I detta fall 
+kommer jag att kunna få en lägre complexitet.
+<br><br>
 Skapa en ny rubrik “Förbättringar” där du väljer minst 3 förbättringar som du vill göra med din kod 
 gärna fler.
 </p>
@@ -118,7 +140,13 @@ Minska komplexiteten i class/metod
 Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det 
 kommer påverka mätvärdena för kvalitet.
 
-Implementera sedan förbättringarna.
+Implementera sedan förbättringarna.<br>
+test/Card/DeckOfCardsTest.php | I denna class fanns två kodrader som upprepades och kunde därför städas bort.
+Jag testkör mitt test med composer php unit för att kontrollera att inget gick sönder och pushar sedan förändringar
+till git.
+Resultatet av detta i Scrutinizer blev att klassen gick från. size 59 complexity 4 
+
+
 Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
 Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar
 </p>
@@ -132,5 +160,8 @@ Finns det fördelar och kanske nackdelar?
 Ser du andra möjligheter att jobba mot “clean code”?
 </p>
 </div>
+</div>
+<div class="spaceblock"></div>
+
 {% endblock %}
 

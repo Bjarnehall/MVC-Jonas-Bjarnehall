@@ -58,8 +58,8 @@ class DeckOfCardsTest extends TestCase
      */
     public function testDealCardFromDeck(): void
     {
-        $initialCount = count($this->deck->getSortedCards());
-        $card = $this->deck->dealCard();
+        // $initialCount = count($this->deck->getSortedCards());
+        // $card = $this->deck->dealCard();
 
         $initialCount = count($this->deck->getSortedCards());
         $card = $this->deck->dealCard();
