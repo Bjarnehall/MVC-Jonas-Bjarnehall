@@ -149,7 +149,18 @@ Jag tar bort controller filen LibraryTestController.php som ej används av min w
 utvecklingen. Stämmer av i phpmetrics och kan se att en klass försvann.
 <br>
 Jag tar bort controller filen ProductController.php som är ifrån en tidigare övning och ej fyller någon funktion för
-min webbplats.
+min webbplats. Stämmer av i metrics och kan se att en Violation försvinner och en klass försvinner.
+<br>
+Mitt nästa steg är att förbättra min kod i LibraryController vilket jag gör genom att refaktorera en del av koden 
+och flytta en del av funktionaliteten till klassen Library. I controllen finns två tjocka routes som är ganska lika varandra
+update och create. Jag flyttar stora delar av koden till min klass Library. Efteråt stämmer jag av i metrics och kan se att
+klassen LibraryController går från att vara rödmarkerad till att bli gul och värderna ändras enlig:<br>
+
+Cyclomatic complexity, före: 12 efter: 7
+Maintainabillity index, före: 66.48 efter: 71.13<br><br>
+
+
+
 
 
 Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.

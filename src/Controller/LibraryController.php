@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Library\Library;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -12,6 +14,12 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class LibraryController extends AbstractController
 {
+    private Library $library;
+
+    public function __construct(Library $library)
+    {
+        $this->library = $library;
+    }
     /**
      * Home page for library
      */
@@ -36,37 +44,18 @@ class LibraryController extends AbstractController
      * Route for creating item from added item in add_library to database
      */
     #[Route('library/create', name: 'library_create', methods: ['POST'])]
-
-    public function createBooks(
-        Request $request,
-        ManagerRegistry $doctrine
-    ): Response {
-        $entityManager = $doctrine->getManager();
-
-        $books = new Books();
-
-        $books->setTitle($request->request->get('title'));
-        $books->setIsbn($request->request->get('isbn'));
-        $books->setAuthor($request->request->get('author'));
-        $books->setDescription($request->request->get('description'));
-
-        // file upload
-        $file = $request->files->get('image');
-        if ($file && $file->isValid()) {
-            $blob = file_get_contents($file->getPathname());
-            $books->setImg($blob);
-        }
-
-        $entityManager->persist($books);
-        $entityManager->flush();
+    public function createBooks(Request $request): Response
+    {
+        $this->library->createOrUpdateBook($request);
 
         return $this->render('library/index.html.twig', [
-        'controller_name' => 'LibraryController',
+            'controller_name' => 'LibraryController',
         ]);
     }
     /**
      * Page for editing existing item
      */
+
     #[Route('/library/update_book/{id}', name: 'update_book')]
     public function update(int $id, ManagerRegistry $doctrine): Response
     {
@@ -84,33 +73,13 @@ class LibraryController extends AbstractController
      * Route for posting changes from update_book to database
      */
     #[Route('/library/update/{id}', name: 'library_update', methods: ['POST'])]
-    public function updateBook(
-        int $id,
-        Request $request,
-        ManagerRegistry $doctrine
-    ): Response {
+    public function updateBook(int $id, Request $request, ManagerRegistry $doctrine): Response
+    {
         $entityManager = $doctrine->getManager();
         $booksRepository = $entityManager->getRepository(Books::class);
+        $book = $booksRepository->find($id);
 
-        $books = $booksRepository->find($id);
-
-        if (!$books) {
-            throw $this->createNotFoundException('Boken finns inte');
-        }
-
-        $books->setTitle($request->request->get('title'));
-        $books->setIsbn($request->request->get('isbn'));
-        $books->setAuthor($request->request->get('author'));
-        $books->setDescription($request->request->get('description'));
-
-
-        $file = $request->files->get('image');
-        if ($file && $file->isValid()) {
-            $blob = file_get_contents($file->getPathname());
-            $books->setImg($blob);
-        }
-
-        $entityManager->flush();
+        $this->library->createOrUpdateBook($request, $book);
 
         return $this->redirectToRoute('show_library_by_id', ['id' => $id]);
     }

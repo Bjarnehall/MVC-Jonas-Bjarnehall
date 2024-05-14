@@ -15,9 +15,9 @@ class ProductRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Product::class);
     }
-/**
- * @return Product[]
- */
+    /**
+     * @return Product[]
+     */
     public function findByMinimumValue(int $value): array
     {
         return $this->createQueryBuilder('p')
@@ -44,7 +44,7 @@ class ProductRepository extends ServiceEntityRepository
             ';
 
         $resultSet = $conn->executeQuery($sql, ['value' => $value]);
-/** @phpstan-ignore-next-line */
+        /** @phpstan-ignore-next-line */
         return $resultSet->fetchAllAssociative();
         // return $query->getResult();
     }
