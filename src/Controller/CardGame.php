@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Card\DeckTask;
 use App\Card\Card;
 use App\Card\CardHand;
 use App\Card\DeckOfCards;
@@ -16,6 +17,12 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CardGame extends AbstractController
 {
+    private $deckTask;
+
+    public function __construct(DeckTask $deckTask)
+    {
+        $this->deckTask = $deckTask;
+    }
     /**
      * Display the card game start page.
      *
@@ -25,11 +32,8 @@ class CardGame extends AbstractController
     #[Route("/card", name: "card")]
     public function index(SessionInterface $session): Response
     {
-        if(!$session->has('shuffledDeck')) {
-            $deck = new DeckOfCards();
-            $deck->shuffle();
-            $session->set('shuffledDeck', serialize($deck->getShuffledCards()));
-        }
+        $this->deckTask->ensureShuffledDeckExists($session);
+
         return $this->render('card/card.html.twig');
     }
     /**
@@ -85,6 +89,7 @@ class CardGame extends AbstractController
             'cards' => $shuffledCards,
         ]);
     }
+
     /**
      * Displays a shuffled list of cards as a JSON response
      *
@@ -95,7 +100,6 @@ class CardGame extends AbstractController
     {
         $deck = new DeckOfCards();
         $deck->shuffle();
-        // $cards = $deck->getShuffledCards();
         $shuffledCards = $deck->getShuffledCards();
         $session->set('shuffledDeck', serialize($shuffledCards));
 
@@ -230,7 +234,6 @@ class CardGame extends AbstractController
 
         $deck = unserialize($session->get('shuffledDeck'));
         if (count($deck) < $number) {
-            // return $this->redirectToRoute('api_deck_shuffle');
             return new JsonResponse(['error' => 'Not enough cards to draw'], 400);
         }
 
