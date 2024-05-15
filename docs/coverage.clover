@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1715712939">
-  <project timestamp="1715712939">
+<coverage generated="1715785670">
+  <project timestamp="1715785670">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="28" coveredelements="28"/>
@@ -616,40 +616,40 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Entity/Books.php">
       <class name="App\Entity\Books" namespace="global">
-        <metrics complexity="13" methods="13" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="31" coveredelements="0"/>
+        <metrics complexity="13" methods="13" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="12" elements="31" coveredelements="20"/>
       </class>
       <line num="33" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="35" type="stmt" count="0"/>
-      <line num="38" type="method" name="getTitle" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="40" type="stmt" count="0"/>
-      <line num="43" type="method" name="setTitle" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="45" type="stmt" count="0"/>
-      <line num="47" type="stmt" count="0"/>
-      <line num="50" type="method" name="getIsbn" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="52" type="stmt" count="0"/>
-      <line num="55" type="method" name="setIsbn" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="57" type="stmt" count="0"/>
-      <line num="59" type="stmt" count="0"/>
-      <line num="62" type="method" name="getAuthor" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="64" type="stmt" count="0"/>
-      <line num="67" type="method" name="setAuthor" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="69" type="stmt" count="0"/>
-      <line num="71" type="stmt" count="0"/>
+      <line num="38" type="method" name="getTitle" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="43" type="method" name="setTitle" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <line num="47" type="stmt" count="1"/>
+      <line num="50" type="method" name="getIsbn" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="55" type="method" name="setIsbn" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="57" type="stmt" count="1"/>
+      <line num="59" type="stmt" count="1"/>
+      <line num="62" type="method" name="getAuthor" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="64" type="stmt" count="1"/>
+      <line num="67" type="method" name="setAuthor" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="69" type="stmt" count="1"/>
+      <line num="71" type="stmt" count="1"/>
       <line num="74" type="method" name="getImg" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="76" type="stmt" count="0"/>
       <line num="79" type="method" name="setImg" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="81" type="stmt" count="0"/>
       <line num="83" type="stmt" count="0"/>
-      <line num="86" type="method" name="getDescription" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="88" type="stmt" count="0"/>
-      <line num="91" type="method" name="setDescription" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="93" type="stmt" count="0"/>
-      <line num="95" type="stmt" count="0"/>
+      <line num="86" type="method" name="getDescription" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="88" type="stmt" count="1"/>
+      <line num="91" type="method" name="setDescription" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="93" type="stmt" count="1"/>
+      <line num="95" type="stmt" count="1"/>
       <line num="102" type="method" name="getImgBase64" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="104" type="stmt" count="0"/>
       <line num="107" type="method" name="setImgBase64" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="109" type="stmt" count="0"/>
-      <metrics loc="112" ncloc="109" classes="1" methods="13" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="31" coveredelements="0"/>
+      <metrics loc="112" ncloc="109" classes="1" methods="13" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="12" elements="31" coveredelements="20"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Entity/Product.php">
       <class name="App\Entity\Product" namespace="global">
@@ -677,26 +677,26 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Library/Library.php">
       <class name="App\Library\Library" namespace="global">
-        <metrics complexity="5" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="17" coveredelements="0"/>
+        <metrics complexity="5" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="17" coveredelements="14"/>
       </class>
-      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="16" type="stmt" count="0"/>
-      <line num="19" type="method" name="createOrUpdateBook" visibility="public" complexity="4" crap="20" count="0"/>
-      <line num="21" type="stmt" count="0"/>
-      <line num="23" type="stmt" count="0"/>
-      <line num="24" type="stmt" count="0"/>
-      <line num="27" type="stmt" count="0"/>
-      <line num="28" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <line num="30" type="stmt" count="0"/>
-      <line num="32" type="stmt" count="0"/>
-      <line num="33" type="stmt" count="0"/>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="16" type="stmt" count="1"/>
+      <line num="19" type="method" name="createOrUpdateBook" visibility="public" complexity="4" crap="4.05" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="32" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
       <line num="34" type="stmt" count="0"/>
       <line num="35" type="stmt" count="0"/>
-      <line num="38" type="stmt" count="0"/>
-      <line num="39" type="stmt" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <metrics loc="44" ncloc="44" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="17" coveredelements="0"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <metrics loc="44" ncloc="44" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="17" coveredelements="14"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Lucky/Luck.php">
       <class name="App\Lucky\Luck" namespace="global">
@@ -768,6 +768,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="24" loc="1783" ncloc="1465" classes="23" methods="105" coveredmethods="23" conditionals="0" coveredconditionals="0" statements="518" coveredstatements="77" elements="623" coveredelements="100"/>
+    <metrics files="24" loc="1783" ncloc="1465" classes="23" methods="105" coveredmethods="32" conditionals="0" coveredconditionals="0" statements="518" coveredstatements="102" elements="623" coveredelements="134"/>
   </project>
 </coverage>

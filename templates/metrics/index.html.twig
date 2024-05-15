@@ -122,13 +122,11 @@ finner relevant och intressant.
 <p>
 Den första förbättring jag vill göra är att städa bort alternativt exkludera kod som inte är relevatn
 för min webbplats. Genom att göra detta blir jag av med issues så som "unused classes" men jag kommer
-även att förbättra min totala kodtäckning.
+även att förbättra min totala kodtäckning.<br>
 
-Min LibraryConroller ska jag bryta ner i flera klasser då denna fil är allt för komplex. I detta fall 
-kommer jag att kunna få en lägre complexitet.
+Min LibraryConroller ska jag refaktorera då denna fil har hög complexitet och dåligt maintainibillty index.
 <br><br>
-Skapa en ny rubrik “Förbättringar” där du väljer minst 3 förbättringar som du vill göra med din kod 
-gärna fler.
+
 </p>
 <p>
 Exempel på förbättringar kan vara:
@@ -140,24 +138,33 @@ Minska komplexiteten i class/metod
 Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det 
 kommer påverka mätvärdena för kvalitet.
 
-Implementera sedan förbättringarna.<br>
-test/Card/DeckOfCardsTest.php | I denna kod finns två kodrader som upprepades och kunde därför städas bort.
+Implementera sedan förbättringarna.<br><br>
+
+
+test/Card/DeckOfCardsTest.php I denna kod finns två kodrader som upprepades och kunde därför städas bort.
 Jag testkör mitt test med composer php unit för att kontrollera att inget gick sönder och pushar sedan förändringar
 till git. Jag stämmer sedan av i scrutinizer och kan se att dessa issues nu är lösta och ligger under fliken "fixed".
-<br>
+<br><br>
 Jag tar bort controller filen LibraryTestController.php som ej används av min webbplats utan blivit kvar sedan
 utvecklingen. Stämmer av i phpmetrics och kan se att en klass försvann.
-<br>
+<br><br>
 Jag tar bort controller filen ProductController.php som är ifrån en tidigare övning och ej fyller någon funktion för
 min webbplats. Stämmer av i metrics och kan se att en Violation försvinner och en klass försvinner.
-<br>
+<br><br>
 Mitt nästa steg är att förbättra min kod i LibraryController vilket jag gör genom att refaktorera en del av koden 
 och flytta en del av funktionaliteten till klassen Library. I controllen finns två tjocka routes som är ganska lika varandra
 update och create. Jag flyttar stora delar av koden till min klass Library. Efteråt stämmer jag av i metrics och kan se att
 klassen LibraryController går från att vara rödmarkerad till att bli gul och värderna ändras enlig:<br>
 
 Cyclomatic complexity, före: 12 efter: 7
-Maintainabillity index, före: 66.48 efter: 71.13<br><br>
+Maintainabillity index, före: 66.48 efter: 71.13<br>
+Jag kan även se att den totala "Average cyclomatic complexity by class" sjunker ifrån 3.30 till 3.13.<br>
+Ifrån Scrutinizer ser jag att min Coverage gick upp med 1% till 16% trots att jag ännu inte skrivit några fler tester vilket
+indikerar att koden blivit mer effektiv.<br><br>
+
+Jag skriver ett test för funktionen createOrUpdateBook i min Library class
+
+
 
 
 

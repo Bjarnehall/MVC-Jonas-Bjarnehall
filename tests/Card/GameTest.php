@@ -33,4 +33,5 @@ class GameTest extends TestCase
         $game = new Game($sessionMock);
         $game->initializeGame();
     }
+
 }
