@@ -7,6 +7,7 @@ use Exception;
 use App\Dice\Dice;
 use App\Dice\DiceGraphic;
 use App\Dice\DiceHand;
+use App\Dice\DiceGameTask;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -127,31 +128,12 @@ class DiceGameController extends AbstractController
         return $this->render('pig/play.html.twig', $data);
     }
 
-
     #[Route("/game/pig/roll", name: "pig_roll", methods: ['POST'])]
     public function roll(
-        SessionInterface $session
+        SessionInterface $session,
+        DiceGameTask $diceGameTask
     ): Response {
-        $hand = $session->get("pig_dicehand");
-        $hand->roll();
-
-        $roundTotal = $session->get("pig_round");
-        $round = 0;
-        $values = $hand->getValues();
-        foreach ($values as $value) {
-            if ($value === 1) {
-                $round = 0;
-                $roundTotal = 0;
-                $this->addFlash(
-                    'warning',
-                    'You got a 1 and you lost the round points!'
-                );
-                break;
-            }
-            $round += $value;
-        }
-
-        $session->set("pig_round", $roundTotal + $round);
+        $diceGameTask->rollAndUpdateRound($session);
 
         return $this->redirectToRoute('pig_play');
     }
