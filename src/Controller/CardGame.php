@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CardGame extends AbstractController
 {
-    private $deckTask;
+    private DeckTask $deckTask;
 
     public function __construct(DeckTask $deckTask)
     {
