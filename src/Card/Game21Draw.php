@@ -23,6 +23,7 @@ class Game21Draw
         }
     }
 
+    
     private static function getDeckFromSession(SessionInterface $session, string $deckSerialized): DeckOfCards
     {
         $deck = unserialize($deckSerialized);

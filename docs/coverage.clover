@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1715846452">
-  <project timestamp="1715846452">
+<coverage generated="1715848043">
+  <project timestamp="1715848043">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="28" coveredelements="28"/>
@@ -113,12 +113,12 @@
       <line num="20" type="stmt" count="0"/>
       <line num="21" type="stmt" count="0"/>
       <line num="22" type="stmt" count="0"/>
-      <line num="26" type="method" name="getDeckFromSession" visibility="private" complexity="2" crap="2.06" count="1"/>
-      <line num="28" type="stmt" count="1"/>
+      <line num="27" type="method" name="getDeckFromSession" visibility="private" complexity="2" crap="2.06" count="1"/>
       <line num="29" type="stmt" count="1"/>
-      <line num="30" type="stmt" count="0"/>
-      <line num="32" type="stmt" count="1"/>
-      <metrics loc="35" ncloc="35" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="3" elements="13" coveredelements="3"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="1"/>
+      <metrics loc="36" ncloc="36" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="3" elements="13" coveredelements="3"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Card/Player.php">
       <class name="App\Card\Player" namespace="global">
@@ -800,6 +800,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="27" loc="1859" ncloc="1539" classes="26" methods="112" coveredmethods="39" conditionals="0" coveredconditionals="0" statements="525" coveredstatements="138" elements="637" coveredelements="177"/>
+    <metrics files="27" loc="1860" ncloc="1540" classes="26" methods="112" coveredmethods="39" conditionals="0" coveredconditionals="0" statements="525" coveredstatements="138" elements="637" coveredelements="177"/>
   </project>
 </coverage>

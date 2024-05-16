@@ -24,5 +24,10 @@ class Game21DrawTest extends TestCase
         $retrievedDeck = $method->invoke($game21Draw, $session, $deckSerialized);
 
         $this->assertInstanceOf(DeckOfCards::class, $retrievedDeck);
+
+        $this->assertNotNull($retrievedDeck);
+
+        $this->assertEquals($deck, $retrievedDeck);
+
     }
 }
