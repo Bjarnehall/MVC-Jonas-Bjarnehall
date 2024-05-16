@@ -1811,7 +1811,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 5,
         "instability": 0.83,
-        "numberOfUnitTests": 0,
+        "numberOfUnitTests": 1,
         "violations": {}
     },
     {

@@ -7,6 +7,8 @@ use App\Card\CardHand;
 use App\Card\DeckOfCards;
 use App\Card\Player;
 use App\Card\Game;
+use App\Card\Game21Draw;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -70,15 +72,8 @@ class Game21 extends AbstractController
             return $this->redirectToRoute('play21');
         }
 
-        $deck = unserialize($deckSerialized);
-        $player = unserialize($playerSerialized);
+        Game21Draw::drawCard($session, $deckSerialized, $playerSerialized);
 
-        $card = $deck->dealCard();
-        if ($card) {
-            $player->drawCard($card);
-            $session->set('shuffledDeck', serialize($deck));
-            $session->set('player', serialize($player));
-        }
         return $this->redirectToRoute('game21_play');
     }
     /**

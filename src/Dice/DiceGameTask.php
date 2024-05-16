@@ -5,8 +5,6 @@ namespace App\Dice;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Exception;
 
-
-
 class DiceGameTask
 {
     public function __construct()
@@ -32,9 +30,9 @@ class DiceGameTask
         }
         $session->set("pig_round", $roundTotal + $round);
     }
-/**
- * @return array{num_dices: int, diceRoll: array<string>}
- */
+    /**
+     * @return array{num_dices: int, diceRoll: array<string>}
+     */
     public function rollDiceHand(int $num): array
     {
         if ($num > 99) {
