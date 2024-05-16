@@ -3,8 +3,9 @@
 namespace App\Dice;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Exception;
 
-// use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
+
 
 class DiceGameTask
 {
@@ -30,5 +31,27 @@ class DiceGameTask
             $round += $value;
         }
         $session->set("pig_round", $roundTotal + $round);
+    }
+/**
+ * @return array{num_dices: int, diceRoll: array<string>}
+ */
+    public function rollDiceHand(int $num): array
+    {
+        if ($num > 99) {
+            throw new Exception("Cannot roll morre than 99 dices!");
+        }
+
+        $hand = new DiceHand();
+        for ($i = 1; $i <= $num; $i++) {
+            $diceToAdd = $i % 2 === 1 ? new DiceGraphic() : new Dice();
+            $hand->add($diceToAdd);
+        }
+
+        $hand->roll();
+
+        return [
+            "num_dices" => $hand->getNumberDices(),
+            "diceRoll" => $hand->getString(),
+        ];
     }
 }

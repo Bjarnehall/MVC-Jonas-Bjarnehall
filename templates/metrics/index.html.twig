@@ -186,10 +186,18 @@ Efter denna refaktor gick Avrage cyclomatic complexity i metrics till 3.04 ifrå
 3.13
 <br>
 
+Jag fortsätter med att refakktorera DiceGameController där jag flyttar kod till classen 
+DiceGameTask<br>
+Resultatet i metrics är att avrage cyclomatic complexity gick från före: 3.04 till 2.96
+Även 1 violation försvann till nu 8 stycken kvar.
 
+complexity för class Controller\DiceGameController i scrutinizer före: 17 efter: 15
 
+jag har nu även lyckats Få ner Avrage bugs by class från 0.11 till 0.9
 
-
+Jag tittar Vidare på Crap score och kan se hur Min funktion testDiceHand som ligger i DiceGameControlle 
+har ett högt crapscore. på 20 och jag börjar med att refaktorera denna kod in till min klass 
+DiceGameTask. 
 
 
 
