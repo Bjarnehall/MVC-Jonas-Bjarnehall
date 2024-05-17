@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1715848043">
-  <project timestamp="1715848043">
+<coverage generated="1715929400">
+  <project timestamp="1715929400">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="28" coveredelements="28"/>
@@ -732,10 +732,10 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Lucky/Luck.php">
       <class name="App\Lucky\Luck" namespace="global">
-        <metrics complexity="7" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="8" elements="34" coveredelements="10"/>
+        <metrics complexity="7" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="30" elements="34" coveredelements="34"/>
       </class>
-      <line num="12" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="3"/>
-      <line num="14" type="stmt" count="3"/>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="5"/>
+      <line num="14" type="stmt" count="5"/>
       <line num="17" type="method" name="getGreeting" visibility="public" complexity="3" crap="3" count="3"/>
       <line num="19" type="stmt" count="3"/>
       <line num="21" type="stmt" count="3"/>
@@ -744,31 +744,31 @@
       <line num="25" type="stmt" count="2"/>
       <line num="26" type="stmt" count="1"/>
       <line num="29" type="stmt" count="3"/>
-      <line num="32" type="method" name="getTranslatedDayOfWeek" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="35" type="stmt" count="0"/>
-      <line num="36" type="stmt" count="0"/>
-      <line num="37" type="stmt" count="0"/>
-      <line num="38" type="stmt" count="0"/>
-      <line num="39" type="stmt" count="0"/>
-      <line num="40" type="stmt" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <line num="42" type="stmt" count="0"/>
-      <line num="44" type="stmt" count="0"/>
-      <line num="45" type="stmt" count="0"/>
-      <line num="48" type="method" name="getWordForToday" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="50" type="stmt" count="0"/>
-      <line num="51" type="stmt" count="0"/>
-      <line num="52" type="stmt" count="0"/>
-      <line num="53" type="stmt" count="0"/>
-      <line num="54" type="stmt" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="56" type="stmt" count="0"/>
-      <line num="57" type="stmt" count="0"/>
-      <line num="58" type="stmt" count="0"/>
-      <line num="60" type="stmt" count="0"/>
-      <line num="61" type="stmt" count="0"/>
-      <metrics loc="64" ncloc="63" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="8" elements="34" coveredelements="10"/>
+      <line num="32" type="method" name="getTranslatedDayOfWeek" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <line num="48" type="method" name="getWordForToday" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="50" type="stmt" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <line num="56" type="stmt" count="1"/>
+      <line num="57" type="stmt" count="1"/>
+      <line num="58" type="stmt" count="1"/>
+      <line num="60" type="stmt" count="1"/>
+      <line num="61" type="stmt" count="1"/>
+      <metrics loc="64" ncloc="63" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="30" elements="34" coveredelements="34"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Repository/BooksRepository.php">
       <class name="App\Repository\BooksRepository" namespace="global">
@@ -800,6 +800,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="27" loc="1860" ncloc="1540" classes="26" methods="112" coveredmethods="39" conditionals="0" coveredconditionals="0" statements="525" coveredstatements="138" elements="637" coveredelements="177"/>
+    <metrics files="27" loc="1860" ncloc="1540" classes="26" methods="112" coveredmethods="41" conditionals="0" coveredconditionals="0" statements="525" coveredstatements="160" elements="637" coveredelements="201"/>
   </project>
 </coverage>

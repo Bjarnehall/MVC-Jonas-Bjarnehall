@@ -39,25 +39,42 @@ class LuckTest extends TestCase
         $this->assertSame('God kväll!', $greeting);
     }
 
+    public function testGetTranslatedDayOfWeek(): void
+    {
+        $luck = new Luck();
+        $expectedTranslations = [
+              'Monday' => 'måndag',
+              'Tuesday' => 'tisdag',
+              'Wednesday' => 'onsdag',
+              'Thursday' => 'torsdag',
+              'Friday' => 'fredag',
+              'Saturday' => 'lördag',
+              'Sunday' => 'söndag',
+        ];
 
-    // private function setMockedTime(int $timestamp): void
-    // {
-    //     $dateTime = new DateTime();
-    //     $dateTime->setTimestamp($timestamp);
+        $currentDayOfWeek = date('l');
+        $expectedTranslation = $expectedTranslations[$currentDayOfWeek];
 
-    //     $stub = $this->getMockbuilder(DateTime::class)
-    //                  ->getMock();
-    //     $stub->method('getTimestamp')
-    //          ->willReturn($dateTime->getTimestamp());
-    // }
+        $this->assertEquals($expectedTranslation, $luck->getTranslatedDayOfWeek());
+    }
 
-    // private function setNow(DateTime $dateTime): void
-    // {
-    //     $stub = $this->getMockBuilder(DateTime::class)
-    //                  ->getMock();
-    //     $stub->method('getTimestamp')
-    //          ->willReturn($dateTime->getTimestamp());
-    //     Luck::setNow($stub);
-    // }
+    public function testGetWordForToday(): void
+    {
+        $luck = new Luck();
 
+        $expectedWords = [
+            'Monday' => 'Illidan Stormrage: “Imprisoned for ten thousand years. Banished from my own homeland. And now, you dare enter my realm. You are not prepared!”',
+            'Tuesday' => 'Sylvanas Windrunner: “We are the Forsaken. We will slaughter anyone who stands in our way.”',
+            'Wednesday' => 'Jaina Proudmoore: “Theres always hope.”',
+            'Thursday' => 'Lady Vashj: “I did not make it this far to be stopped! The future I have planned will not be jeopardized!”',
+            'Friday' => 'Anduin Wrynn: "I only hope my friends will remember me as I was. Not what you made me to be."',
+            'Saturday' => 'Uther Lightbringer: "We cannot change the past, and we may never find forgiveness in the future, but inaction damns us all."',
+            'Sunday' => 'Anduin Wrynn: "No one, not even a king, is more important than the Alliance."',
+        ];
+
+        $currentDayOfWeek = date('l');
+        $expectedWord = $expectedWords[$currentDayOfWeek];
+
+        $this->assertEquals($expectedWord, $luck->getWordForToday());
+    }
 }
