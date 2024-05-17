@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1715938240">
-  <project timestamp="1715938240">
+<coverage generated="1715942630">
+  <project timestamp="1715942630">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="28" coveredelements="28"/>
@@ -518,15 +518,11 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/Lucky.php">
       <class name="App\Controller\Lucky" namespace="global">
-        <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="20" coveredelements="0"/>
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
       </class>
-      <line num="14" type="method" name="lucky" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="17" type="stmt" count="0"/>
+      <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="18" type="stmt" count="0"/>
-      <line num="19" type="stmt" count="0"/>
-      <line num="20" type="stmt" count="0"/>
-      <line num="21" type="stmt" count="0"/>
-      <line num="22" type="stmt" count="0"/>
+      <line num="20" type="method" name="lucky" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="23" type="stmt" count="0"/>
       <line num="24" type="stmt" count="0"/>
       <line num="25" type="stmt" count="0"/>
@@ -534,13 +530,11 @@
       <line num="28" type="stmt" count="0"/>
       <line num="30" type="stmt" count="0"/>
       <line num="31" type="stmt" count="0"/>
+      <line num="32" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
       <line num="34" type="stmt" count="0"/>
       <line num="35" type="stmt" count="0"/>
-      <line num="36" type="stmt" count="0"/>
-      <line num="37" type="stmt" count="0"/>
-      <line num="38" type="stmt" count="0"/>
-      <line num="39" type="stmt" count="0"/>
-      <metrics loc="42" ncloc="42" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="20" coveredelements="0"/>
+      <metrics loc="38" ncloc="38" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/MetricsController.php">
       <class name="App\Controller\MetricsController" namespace="global">
@@ -712,26 +706,31 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Library/Library.php">
       <class name="App\Library\Library" namespace="global">
-        <metrics complexity="5" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="17" coveredelements="14"/>
+        <metrics complexity="7" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="15" elements="22" coveredelements="18"/>
       </class>
       <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="16" type="stmt" count="1"/>
-      <line num="19" type="method" name="createOrUpdateBook" visibility="public" complexity="4" crap="4.05" count="1"/>
-      <line num="21" type="stmt" count="1"/>
+      <line num="18" type="method" name="createOrUpdateBook" visibility="public" complexity="2" crap="2" count="1"/>
+      <line num="20" type="stmt" count="1"/>
+      <line num="22" type="stmt" count="1"/>
       <line num="23" type="stmt" count="1"/>
-      <line num="24" type="stmt" count="1"/>
-      <line num="27" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
       <line num="28" type="stmt" count="1"/>
-      <line num="29" type="stmt" count="1"/>
       <line num="30" type="stmt" count="1"/>
-      <line num="32" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
       <line num="33" type="stmt" count="1"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="35" type="stmt" count="0"/>
+      <line num="35" type="method" name="setBookProperties" visibility="private" complexity="1" crap="1" count="1"/>
+      <line num="37" type="stmt" count="1"/>
       <line num="38" type="stmt" count="1"/>
       <line num="39" type="stmt" count="1"/>
-      <line num="41" type="stmt" count="1"/>
-      <metrics loc="44" ncloc="44" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="17" coveredelements="14"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="43" type="method" name="handleFileUpload" visibility="private" complexity="3" crap="4.94" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="47" type="stmt" count="0"/>
+      <line num="48" type="stmt" count="0"/>
+      <line num="49" type="stmt" count="0"/>
+      <metrics loc="53" ncloc="53" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="15" elements="22" coveredelements="18"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Lucky/Luck.php">
       <class name="App\Lucky\Luck" namespace="global">
@@ -821,6 +820,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="28" loc="1931" ncloc="1583" classes="26" methods="113" coveredmethods="43" conditionals="0" coveredconditionals="0" statements="539" coveredstatements="171" elements="652" coveredelements="214"/>
+    <metrics files="28" loc="1936" ncloc="1588" classes="26" methods="116" coveredmethods="45" conditionals="0" coveredconditionals="0" statements="535" coveredstatements="173" elements="651" coveredelements="218"/>
   </project>
 </coverage>

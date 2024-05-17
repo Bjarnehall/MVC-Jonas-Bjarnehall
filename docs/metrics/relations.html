@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2024-05-17 09:33:07        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2024-05-17 10:41:56        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -420,8 +420,15 @@
         "size": 3000,
         "relations": [
             "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "\\App\\Lucky\\RandomPetImageSelector",
             "\\Symfony\\Component\\HttpFoundation\\Response",
-            "\\App\\Lucky\\Luck",
+            "\\App\\Lucky\\Luck"
+        ]
+    },
+    {
+        "name": "\\App\\Lucky\\RandomPetImageSelector",
+        "size": 3000,
+        "relations": [
             "\\Symfony\\Component\\Filesystem\\Filesystem"
         ]
     },
@@ -431,11 +438,6 @@
         "relations": [
             "\\DateTime"
         ]
-    },
-    {
-        "name": "\\Symfony\\Component\\Filesystem\\Filesystem",
-        "size": 3000,
-        "relations": []
     },
     {
         "name": "\\App\\Controller\\MetricsController",
@@ -538,11 +540,9 @@
         "relations": []
     },
     {
-        "name": "\\App\\Lucky\\RandomPetImageSelector",
+        "name": "\\Symfony\\Component\\Filesystem\\Filesystem",
         "size": 3000,
-        "relations": [
-            "\\Symfony\\Component\\Filesystem\\Filesystem"
-        ]
+        "relations": []
     },
     {
         "name": "\\App\\Entity\\Books",

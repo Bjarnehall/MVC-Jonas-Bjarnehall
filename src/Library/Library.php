@@ -15,29 +15,38 @@ class Library
     {
         $this->doctrine = $doctrine;
     }
-
     public function createOrUpdateBook(Request $request, ?Books $book = null): Books
     {
         $entityManager = $this->doctrine->getManager();
 
         if (!$book) {
-            $book = new books();
+            $book = new Books();
         }
 
-        $book->setTitle($request->request->get('title'));
-        $book->setIsbn($request->request->get('isbn'));
-        $book->setAuthor($request->request->get('author'));
-        $book->setDescription($request->request->get('description'));
+        $this->setBookProperties($request, $book);
 
-        $file = $request->files->get('image');
-        if ($file instanceof UploadedFile && $file->isValid()) {
-            $blob = file_get_contents($file->getPathname());
-            $book->setImg($blob);
-        }
+        $this->handleFileUpload($request, $book);
 
         $entityManager->persist($book);
         $entityManager->flush();
 
         return $book;
+    }
+    private function setBookProperties(Request $request, Books $book): void
+    {
+        $book->setTitle($request->request->get('title'));
+        $book->setIsbn($request->request->get('isbn'));
+        $book->setAuthor($request->request->get('author'));
+        $book->setDescription($request->request->get('description'));
+    }
+
+    private function handleFileUpload(Request $request, Books $book): void
+    {
+        $file = $request->files->get('image');
+        if ($file instanceof UploadedFile && $file->isValid()) {
+            $filePath = $file->move(sys_get_temp_dir(), $file->getClientOriginalName())->getPathname();
+            $blob = file_get_contents($filePath);
+            $book->setImg($blob);
+        }
     }
 }
