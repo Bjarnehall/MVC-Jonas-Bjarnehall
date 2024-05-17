@@ -21,3 +21,8 @@ services:
             - '../src/Kernel.php'
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\Lucky\RandomPetImageSelector:
+        arguments:
+            $filesystem: '@filesystem'
+            $imagePath: '%kernel.project_dir%/public/img/'
+            $petImages: ['pet1.jpg', 'pet2.jpg', 'pet3.jpg']

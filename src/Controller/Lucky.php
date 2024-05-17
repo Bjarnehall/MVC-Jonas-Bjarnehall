@@ -18,11 +18,9 @@ class Lucky extends AbstractController
         $greeting = $luck->getGreeting();
         $dayOfWeekSwe = $luck->getTranslatedDayOfWeek();
         $wordForToday = $luck->getWordForToday();
-
         $filesystem = new Filesystem();
         $imagePath = $this->getParameter('kernel.project_dir') . '/public/img/';
         $petImages = ['pet1.jpg', 'pet2.jpg', 'pet3.jpg'];
-
         $availablePetImages = array_filter($petImages, function ($image) use ($filesystem, $imagePath) {
             return $filesystem->exists($imagePath . $image);
         });
