@@ -23,6 +23,7 @@ class CardGame extends AbstractController
     {
         $this->deckTask = $deckTask;
     }
+
     /**
      * Display the card game start page.
      *
@@ -235,10 +236,10 @@ class CardGame extends AbstractController
             'remaining' => count($remainingDeck)
         ]);
     }
-/**
- * @param SessionInterface $session
- * @return Card[] An array of Card objects
- */
+    /**
+     * @param SessionInterface $session
+     * @return Card[] An array of Card objects
+     */
     private function getDeck(SessionInterface $session): array
     {
         if (!$session->has('shuffledDeck')) {

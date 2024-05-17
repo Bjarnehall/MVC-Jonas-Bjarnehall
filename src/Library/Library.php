@@ -24,7 +24,7 @@ class Library
      *
      * @param Request     $request
      * @param Books|null  $book
-     * 
+     *
      * @return Books
      */
     public function createOrUpdateBook(Request $request, ?Books $book = null): Books
@@ -49,7 +49,7 @@ class Library
      *
      * @param Request $request
      * @param Books   $book
-     * 
+     *
      * @return void
      */
     private function setBookProperties(Request $request, Books $book): void
@@ -64,7 +64,7 @@ class Library
      *
      * @param Request $request
      * @param Books   $book
-     * 
+     *
      * @return void
      */
     private function handleFileUpload(Request $request, Books $book): void
