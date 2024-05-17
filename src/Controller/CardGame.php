@@ -162,32 +162,24 @@ class CardGame extends AbstractController
      *
      * @return JsonResponse
      */
-    #[Route("/api/deck/draw", name: "api_deck_draw", methods: ["POST"])]
-    public function apiDrawCard(SessionInterface $session, DeckTask $deckTask): Response
+    #[Route("/api/deck/draw", name: "api_draw_card", methods: ["POST"])]
+    public function apiDrawCard(SessionInterface $session): JsonResponse
     {
-        if (!$session->has('shuffledDeck')) {
-            $deck = new DeckOfCards();
-            $deck->shuffle();
-            $session->set('shuffledDeck', serialize($deck->getShuffledCards()));
+        $deck = $this->getDeck($session);
+
+        if (empty($deck)) {
+            return $this->handleErrorResponse('No cards left to draw', 400);
         }
 
-        $deckArray = unserialize($session->get('shuffledDeck'));
+        $card = array_shift($deck);
+        $session->set('shuffledDeck', serialize($deck));
 
-        if (empty($deckArray)) {
-            return new JsonResponse(['error' => 'No cards left to draw'], 400);
-        }
-
-        $card = $deckTask->drawCardFromDeck($deckArray);
-        if ($card === null) {
-            return new JsonResponse(['error' => 'No cards left to draw'], 400);
-        }
-
-        $session->set('shuffledDeck', serialize($deckArray));
         $cardData = [
             'suit' => $card->getSuit(),
             'value' => $card->getValue(),
-            'remaining' => count($deckArray)
+            'remaining' => count($deck)
         ];
+
         return new JsonResponse($cardData);
     }
     /**
@@ -227,30 +219,81 @@ class CardGame extends AbstractController
     #[Route("api/deck/draw/{number}", name: "api_card_draw_cards", methods: ["POST"])]
     public function apiDrawCards(SessionInterface $session, int $number): JsonResponse
     {
+        $deck = $this->getDeck($session);
+
+        if (count($deck) < $number) {
+            return $this->handleErrorResponse('Not enough cards to draw', 400);
+        }
+
+        [$cardsDrawn, $remainingDeck] = $this->drawCards($deck, $number);
+        $session->set('shuffledDeck', serialize($remainingDeck));
+
+        $cardsData = $this->formatCardsData($cardsDrawn);
+
+        return new JsonResponse([
+            'cards' => $cardsData,
+            'remaining' => count($remainingDeck)
+        ]);
+    }
+/**
+ * @param SessionInterface $session
+ * @return Card[] An array of Card objects
+ */
+    private function getDeck(SessionInterface $session): array
+    {
         if (!$session->has('shuffledDeck')) {
             $deck = new DeckOfCards();
             $deck->shuffle();
             $session->set('shuffledDeck', serialize($deck->getShuffledCards()));
         }
 
-        $deck = unserialize($session->get('shuffledDeck'));
-        if (count($deck) < $number) {
-            return new JsonResponse(['error' => 'Not enough cards to draw'], 400);
+        return $this->deserializeDeck($session->get('shuffledDeck'));
+    }
+    /**
+     * @param string $serializedDeck
+     * @return Card[] An array of Card objects
+     */
+    private function deserializeDeck(string $serializedDeck): array
+    {
+        $deck = unserialize($serializedDeck);
+        if (!is_array($deck)) {
+            $deck = $deck->getShuffledCards();
         }
-
+        return $deck;
+    }
+    /**
+     * @param Card[] $deck
+     * @param int $number
+     * @return array{0: Card[], 1: Card[]}
+     */
+    private function drawCards(array $deck, int $number): array
+    {
         $cardsDrawn = array_splice($deck, 0, $number);
-        $session->set('shuffledDeck', serialize($deck));
-
-        $cardsData = array_map(function ($card) {
+        return [$cardsDrawn, $deck];
+    }
+    /**
+     * @param Card[] $cardsDrawn
+     * @return array<array<string, mixed>>
+     */
+    private function formatCardsData(array $cardsDrawn): array
+    {
+        return array_map(function ($card) {
             return [
                 'suit' => $card->getSuit(),
                 'value' => $card->getValue()
             ];
         }, $cardsDrawn);
-
-        return new JsonResponse([
-            'cards' => $cardsData,
-            'remaining' => count($deck)
-        ]);
     }
+    /**
+     * Handles error responses by returning a JSON response.
+     *
+     * @param string $message The error message
+     * @param int $statusCode The HTTP status code
+     * @return JsonResponse
+     */
+    private function handleErrorResponse(string $message, int $statusCode): JsonResponse
+    {
+        return new JsonResponse(['error' => $message], $statusCode);
+    }
+
 }

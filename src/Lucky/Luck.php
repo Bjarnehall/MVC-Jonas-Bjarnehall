@@ -8,16 +8,23 @@ use DateTime;
 class Luck
 {
     private DateTime $dateTime;
-
+    /**
+     * Constructor.
+     *
+     * @param DateTime|null $dateTime DateTime object representing the date and time.
+     */
     public function __construct(?DateTime $dateTime = null)
     {
         $this->dateTime = $dateTime ?: new DateTime();
     }
-
+    /**
+     * Get the greeting based on the time of day.
+     *
+     * @return string The greeting message.
+     */
     public function getGreeting(): string
     {
-        $timeH = $this->dateTime->format('G');
-        // $timeH = date("G");
+        $timeH = $this->getTimeHour();
         $greeting = "God kväll!";
 
         if ($timeH < 12) {
@@ -28,7 +35,11 @@ class Luck
 
         return $greeting;
     }
-
+    /**
+     * Get the translated name of the current day of the week.
+     *
+     * @return string The translated day of the week.
+     */
     public function getTranslatedDayOfWeek(): string
     {
         $weekDayTranslation = [
@@ -41,10 +52,14 @@ class Luck
             'Sunday' => 'söndag',
         ];
 
-        $dayOfWeek = date('l');
+        $dayOfWeek = $this->getDayOfWeek();
         return $weekDayTranslation[$dayOfWeek];
     }
-
+    /**
+     * Get the quote for current day of the week.
+     *
+     * @return string The quote for today.
+     */
     public function getWordForToday(): string
     {
         $wordOfDay = [
@@ -57,7 +72,25 @@ class Luck
             'Sunday' => 'Anduin Wrynn: "No one, not even a king, is more important than the Alliance."',
         ];
 
-        $dayOfWeek = date('l');
+        $dayOfWeek = $this->getDayOfWeek();
         return $wordOfDay[$dayOfWeek];
+    }
+    /**
+     * Get the name of the current day of the week.
+     *
+     * @return string The name of the day of the week.
+     */
+    private function getDayOfWeek(): string
+    {
+        return $this->dateTime->format('l');
+    }
+    /**
+     * Get the current hour of the day.
+     *
+     * @return int The hour of the day (0-23).
+     */
+    private function getTimeHour(): int
+    {
+        return (int)$this->dateTime->format('G');
     }
 }
