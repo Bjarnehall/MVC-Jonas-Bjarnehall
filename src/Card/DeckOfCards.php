@@ -43,8 +43,9 @@ class DeckOfCards
      */
     public function getShuffledCards(): array
     {
-        $this->shuffle();
-        return $this->cards;
+        $shuffledCards = $this->cards; // Create a copy of the cards array
+        shuffle($shuffledCards); // Shuffle the copy
+        return $shuffledCards; // Return the shuffled copy
     }
     /**
      * Deals a card from the deck and removes it

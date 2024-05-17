@@ -89,7 +89,6 @@ class CardGame extends AbstractController
             'cards' => $shuffledCards,
         ]);
     }
-
     /**
      * Displays a shuffled list of cards as a JSON response
      *
@@ -127,7 +126,6 @@ class CardGame extends AbstractController
             'notice',
             'The session was destroyed!'
         );
-
         return $this->redirectToRoute('session');
     }
     /**
@@ -145,17 +143,18 @@ class CardGame extends AbstractController
             $session->set('shuffledDeck', serialize($deck->getShuffledCards()));
         }
 
-        $deck = unserialize($session->get('shuffledDeck'));
-        if (empty($deck)) {
+        $deckArray = unserialize($session->get('shuffledDeck'));
+
+        if (empty($deckArray)) {
             return $this->redirectToRoute('shuffle');
         }
 
-        $card = array_shift($deck);
-        $session->set('shuffledDeck', serialize($deck));
+        $card = array_shift($deckArray);
+        $session->set('shuffledDeck', serialize($deckArray));
 
         return $this->render('card/draw.html.twig', [
             'card' => $card,
-            'remaining' => count($deck)
+            'remaining' => count($deckArray)
         ]);
     }
     /**
@@ -164,7 +163,7 @@ class CardGame extends AbstractController
      * @return JsonResponse
      */
     #[Route("/api/deck/draw", name: "api_deck_draw", methods: ["POST"])]
-    public function apiDrawCard(SessionInterface $session): Response
+    public function apiDrawCard(SessionInterface $session, DeckTask $deckTask): Response
     {
         if (!$session->has('shuffledDeck')) {
             $deck = new DeckOfCards();
@@ -172,21 +171,23 @@ class CardGame extends AbstractController
             $session->set('shuffledDeck', serialize($deck->getShuffledCards()));
         }
 
-        $deck = unserialize($session->get('shuffledDeck'));
-        if (empty($deck)) {
+        $deckArray = unserialize($session->get('shuffledDeck'));
+
+        if (empty($deckArray)) {
             return new JsonResponse(['error' => 'No cards left to draw'], 400);
-            // return $this->redirectToRoute('api_deck_shuffle');
         }
 
-        $card = array_shift($deck);
-        $session->set('shuffledDeck', serialize($deck));
+        $card = $deckTask->drawCardFromDeck($deckArray);
+        if ($card === null) {
+            return new JsonResponse(['error' => 'No cards left to draw'], 400);
+        }
 
+        $session->set('shuffledDeck', serialize($deckArray));
         $cardData = [
             'suit' => $card->getSuit(),
             'value' => $card->getValue(),
-            'remaining' => count($deck)
+            'remaining' => count($deckArray)
         ];
-
         return new JsonResponse($cardData);
     }
     /**

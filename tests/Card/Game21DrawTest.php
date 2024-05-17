@@ -1,7 +1,11 @@
 <?php
 
+namespace App\Card;
+
+use App\Card\Card;
 use App\Card\Game21Draw;
 use App\Card\DeckOfCards;
+use App\Card\CardHand;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 

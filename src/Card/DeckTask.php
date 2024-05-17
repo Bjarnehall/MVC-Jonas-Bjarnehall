@@ -16,4 +16,20 @@ class DeckTask
             $session->set('shuffledDeck', serialize($deck->getShuffledCards()));
         }
     }
+
+    public function shuffleDeck(DeckOfCards $deck): void
+    {
+        $deck->shuffle();
+    }
+    /**
+     * @param array<Card> &$deck
+     * @return Card|null
+     */
+    public function drawCardFromDeck(array &$deck): ?Card
+    {
+        if (empty($deck)) {
+            return null;
+        }
+        return array_shift($deck);
+    }
 }
