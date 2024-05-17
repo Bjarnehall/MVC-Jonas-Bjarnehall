@@ -23,7 +23,6 @@ class CardGame extends AbstractController
     {
         $this->deckTask = $deckTask;
     }
-
     /**
      * Display the card game start page.
      *

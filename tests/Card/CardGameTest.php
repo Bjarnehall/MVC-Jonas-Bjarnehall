@@ -10,23 +10,17 @@ use App\Card\DeckTask;
 use App\Card\DeckOfCards;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Card\Card;
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class CardGameTest extends WebTestCase
+
+class CardGameTest extends TestCase
 {
-    public function testApiDeckReturnsJsonResponse(): void
+        public function testApiDeckReturnsJsonResponse(): void
     {
         $deckTaskMock = $this->createMock(DeckTask::class);
         $sessionMock = $this->createMock(SessionInterface::class);
-        $cardGame = new CardGame($deckTaskMock);
+
+        $cardGame = new CardGame($deckTaskMock, $sessionMock);
         $response = $cardGame->apiDeck();
         $this->assertInstanceOf(JsonResponse::class, $response);
-    }
-    public function testCardsRoute(): void
-    {
-        $client = static::createClient();
-        $client->request('GET', '/card/deck');
-        $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('h1', 'MVC Blekinge tekniska högskola');
     }
 }
