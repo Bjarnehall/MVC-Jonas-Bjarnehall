@@ -27,3 +27,6 @@ build:
                 coverage:
                     file: "docs/coverage.clover"
                     format: "php-clover"
+php:
+    exclude:
+        - 'src/controller/*'
