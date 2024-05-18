@@ -11,238 +11,185 @@
 Introduktion
 </h2>
 <p>
-Börja med en rubrik “Introduktion” där du förklarar de sex C:na och hur de kan påverka kodens kvalitet. 
-Exemplifiera, där det passar, med några mätvärden som är kopplad till din egen kod och ge en kort förklaring 
-av mätvärdet relaterat till kodkvalitet.
-Codestyle
-Coverage
-Complexity
-Cohesion
-Coupling
-CRAP
-<br><br>
-I sammanhang av kodkvalitet och begreppet "snygg" kod finns något som vi benämner de sex styken C:na vilka
-lyder.<br>
+I samband med den här rapportern kommer jag att förhålla mig till det som defineras som de sex stycken C:na vilka beskrivs 
+enligt följande.
+</p>
+<h4>Codestyle:</h4> 
+<p>
+Genom att förhålla sig till vissa stilregler och normer erhålls en möjlighet för andra personer att 
+förstå koden. Detta är värdefullt om man är flera personer som arbetar med ett projekt men även när man själv ska tillbaka
+i ett kodstycke som är skrivit en tid tillbaka.
+</p>
+<h4>Covergare:</h4>
+<p>
+Är måttstock på hur mycket av koden som omfattas av testning, även kallat kodtäckning. Om en stor andel 
+av den totala koden är testad antyder detta att ambition finns inom projektet då mycket tid lagts ner på detta. Coverage kan 
+även användas på delar av koden som till exempel en klass eller funktion.
+</p>
 
-<h4>Codestyle:</h4> Genom att skriva kod med en konsistent stil och anpassa sig till de normer som finns gör man det enklare
-för sig själv då man lättare kommer att kunna läsa annans kod men framförallt så gör man det enklare för andra att 
-läsa ens egen kod vilket är värdefullt.<br>
-
-<h4>Covergare:</h4> En måttstock på hur mycket av koden som omfattas av testning, ju mer kod teckning som
-koden har destå mer arbtete har lagts ner på att skriva tester för koden vilket i sin tur bör vara en indikation
-på att koden håller en hög kvalite men behöver inte nödvändigtvis vara så.<br>
-
-<h4>Complexity:</h4> En kodbas med hög komplexitet betyder inte nödvändigtvis att den är bra eller dålig, dock kan en hög 
+<h4>Complexity:</h4>
+<p>
+En kodbas med hög komplexitet betyder inte nödvändigtvis att den är bra eller dålig, dock kan en hög 
 komplexitet antyda att koden är svår att underhålla och bygga ut särkilt för en kodare som ska fortsätta på 
 ett redan båbörjat projekt. Med tanke på nackdelarna med hög komplexitet ska det försökas att undvikas i den mån 
 som är rimligt, en del uppgifter är väldigt komplexa och kan därför vara svåra att göra på ett enkelt sätt och i
-dessa fall är det helt okej men "keep it simple" är ett bra mantra att ha för sig själv när man arbetar med sin 
-kod så att man inte krånglar till det i onödan vilket kan vara lätt hänt.<br>
+dessa fall är det helt okej.
+</p>
 
 <h4>Cohesion:</h4>
-<p>En klass med hög Cohesion indikerar att methoderna relaterar till varandra i hög grad. Detta i sin tur indikerar att
-classen har ett tydligt syfte och gör i bästa fall endast en sak. I motsats till detta innebär en låg cohesion att classen 
+<p>
+En klass med hög Cohesion indikerar att methoderna relaterar till varandra i hög grad. Detta i sin tur indikerar att
+koden har ett tydligt syfte och gör i bästa fall endast en sak. I motsats till detta innebär en låg cohesion att classen 
 har en lösare relation och gör många olika saker.
-
-<h4>Coupling:</h4> Ett begrepp som ändvänds i samband med hur starkt kopplad en funktion eller metod kopplad till andra.
-En funktion som är stark kopplad genom att vara beroende av andra funktioner är inte modulär och kan därför ställa
+</p>
+<h4>Coupling:</h4>
+<p>
+Ett begrepp som ändvänds i samband med hur starkt kopplad en funktion eller metod är kopplad till andra.
+En funktion som är starkt kopplad genom att vara beroende av andra funktioner är inte modulär och kan därför ställa
 till med problem i framtiden när projektet tar en annan riktning eller implementationer som inte var förutsädda 
-från början dyker upp.<br>
+från början dyker upp.
+</p>
 
-<h4>CRAP:</h4>Är en kombination av complexitet i förhållande till kodtäckning. Genom att väga komplexitet mot hur väl testad
+<h4>CRAP:</h4>
+<p>
+Är en kombination av complexitet i förhållande till kodtäckning. Genom att väga komplexitet mot hur väl testad
 koden är kommer CRAP till nytta då vi får ett riktmärke kring hur mycket arbete med enhetstester för en metod som är rimligt
 att sträva efter. En komplicerad kod kan behöva mer testning än en kod med låg komplexitet.<br>
-
 </p>
+
 <h3>
 Phpmetrics
 </h3>
+<p>
+Att analysera min kod med metrics hjälper mig att hitta svagheter genom att läsa av värden som Complexitet och 
+Maintainibillty index. Metrics ger en bra översikt över vilka delar som kan behöva extra arbete detta genom tydligt
+visuella atribut.</p>
+<img src="{{ asset('img/metrics-start.png') }}" alt="picture of metrics" width="920">
 
 <p>
-
-
-Genom rapporten från php metrics har jag hittat vissa svagheter med min kod.
-<br>
 Class Violations / App\Controller\Library\Controller<br>
 Här finns förbättringspotential då för mycket funktionallitet ligger i denna controller, genom att dela upp 
 koden i flera klasser skulle min kod bli mer mobil.<br>
 
 Via rapporten finner jag även att det är många av mina classer som inte omfattas av enhetstester och här finns
-därför en stor potenial för förbättring. Metrics talar dessutom om att klasser med en hög kompleitet bör 
+därför en stor potenial för förbättring. Metrics talar dessutom om att klasser med en hög komplexitet bör 
 omfattas av enhetstester och här återkommmer LibraryController som en svaghet. Efter refaktorering av denna kod
-bör även enhetstester skrivas.<br>
+bör även enhetstester skrivas.<br><br>
 
-Det finns flera klasser som visar på en hög komplexitet och lågt maintainibillty index varav flera kommer ifrån 
-övningsuppgifter som jag gjort under kursen. Efter som att detta är kod som skrivits i syfte att träna så skulle 
-det vara lämpligt att städa bort en del av denna kod då onödig kod orsakar en kod som är svår att underhålla.<br>
 
-Sammanfattningsvis så är det främst LibraryController och LuckyController de punkterna där jag ser störst möjlighet
-till förbättring genom refaktorering och enhetstestning. Utöver detta finns det kod som inte har något användnings
-område alls i mitt repository och kan därför "städas" bort alternativt exkluderas från rapporten.
+Det finns flera klasser som visar på en hög komplexitet och lågt maintainibillty index vilket är tydligt presenterat i
+metrics.<br>
+<img src="{{ asset('img/metricsstartcirle.png') }}" alt="picture of metrics" width="920">
+
 
 </p>
-<img src="{{ asset('img/metrics-start.png') }}" alt="picture of metrics" width="920">
+
 
 
 <h3>
 Scrutinizer
 </h3>
 <p>
-Skapa en rubrik “Scrutinizer” och analysera dess rapport för din kod. Gör på samma sätt som du gjorde med 
-Phpmetrics.<br>
+I scrutinezer ges en bra möjlighet att djupdyka i koden och en mängd olika mätvärden så som CRAP och Coverage finns till hands.
 
 Betyget för min kod i Scrutinizer får rating 10 vid en första kontroll vilket ger en antydan till att koden är bra,
-däremot är kodtäckningen låg endast 15% vilket leder mig till att ifrågasätta det betyget på koden. 
-När jag undersöker fliken "Issues" ser jag att det finns tre klasser som inte används alls. Dessa klasser är 
-skapade under kursens gång när jag provat mig fram samt arbetat med övningsuppgifterna. Det finns en möjlighet att städa bort
-kod och få en överlag bättre kodteckning samtidigt som några issues försvinner.<br>
-
-Tidigare nämda problem ifrån Metrics rapporten bekräftas i Scrutinizer där LibraryController visar en hög komplexitet
-med en 0% Coverage, här finns en möjlighet att arbeta med refaktorering och enhetstestning.<br>
-
+däremot är kodtäckningen låg endast 15% och här finns med andra ord en förbättringpotenial. Det är även ett antal klasser
+som får ett högt CRAP score och det indikerar att det är dessa klasser där stor förbättringspotenial för rafaktorering eller 
+enhetstestning finns.</p>
 
 <img src="{{ asset('img/scrutinizer-start.png') }}" alt="picture of scrutinizer" width="920">
-
-</p>
 <p>
-Nuvarane värden från badges.
-<br>
-<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/quality-score.png?b=main" alt="Scrutinizer Code Quality"/><br>
-<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/coverage.png?b=main" alt="Code Coverage"/><br>
-<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/build.png?b=main" alt="Build Status"/><br>
-<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/code-intelligence.svg?b=main" alt="Code Intelligence Status"/><br>
-
-
-</p>
 <p>
-I ovan analys så kopplar du dina “findings” till 6C. Använd gärna något ytterligare mättal som du 
-finner relevant och intressant.
+	När jag undersöker fliken "Issues" ser jag att det finns tre klasser som inte används alls. Dessa klasser är 
+	skapade under kursens gång när jag provat mig fram samt arbetat med övningsuppgifterna. Det finns en möjlighet att städa bort
+	kod och få en överlag bättre kodtäckning samtidigt som jag arbetar bort några issues.
+</p>
+
 </p>
 <h3>Förbättringar</h3>
 <p>
-Den första förbättring jag vill göra är att städa bort alternativt exkludera kod som inte är relevatn
+Den första förbättring jag vill göra är att städa bort alternativt exkludera kod som inte är relevant
 för min webbplats. Genom att göra detta blir jag av med issues så som "unused classes" men jag kommer
-även att förbättra min totala kodtäckning.<br>
-
-Min LibraryConroller ska jag refaktorera då denna fil har hög complexitet och dåligt maintainibillty index.
-<br><br>
-
+även att förbättra min totala kodtäckning. Det finns flera controllers som har ett dåligt maintainibillty
+index score från metrics samt ett högt CRAP score. Här kommer jag att refaktorera koden genom att skapa 
+eller använda befintliga klasser där koden flyttas från controller. Jag avser även att skriva enhetstester
+för den koden jag refaktorerar. Avrage cyclomatic complexity by class är ett mätvärde som ges genom metrics,
+målet är att genom refaktorering även kunna få ett lägre värde här.
 </p>
 <p>
-Exempel på förbättringar kan vara:
+Jag börjar mitt arbete genom att se över om det finns kod som inte används alls av min webbplats. Med hjälp av scrutinizer
+påvisas att DeckOfCardsTest innehåller oanvänd kod varav dessa består i två rader som är dubbletter. Jag uppdatterar git 
+och ser att en issue försvunnit. Jag finner filen LibraryTestController och att den ej används utan har blivit över från 
+utvecklingstadiet denna raderas och jag stämmer av med verktygen och kan se att en violation i metrics försvunnit.
+Min LibraryController påvisar en hög complexitet och lågt maintainibillty index. Här refaktoreras koden kring
+uppdatering av bok och uppladdning av ny bok. Dessa Routes är ganska lika och jag gör en ny klass Library dit endel av
+koden flyttas. Efteråt stämmer jag av i metrics och ser att rödmarkeringen kring denna klass försvunnit.
 
-Fixa issues
-Öka kodtäckning
-Fokusera på kvalitetsindex i Scrutinizer
-Minska komplexiteten i class/metod
-Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det 
-kommer påverka mätvärdena för kvalitet.
+Cyclomatic complexity  | före: 12 efter: 7
+Maintainabillity index | före: 66.48 efter: 71.13
 
-Implementera sedan förbättringarna.<br><br>
+Jag kan även se att den totala "Average cyclomatic complexity by class" sjunker ifrån 3.30 till 3.13. Ifrån Scrutinizer ser 
+jag att min Coverage gick upp med 1% till 16% trots att jag ännu inte skrivit några fler tester vilket indikerar att koden 
+blivit mer effektiv.
+</p>
+<p>
+Jag fortsätter mitt arbete genom att skriva enhetstester för klassen Library och ökar total codecoverage från 16% till 22%.
+Enhetstester skrivs även för DiceGraphic, Controller/Api och ökar Coverage till 25%.
+</p>
+<p>
+I Controller\CardGame refaktoreras en del av koden, en ny klass DeckTask görs för att hantera en del av koden. Även i 
+DiceGameController refaktoreras kod till DiceGameTask.
+Resultatet i metrics visar att avrage cyclomatic complexity gick från: 3.13 till 2.96
+även violations har minskat till 8 stycken.
 
+Jag fortsätter genom att titta på CRAP score där testDiceHand funktionen har ett högt CRAP score jag flyttar denna kod
+till DiceGameTask, enhetstest skrivs för koden. Resultatet blir att ytterligare en violation försvinner och min kodtäckning
+har nu ökat till 28%. Funktionens nya CRAP score mäter 4 från tidigare 20 och Avrage bugs by class  
+har minskat enligt: 0.11 till 0.9.
 
-test/Card/DeckOfCardsTest.php I denna kod finns två kodrader som upprepades och kunde därför städas bort.
-Jag testkör mitt test med composer php unit för att kontrollera att inget gick sönder och pushar sedan förändringar
-till git. Jag stämmer sedan av i scrutinizer och kan se att dessa issues nu är lösta och ligger under fliken "fixed".
-<br><br>
-Jag tar bort controller filen LibraryTestController.php som ej används av min webbplats utan blivit kvar sedan
-utvecklingen. Stämmer av i phpmetrics och kan se att en klass försvann.
-<br><br>
-Jag tar bort controller filen ProductController.php som är ifrån en tidigare övning och ej fyller någon funktion för
-min webbplats. Stämmer av i metrics och kan se att en Violation försvinner och en klass försvinner.
-<br><br>
-Mitt nästa steg är att förbättra min kod i LibraryController vilket jag gör genom att refaktorera en del av koden 
-och flytta en del av funktionaliteten till klassen Library. I controllen finns två tjocka routes som är ganska lika varandra
-update och create. Jag flyttar stora delar av koden till min klass Library. Efteråt stämmer jag av i metrics och kan se att
-klassen LibraryController går från att vara rödmarkerad till att bli gul och värderna ändras enlig:<br>
+Jag fortsätter mer refaktorering i Game21, DeckOfCards, CardGame, library, och lucky endel av koden flyttas till nya eller
+befintliga klasser och jag skriver sedan enhetstester. Jag fortsätter sedan med att skriva docblocks kommentarer och kan se 
+att maintainibillty index ökar för flera klasser.
+</p>
 
-Cyclomatic complexity, före: 12 efter: 7
-Maintainabillity index, före: 66.48 efter: 71.13<br>
-Jag kan även se att den totala "Average cyclomatic complexity by class" sjunker ifrån 3.30 till 3.13.<br>
-Ifrån Scrutinizer ser jag att min Coverage gick upp med 1% till 16% trots att jag ännu inte skrivit några fler tester vilket
-indikerar att koden blivit mer effektiv.<br><br>
+<h4>Resultat</h4>
+<p>
+I metrics sammanfattning av kodbasen syns att flera värden förändrats i en positiv riktning. Violations
+har minskat till 6 från tidigare 10, avrage cyclomatic complexity har ett lägre värde på 2.89 från tidigare
+3.29. Assertions in test har ökat till 66 från tidigare 37 och slutligen avrage bugs by class som fått ett nytt
+värde på 0.09 från tidigare 0.11. Nedan visas bilder före och efter.
+</p>
+<img src="{{ asset('img/metricsStartssmall.png') }}" alt="picture of metrics" width="920">
+<img src="{{ asset('img/metricsFinalsmall.png') }}" alt="picture of metrics" width="920">
+<p>
+I scrutinizer har coverage ökat ifrån tidigare 15% till 36%. Detta främst genom de enhetstester som skrivits men 
+även genom kod som har städats bort eller skrivits på ett bättre sätt. I scrutinizer kan även en förbättring
+av CRAP score på enskillda methoder ses där det högsta mätvärde på någon nu är 12, tidigare fanns ett flertal
+metoder med ett CRAP score på 20+.
+</p>
+<p>
+	Dagsaktuella värden från värden från badges scrutinizer.
+</p>
+<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/quality-score.png?b=main" alt="Scrutinizer Code Quality"/>
+<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/coverage.png?b=main" alt="Code Coverage"/>
+<img src="https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/build.png?b=main" alt="Build Status"/>
 
-Jag skriver ett test för funktionen createOrUpdateBook i min Library class genom implementationen
-av mitt nya test gick jag från : <br>
-före 16% efter 22% coverage.<br>
-
-Jag har nu städat refektorerat och testat min kod.
-<br>
-
-Jag skriver ett test för klassen DiceGraphic function getAsString
-Detta är en liten klass med låg komplexitet så påverkan på min totala 
-coverage blir liten.<br>
-
-Efter mina två tester är skrivna har jag förbättrat andel klasser som 
-saknar tester gått ner ifrån 66,67% till 58,33%
-
-Jag skriver sedan ett test för Controller/Api och lyckas öka min kod teckning med 2%
-till 25% I scrutinizer.<br>
-
-I min Controller\CardGame refaktorerar jag en del koden och skriver en ny class DeckTask
-där jag gör en funktion för att säkerhetställa att en kortlek finns i session.
-
-Efter denna refaktor gick Avrage cyclomatic complexity i metrics till 3.04 ifrån tidigare 
-3.13
-<br>
-
-Jag fortsätter med att refakktorera DiceGameController där jag flyttar kod till classen 
-DiceGameTask<br>
-Resultatet i metrics är att avrage cyclomatic complexity gick från före: 3.04 till 2.96
-Även 1 violation försvann till nu 8 stycken kvar.
-
-complexity för class Controller\DiceGameController i scrutinizer före: 17 efter: 15
-
-jag har nu även lyckats Få ner Avrage bugs by class från 0.11 till 0.9
-
-Jag tittar Vidare på Crap score och kan se hur Min funktion testDiceHand som ligger i DiceGameControlle 
-har ett högt crapscore. på 20 och jag börjar med att refaktorera denna kod in till min klass 
-DiceGameTask. 
-Resultatet i phpmetrics var att jag nu blev av medytterligare en violation och är nere på 7
-violations nu.<br>
-Jag fortsätter att skriva enhettest för min nya kod i klassen DiceGameTask.
-Mitt nya test ökar min kodtäckning från 24  till 28% i scrutinizer.
-DiceGameTask::rollDiceHand har nu ett crapscore på 4 från tidigare 20.
-<br>
-Jag fortsätter att refaktorera Game21 controller route game21draw då denna har ett högt crap score på 
-20. Efter refaktor CRAP score 12
-Efter detta går min Avrage cyclomatic complexity by class ner till 2.89 från tidigare 2.96.
-<br>Efter enhetstest implementerades ökade min avrage cyclomatic complexity till 2.93 i metrics
-men jag blev av med en violation och har nu 6 violations.
-Jag lyckas även få ner mitt värde classes never called by tests till 51.85%
-
-Jag fortsätter att skriva enhetstester och utökar testerna för klassen Luck.
-Min coverage ökar till 32% nu.<br>
-
-refactor code in DeckOfCards, CardGame, expanding DeckTask and written test for DeckTask
-<br> resultat av detta i metrics var att average cyclomatic complexity återgick till 3.00
-App\Controller\CardGame	235	19	0%	1
-<br>
-Fortsätter att refaktorera kod i lucky controller och implementerar en ny class som jag även gör 
-tester för vilket ökar min coverage i scrutinizer till 34%
-och avrage cyclomatic complexity i metrics ner till 2.96 <br>
-
-Jag refaktorerar koden i library för att få ett bättre index i metrics 
-cc 4, MI 52.24 Efter refaktorering har jag nu maintainibillty Index 89.61 på denna klass.
-<br>
-Jag refaktorerar och skriver docblocks för klassen luck och för en kraftig förbättring i Maintainabillity
-index.<br>
-
-Jag fortsätter refaktorera CardGame controller och lyckas nu få ner 
-avrage cyclomatis complexity index till 2.89<br>
-
-Jag skriver ett första test för CardGame controller och sänker mätvärdet classes never 
-called by tests till 46.43% Min code caverage i scrutinizer ökade även till 36%<br>
 </p>
 <h3>
 Diskussion
 </h3>
 <p>
-Avsluta med ett stycke “Diskussion” där du diskuterar kort kring det du nyss gjort.
-Kan man aktivt jobba med kodkvalitet och “clean code” på detta sättet?
-Finns det fördelar och kanske nackdelar?
-Ser du andra möjligheter att jobba mot “clean code”?
-</p>
+Genom att arbeta med metrics och scrutinizer ges ett enkelt överblickbart sätt att hitta flaskhalsar och problem i en 
+kodbas oavsett om man är väl införstådd i koden eller inte. Att arbeta med att förbättra sin kod på detta sätt är nyttigt
+och jag tycker jag lärt mig mycket om min egen kodbas när jag arbetat med refaktorering framförallt. Jag tycker det är bra 
+att testa sin kod även om det är en tidskrävande uppgift så leder det i längden till en bättre kodbas och mer insatta programmerare.
+
+I många fall kan jag se att den tid det tar att arbeta med testning helt enkelt är för dyrbar och det på grund av detta inte är 
+försvarbart. Men i de fall där det är känslig programvara eller för kund väldigt viktigt med driftsäkerhet är testning klart att föredra.
+
+Andra möjligheter att arbeta vidare med "clean code" är att man skulle integrera dessa verktygen från utvecklingens början och låta
+dem bli en självklar och naturlig del av det dagliga arbetet detta tror jag är den bästa vägen som visserligen skulle innebära mer tid i
+utvecklingstadiet men som skulle kunna betala sig genom att kosta mindre under livslängden i form av buggar till exempel.
 </div>
 </div>
 <div class="spaceblock"></div>
