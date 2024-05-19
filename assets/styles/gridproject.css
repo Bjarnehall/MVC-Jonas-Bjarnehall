@@ -1,0 +1,98 @@
+
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+.spaceblock {
+    grid-column: 2/ span 8;
+    min-height: 100px;
+}
+
+.spaceblockSmall {
+    grid-column: 2/ span 8;
+    min-height: 10px;
+}
+
+.about {
+    grid-column: 2/ span 5;
+}
+
+@media (max-width: 1050px) {
+    .about {
+        grid-column: 1/span 10;
+    }
+}
+
+@media (max-width: 750px) {
+    .about {
+        grid-column: 1/span 12;
+        margin-left: -6%;
+    }
+}
+
+.Flowchart img {
+    max-width: 100%;
+}
+
+
+.gameBox {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column: 1/span 24;
+    grid-template-rows: repeat(24, 1fr);
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .buttonServer {
+    margin-left: 85%;
+} */
+
+.gameBox {
+    background-size: 100% 100%;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonServer {
+    margin-top: 220px;
+    margin-left: 1350px;
+}
+
+.buttonServer a {
+    color: #77ff00;
+    font-size: 4rem;
+}
+
+.buttonEnd{
+    width: 300px;
+}
+.buttonEnd a {
+    color: #FFF;
+    font-size: 2rem;
+}
+
+.buttonRedDoor {
+    margin-top: -100px;
+    margin-left: -1100px;
+}
+
+.buttonRedDoor a {
+    color: #77ff00;
+    font-size: 4rem;
+}

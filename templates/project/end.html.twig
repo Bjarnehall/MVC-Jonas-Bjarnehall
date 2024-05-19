@@ -1,0 +1,22 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}Adventure Game
+{% endblock %}
+
+
+{% block body %}
+<div class="gameBox" style="background-image: url('{{ asset('img/startrum1black.png') }}');">
+<div class="container">
+
+	<div class="buttonEnd">
+		<h2>
+<a href="{{ path('project_start') }}">Spela igen</a>
+
+
+		</h2>
+	</div>
+</div>
+
+{% endblock %}
+
+

@@ -11,34 +11,34 @@
 Introduktion
 </h2>
 <p>
-I samband med den här rapportern kommer jag att förhålla mig till det som defineras som de sex stycken C:na vilka beskrivs 
-enligt följande.
+I samband med denna rapport kommer jag att förhålla mig till det som defineras som de sex C:na, vilka beskrivs 
+i kommande avsnitt.
 </p>
 <h4>Codestyle:</h4> 
 <p>
 Genom att förhålla sig till vissa stilregler och normer erhålls en möjlighet för andra personer att 
 förstå koden. Detta är värdefullt om man är flera personer som arbetar med ett projekt men även när man själv ska tillbaka
-i ett kodstycke som är skrivit en tid tillbaka.
+till ett kodstycke som är skrivit en tid tillbaka.
 </p>
-<h4>Covergare:</h4>
+<h4>Coverage:</h4>
 <p>
 Är måttstock på hur mycket av koden som omfattas av testning, även kallat kodtäckning. Om en stor andel 
 av den totala koden är testad antyder detta att ambition finns inom projektet då mycket tid lagts ner på detta. Coverage kan 
-även användas på delar av koden som till exempel en klass eller funktion.
+även användas på delar av koden som till exempel en klass eller en funktion.
 </p>
 
 <h4>Complexity:</h4>
 <p>
 En kodbas med hög komplexitet betyder inte nödvändigtvis att den är bra eller dålig, dock kan en hög 
 komplexitet antyda att koden är svår att underhålla och bygga ut särkilt för en kodare som ska fortsätta på 
-ett redan båbörjat projekt. Med tanke på nackdelarna med hög komplexitet ska det försökas att undvikas i den mån 
-som är rimligt, en del uppgifter är väldigt komplexa och kan därför vara svåra att göra på ett enkelt sätt och i
-dessa fall är det helt okej.
+ett redan båbörjat projekt. Med tanke på nackdelarna med hög komplexitet ska det helst undvikas i den mån 
+som är rimligt. En del uppgifter är väldigt komplexa och kan därför vara svåra att göra på ett enkelt sätt och i
+dessa fall är det helt okej. 
 </p>
 
 <h4>Cohesion:</h4>
 <p>
-En klass med hög Cohesion indikerar att methoderna relaterar till varandra i hög grad. Detta i sin tur indikerar att
+En klass med hög Cohesion indikerar att metoderna relaterar till varandra i hög grad. Detta, i sin tur, indikerar att
 koden har ett tydligt syfte och gör i bästa fall endast en sak. I motsats till detta innebär en låg cohesion att classen 
 har en lösare relation och gör många olika saker.
 </p>
@@ -61,7 +61,7 @@ att sträva efter. En komplicerad kod kan behöva mer testning än en kod med l�
 Phpmetrics
 </h3>
 <p>
-Att analysera min kod med metrics hjälper mig att hitta svagheter genom att läsa av värden som Complexitet och 
+Att analysera koder med metrics hjälper till att hitta svagheter genom att läsa av värden som Complexitet och 
 Maintainibillty index. Metrics ger en bra översikt över vilka delar som kan behöva extra arbete detta genom tydligt
 visuella atribut.</p>
 <img src="{{ asset('img/metrics-start.png') }}" alt="picture of metrics" width="920">
@@ -69,7 +69,7 @@ visuella atribut.</p>
 <p>
 Class Violations / App\Controller\Library\Controller<br>
 Här finns förbättringspotential då för mycket funktionallitet ligger i denna controller, genom att dela upp 
-koden i flera klasser skulle min kod bli mer mobil.<br>
+koden i flera klasser skulle koden bli mer mobil.<br>
 
 Via rapporten finner jag även att det är många av mina classer som inte omfattas av enhetstester och här finns
 därför en stor potenial för förbättring. Metrics talar dessutom om att klasser med en hög komplexitet bör 
@@ -118,7 +118,7 @@ målet är att genom refaktorering även kunna få ett lägre värde här.
 </p>
 <p>
 Jag börjar mitt arbete genom att se över om det finns kod som inte används alls av min webbplats. Med hjälp av scrutinizer
-påvisas att DeckOfCardsTest innehåller oanvänd kod varav dessa består i två rader som är dubbletter. Jag uppdatterar git 
+påvisas att DeckOfCardsTest innehåller oanvänd kod varav dessa består i två rader som är dubbletter. Jag uppdaterar git 
 och ser att en issue försvunnit. Jag finner filen LibraryTestController och att den ej används utan har blivit över från 
 utvecklingstadiet denna raderas och jag stämmer av med verktygen och kan se att en violation i metrics försvunnit.
 Min LibraryController påvisar en hög complexitet och lågt maintainibillty index. Här refaktoreras koden kring
@@ -147,7 +147,7 @@ till DiceGameTask, enhetstest skrivs för koden. Resultatet blir att ytterligare
 har nu ökat till 28%. Funktionens nya CRAP score mäter 4 från tidigare 20 och Avrage bugs by class  
 har minskat enligt: 0.11 till 0.9.
 
-Jag fortsätter mer refaktorering i Game21, DeckOfCards, CardGame, library, och lucky endel av koden flyttas till nya eller
+Vidare fortsättter jag med refaktorering i Game21, DeckOfCards, CardGame, library, och lucky endel av koden flyttas till nya eller
 befintliga klasser och jag skriver sedan enhetstester. Jag fortsätter sedan med att skriva docblocks kommentarer och kan se 
 att maintainibillty index ökar för flera klasser.
 </p>
@@ -188,7 +188,7 @@ I många fall kan jag se att den tid det tar att arbeta med testning helt enkelt
 försvarbart. Men i de fall där det är känslig programvara eller för kund väldigt viktigt med driftsäkerhet är testning klart att föredra.
 
 Andra möjligheter att arbeta vidare med "clean code" är att man skulle integrera dessa verktygen från utvecklingens början och låta
-dem bli en självklar och naturlig del av det dagliga arbetet detta tror jag är den bästa vägen som visserligen skulle innebära mer tid i
+dem bli en självklar och naturlig del av det dagliga arbetet vilket jag tror är den bästa vägen som visserligen skulle innebära mer tid i
 utvecklingstadiet men som skulle kunna betala sig genom att kosta mindre under livslängden i form av buggar till exempel.
 </div>
 </div>

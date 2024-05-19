@@ -1,0 +1,122 @@
+@import "gridproject.css";
+@import "card.css";
+
+
+html {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 1.65;
+    letter-spacing: 0.08rem;
+}
+
+body {
+    background-color: #040113;
+    color: hsl(210, 15%, 95%);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+nav li {
+    display: inline;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 0;
+}
+
+header {
+    /* background-color: #38457B; */
+    padding: 1rem;
+    margin: 0;
+}
+
+header h1 {
+    padding-left: 2.5rem;
+}
+
+main {
+    margin: 0%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #000000;
+    height: 5.75rem;
+    display: grid;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding-left: 6%;
+    z-index: 1000;
+}
+
+nav a {
+    color: hsl(210, 15%, 95%);
+}
+
+
+nav a:hover {
+    color: hsl(163, 100%, 51%);
+}
+
+
+main {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 2rem;
+    padding-left: 6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

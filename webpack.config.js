@@ -22,6 +22,7 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     // css for casino
+    .addEntry('project', './assets/project.js')
     .addEntry('casino', './assets/casino.js')
     .addEntry('app', './assets/app.js')
 

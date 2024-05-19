@@ -1,0 +1,55 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}Adventure Game
+{% endblock %}
+
+
+{% block body %}
+<div class="about">
+	<h2>Projekt examination MVC</h2>
+    <p>
+    I mitt projekt har jag valt inriktningen "Adventure Game".
+    </p>
+    <p>
+    Jag börjar med att rita en snabb skiss med papper och penna vad mitt spel ska gå ut på.
+    Sedan förenklar jag det till de minsta beståndsdelarna för att ha något att starta ifrån.
+    Spelet går ut på att spelaren tar sig till ett serverrum sär en server ska stängas av i syfte
+    att stoppa ett virus att sprida sig.
+    </p>
+    <p>
+    Den enklaste implementationen av detta spel är följande:<br>
+    Start rum: Här startar spelaren.<br>
+    Serverum: Hit tar sig spelaren för att stänga servern.<br>
+    Servern: Servern är ett object som ska stängas av gör detta genom att klicka på servern.<br>
+    Vinst: Skickar spelaren till en sida där nytt spel kan startas.<br>
+    </p>
+    <p>
+    Nedan en bild som visar flödet på den enklaste varianten på mitt spel.
+    </p>
+<div class="Flowchart">
+	<img src="{{ asset('img/Flowchart1.png') }}" alt="FlowchartGame" width="720">
+</div>
+    <p>
+    Jag skriver routes för följande templates: about, end, home, server och start. Jag kontrollerar
+    att flödet fungerar mellan templates. Jag tar efter detta ett steg tillbaka och läser igenom 
+    instruktionerna och kraven för projektet.
+    </p>
+    <p>
+    Jag skissar med penna och papper och ritar sedan ett nytt flödesdiagram för nästa delmoment.
+    Nästa delproblem är följande:<br>
+    Möjlighet att gå till Serverrum redan implementerat.<br>
+    Möjlighet att gå mellan övriga rum.<br>
+    Bild för start rum med dörrar i tre riktningar.<br>
+    Bilder för övriga rum totalt tre stycken.<br>
+    </p>
+    <div class="Flowchart">
+        <img src="{{ asset('img/Flowchart2.png') }}" alt="FlowchartGame" width="720">
+    </div>
+ <p>
+ Jag har nu implementerat ett start rum, serverrum, server och ett ledtrådsrum.
+Vidare ska jag skapa en databas "notebook" där olika siffror och nummer kan sparas.
+</div>
+</div>
+<div class="spaceblock"></div>
+{% endblock %}
+
