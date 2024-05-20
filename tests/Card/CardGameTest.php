@@ -11,16 +11,26 @@ use App\Card\DeckOfCards;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Card\Card;
 
-
 class CardGameTest extends TestCase
 {
-        public function testApiDeckReturnsJsonResponse(): void
+    /**
+     * Helper method to create an instance of the CardGame controller.
+     *
+     * @return CardGame An instance of the CardGame controller.
+     */
+    private function createCardGameController(): CardGame
     {
         $deckTaskMock = $this->createMock(DeckTask::class);
-        $sessionMock = $this->createMock(SessionInterface::class);
-
-        $cardGame = new CardGame($deckTaskMock, $sessionMock);
+        return new CardGame($deckTaskMock);
+    }
+    /**
+     * Test case to verify that the apiDeck method returns a JsonResponse.
+     */
+    public function testApiDeckReturnsJsonResponse(): void
+    {
+        $cardGame = $this->createCardGameController();
         $response = $cardGame->apiDeck();
+
         $this->assertInstanceOf(JsonResponse::class, $response);
     }
 }

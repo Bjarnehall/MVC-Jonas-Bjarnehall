@@ -54,9 +54,6 @@
     background-position: center;
 }
 
-/* .buttonServer {
-    margin-left: 85%;
-} */
 
 .gameBox {
     background-size: 100% 100%;
@@ -69,7 +66,7 @@
     align-items: center;
 }
 
-.buttonServer {
+/* .buttonServer {
     margin-top: 220px;
     margin-left: 1350px;
 }
@@ -77,7 +74,7 @@
 .buttonServer a {
     color: #77ff00;
     font-size: 4rem;
-}
+} */
 
 .buttonEnd{
     width: 300px;
@@ -87,7 +84,7 @@
     font-size: 2rem;
 }
 
-.buttonRedDoor {
+/* .buttonRedDoor {
     margin-top: -100px;
     margin-left: -1100px;
 }
@@ -95,4 +92,193 @@
 .buttonRedDoor a {
     color: #77ff00;
     font-size: 4rem;
+} */
+
+.buttonServer {
+    position: fixed;
+    left: 82%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonServer a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+.buttonServer a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+.clueQuoteOne {
+    position: fixed;
+    left: 63%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    height: 240px;
+    width: 250px;
+}
+
+.clueQuoteOne {
+    color: #00000000;
+    font-size: 0.65rem;
+    background-color: #ffffff34;
+    border-radius: 5%;
+}
+
+.clueQuoteOne :hover {
+    color: #000000;
+    font-size: 1rem;
+    background-color: #FFF;
+    border-radius: 5%;
+    padding: 15px;
+    position: fixed;
+    left: -73%;
+    top: -28%;
+    width: 200px;
+}
+
+.buttonRedDoor {
+    position: fixed;
+    left: 8%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonRedDoor a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonRedDoor a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+
+.buttonBackFromOffice {
+    position: fixed;
+    left: 92%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonBackFromOffice a {
+    color:#77ff0020;
+    font-size: 7rem;
+}
+
+.buttonBackFromOffice a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+.buttonPickUp {
+    position: fixed;
+    left: 68%;
+    top: 69%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonPickUp a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonPickUp a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+
+.buttonThirdRoom {
+    position: fixed;
+    left: 39%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonThirdRoom a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonThirdRoom a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+
+.buttonBackToSecond {
+    position: fixed;
+    left: 12%;
+    top: 26%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonBackToSecond a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonBackToSecond a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+.inventory {
+    position: fixed;
+    left: 12%;
+    top: 74%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(164, 144, 52);
+    border-radius: 1.3rem;
+    color: black;
+    padding-right: 15px;
+    height: 240px;
+    width: 150px;
+}
+
+.doorForm {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    border-radius: 1.3rem;
+    color: rgb(4, 255, 0);
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 240px;
+    width: 250px;
+}
+
+.buttonStart {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonStart a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonStart a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+.endPromt {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.3rem;
+    color: rgb(4, 255, 0);
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 240px;
+    width: 450px;
 }

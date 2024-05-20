@@ -5,7 +5,7 @@
 
 
 {% block body %}
-<div class="gameBox" style="background-image: url('{{ asset('img/startroomcharacter.png') }}');">
+<div class="gameBox" style="background-image: url('{{ asset('img/startGame.png') }}');">
 
 
 <div class="container">
@@ -13,14 +13,28 @@
 		<a href="{{ path('project_server') }}"><i class="fa-solid fa-right-to-bracket"></i>
 		</a>
 	</div>
+</div>
+<div class="container">
 	<div class="buttonRedDoor">
-<a href="{{ path('project_secondroom') }}">
-
-			<i class="fa-solid fa-right-to-bracket"></i>
+		<a href="{{ path('project_secondroom') }}"><i class="fa-solid fa-right-to-bracket"></i>
 		</a>
 	</div>
-
 </div>
+<div class="container">
+	<div class="clueQuoteOne">
+		<h4>Hello there!<br>A madman is about to spread a dangerous computer virus.
+		He wants to delete the schools database just becouse he did not get
+		the grade he wanted. Man I dont want my education to be wasted!</h4>
+	</div>
+</div>
+<div
+	class="inventory">
+	{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
+</div>
+
 {% endblock %}
+
+
+
 
 
