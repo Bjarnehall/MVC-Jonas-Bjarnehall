@@ -11,8 +11,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ProjectController extends AbstractController
 {
-    private $adventureMechanics;
-    private $adventureInventory;
+    private AdventureMechanics $adventureMechanics;
+    private AdventureInventory $adventureInventory;
 
     public function __construct(AdventureMechanics $adventureMechanics, AdventureInventory $adventureInventory)
     {

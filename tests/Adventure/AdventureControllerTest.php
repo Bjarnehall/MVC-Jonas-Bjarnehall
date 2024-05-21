@@ -7,22 +7,25 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class AdventureControllerTest extends WebTestCase
 {
-    private $adventureInventoryMock;
-
-    protected function setUp(): void
-    {
-        $this->adventureInventoryMock = $this->createMock(AdventureInventory::class);
-    }
 /**
  * Test for doctrine setup index
  */
-    public function testIndex(): void
+    // public function testIndex(): void
+    // {
+    //     $client = static::createClient();
+    //     $crawler = $client->request('GET', '/adventure');
+    //     $this->assertResponseIsSuccessful();
+
+    //     $this->assertSelectorExists('.example-wrapper');
+    //     $this->assertSelectorTextContains('.example-wrapper', 'This friendly message is coming from:');
+    // }
+        public function testTitle(): void
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/adventure');
-        $this->assertResponseIsSuccessful();
+        $client->request('GET', '/adventure');
 
-        $this->assertSelectorExists('.example-wrapper');
-        $this->assertSelectorTextContains('.example-wrapper', 'This friendly message is coming from:');
+        $this->assertResponseIsSuccessful();
+        $this->assertSelectorExists('title');
+        $this->assertSelectorTextContains('title', 'Hello AdventureController!');
     }
 }
