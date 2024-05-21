@@ -8,22 +8,30 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class AdventureInventory
 {
-    private $doctrine;
-    private $entityManager;
+    private ManagerRegistry $doctrine;
+    private EntityManagerInterface $entityManager;
 
     public function __construct(ManagerRegistry $doctrine, EntityManagerInterface $entityManager)
     {
         $this->doctrine = $doctrine;
         $this->entityManager = $entityManager;
     }
-
+    /**
+     * Get all Adventure
+     *
+     * @return Adventure[]
+     */
     public function getAllAdventures()
     {
         $repository = $this->doctrine->getRepository(Adventure::class);
         return $repository->findAll();
     }
-
-    public function clearAdventures()
+    /**
+     * Reset clues from Adventure
+     * 
+     * @return void
+     */
+    public function clearAdventures(): void
     {
         $repository = $this->doctrine->getRepository(Adventure::class);
         $adventures = $repository->findAll();
@@ -35,31 +43,31 @@ class AdventureInventory
         $this->entityManager->flush();
     }
     /**
+    * check if item exist
+    */
+    public function adventureExists(int $codes, int $keys): bool
+    {
+        $repository = $this->doctrine->getRepository(Adventure::class);
+        $existingAdventure = $repository->findOneBy(['codes' => $codes, 'keys' => $keys]);
+        return $existingAdventure !== null;
+    }
+    /**
     * Adds a note to the inventory.
-    *
-    * This method adds a note to the adventure entity. It checks if the specified item already exists. 
-    * If exists then returns false.
-    *
-    * @return bool Returns true if the note was added, otherwise false.
-     */
+    */
     public function addNote(): bool
     {
-        $entityManager = $this->doctrine->getManager();
-        $repository = $this->doctrine->getRepository(Adventure::class);
-        $existingAdventure = $repository->findOneBy(['codes' => 22456789, 'keys' => 101]);
-
-        if ($existingAdventure !== null) {
+        $codes = 22456789;
+        $keys = 101;
+        if ($this->adventureExists($codes, $keys)) {
             return false;
         }
-
+        $entityManager = $this->doctrine->getManager();
         $adventure = new Adventure();
         $adventure->setNotes("papperslapp");
-        $adventure->setCodes(22456789);
-        $adventure->setKeys(101);
-
+        $adventure->setCodes($codes);
+        $adventure->setKeys($keys);
         $entityManager->persist($adventure);
         $entityManager->flush();
-
         return true;
     }
 }

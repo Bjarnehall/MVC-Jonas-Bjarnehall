@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdventureController extends AbstractController
 {
-    private $adventureInventory;
+    private AdventureInventory $adventureInventory;
 
     public function __construct(AdventureInventory $adventureInventory)
     {
@@ -23,23 +23,30 @@ class AdventureController extends AbstractController
             'controller_name' => 'AdventureController',
         ]);
     }
-
+/**
+ * Pick up a clue for Adventure.
+ */
     #[Route('/adventure/add', name: 'adventure_add')]
     public function adventureAdd(): Response
     {
-        $added = $this->adventureInventory->addNote();
-
-        if (!$added) {
+        $codes = 22456789;
+        $keys = 101;
+        if ($this->adventureInventory->adventureExists($codes, $keys)) {
             return $this->redirectToRoute('project_secondroom');
         }
-
-        $adventures = $this->adventureInventory->getAllAdventures();
-
-        return $this->render('project/secondroom.html.twig', [
-            'adventures' => $adventures,
-        ]);
+        $added = $this->adventureInventory->addNote();
+        if ($added) {
+            $adventures = $this->adventureInventory->getAllAdventures();
+            return $this->render('project/secondroom.html.twig', [
+                'adventures' => $adventures,
+            ]);
+        } else {
+            return $this->redirectToRoute('project_secondroom');
+        }
     }
-
+/**
+ * Clears the clues for Adventure.
+ */
     #[Route('/adventure/clear', name: 'project_clear')]
     public function proj_clear(): Response
     {
