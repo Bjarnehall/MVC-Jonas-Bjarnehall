@@ -5,10 +5,7 @@ namespace App\Controller;
 use App\Adventure\AdventureInventory;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
-
-use App\Entity\Adventure;
-use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\Routing\Annotation\Route;
 
 class AdventureController extends AbstractController
 {
@@ -27,7 +24,7 @@ class AdventureController extends AbstractController
         ]);
     }
 
-    #[Route('/Adventure/add', name: 'adventure_add')]
+    #[Route('/adventure/add', name: 'adventure_add')]
     public function adventureAdd(): Response
     {
         $added = $this->adventureInventory->addNote();
@@ -43,7 +40,7 @@ class AdventureController extends AbstractController
         ]);
     }
 
-    #[Route('/proj/clear', name: 'project_clear')]
+    #[Route('/adventure/clear', name: 'project_clear')]
     public function proj_clear(): Response
     {
         $this->adventureInventory->clearAdventures();

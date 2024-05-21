@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2024-05-17 13:29:06        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2024-05-20 17:15:26        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -262,6 +262,34 @@
 
     var relations = [
     {
+        "name": "\\App\\Controller\\AdventureController",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "\\App\\Adventure\\AdventureInventory",
+            "\\Symfony\\Component\\HttpFoundation\\Response"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Adventure\\AdventureInventory",
+        "size": 3000,
+        "relations": [
+            "\\Doctrine\\Persistence\\ManagerRegistry",
+            "\\Doctrine\\ORM\\EntityManagerInterface",
+            "\\App\\Entity\\Adventure"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\Response",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\App\\Controller\\LibraryController",
         "size": 3000,
         "relations": [
@@ -274,11 +302,6 @@
         ]
     },
     {
-        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
-        "size": 3000,
-        "relations": []
-    },
-    {
         "name": "\\App\\Library\\Library",
         "size": 3000,
         "relations": [
@@ -286,11 +309,6 @@
             "\\App\\Entity\\Books",
             "\\Symfony\\Component\\HttpFoundation\\Request"
         ]
-    },
-    {
-        "name": "\\Symfony\\Component\\HttpFoundation\\Response",
-        "size": 3000,
-        "relations": []
     },
     {
         "name": "\\Symfony\\Component\\HttpFoundation\\Request",
@@ -318,6 +336,22 @@
     },
     {
         "name": "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Controller\\ProjectController",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "\\App\\Adventure\\AdventureMechanics",
+            "\\App\\Adventure\\AdventureInventory",
+            "\\Symfony\\Component\\HttpFoundation\\Response",
+            "\\Symfony\\Component\\HttpFoundation\\Request"
+        ]
+    },
+    {
+        "name": "\\App\\Adventure\\AdventureMechanics",
         "size": 3000,
         "relations": []
     },
@@ -504,6 +538,16 @@
         ]
     },
     {
+        "name": "\\Doctrine\\ORM\\EntityManagerInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Entity\\Adventure",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\App\\Repository\\BooksRepository",
         "size": 3000,
         "relations": [
@@ -515,6 +559,14 @@
         "name": "\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
         "size": 3000,
         "relations": []
+    },
+    {
+        "name": "\\App\\Repository\\AdventureRepository",
+        "size": 3000,
+        "relations": [
+            "\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+            "\\Doctrine\\Persistence\\ManagerRegistry"
+        ]
     },
     {
         "name": "\\App\\Repository\\ProductRepository",
