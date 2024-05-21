@@ -43,7 +43,7 @@ class AdventureInventory
         $this->entityManager->flush();
     }
     /**
-    * check if item exist
+    * Check if exist
     */
     public function adventureExists(int $codes, int $keys): bool
     {
