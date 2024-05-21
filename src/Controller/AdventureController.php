@@ -23,9 +23,9 @@ class AdventureController extends AbstractController
             'controller_name' => 'AdventureController',
         ]);
     }
-/**
- * Pick up a clue for Adventure.
- */
+    /**
+     * Pick up a clue for Adventure.
+     */
     #[Route('/adventure/add', name: 'adventure_add')]
     public function adventureAdd(): Response
     {
@@ -44,9 +44,9 @@ class AdventureController extends AbstractController
             return $this->redirectToRoute('project_secondroom');
         }
     }
-/**
- * Clears the clues for Adventure.
- */
+    /**
+     * Clears the clues for Adventure.
+     */
     #[Route('/adventure/clear', name: 'project_clear')]
     public function proj_clear(): Response
     {

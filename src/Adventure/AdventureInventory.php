@@ -28,7 +28,7 @@ class AdventureInventory
     }
     /**
      * Reset clues from Adventure
-     * 
+     *
      * @return void
      */
     public function clearAdventures(): void

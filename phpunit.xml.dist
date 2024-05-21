@@ -20,6 +20,9 @@
     <testsuites>
         <testsuite name="Project Test Suite">
             <directory>tests</directory>
+            <exclude>
+                <file>./src/Controller/SessionController.php</file>
+            </exclude>
         </testsuite>
     </testsuites>
 
