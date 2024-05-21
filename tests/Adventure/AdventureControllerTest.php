@@ -10,16 +10,7 @@ class AdventureControllerTest extends WebTestCase
 /**
  * Test for doctrine setup index
  */
-    // public function testIndex(): void
-    // {
-    //     $client = static::createClient();
-    //     $crawler = $client->request('GET', '/adventure');
-    //     $this->assertResponseIsSuccessful();
-
-    //     $this->assertSelectorExists('.example-wrapper');
-    //     $this->assertSelectorTextContains('.example-wrapper', 'This friendly message is coming from:');
-    // }
-        public function testTitle(): void
+    public function testTitle(): void
     {
         $client = static::createClient();
         $client->request('GET', '/adventure');
