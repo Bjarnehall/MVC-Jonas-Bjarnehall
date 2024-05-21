@@ -16,7 +16,7 @@ class AdventureMechanicsTest extends TestCase
     public function testCheckPasswordWithCorrectPassword(): void
     {
         $adventureMechanics = new AdventureMechanics();
-        $this->assertTrue($adventureMechanics->checkPassword('22456789'));
+        $this->assertTrue($adventureMechanics->checkPassword('mumintrollet'));
     }
     /**
      * Test the checkPassword method with incorrect password.

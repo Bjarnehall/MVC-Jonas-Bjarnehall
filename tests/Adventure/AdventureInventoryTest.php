@@ -64,7 +64,7 @@ class AdventureInventoryTest extends TestCase
      */
     public function testAdventureExists(): void
     {
-        $codes = 22456789;
+        $codes = "zhzvagebyyrg";
         $keys = 101;
 
         $repositoryMock = $this->createMock(ObjectRepository::class);
