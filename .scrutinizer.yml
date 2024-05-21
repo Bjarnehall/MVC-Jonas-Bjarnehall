@@ -2,7 +2,7 @@ imports:
     - php
 
 filter:
-    excluded_paths: [vendor/*, test/*]
+    excluded_paths: [vendor/*, test/*, src/Controller/SessionController.php]
 
 build:
     image: default-bionic
@@ -27,7 +27,3 @@ build:
                 coverage:
                     file: "docs/coverage.clover"
                     format: "php-clover"
-
-    filter:
-        excluded_paths:
-            - 'src/Controller/SessionController.php'
