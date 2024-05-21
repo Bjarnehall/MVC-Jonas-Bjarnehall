@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use App\Adventure\AdventureInventory;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ObjectRepository;
 use App\Entity\Adventure;
 
 /**
@@ -13,34 +14,21 @@ use App\Entity\Adventure;
  */
 class AdventureInventoryTest extends TestCase
 {
-    public function testGetAllAdventures()
+    public function testGetAllAdventures(): void
     {
-        $doctrineMock = $this->getMockBuilder(\Doctrine\Persistence\ManagerRegistry::class)
-                             ->getMock();
+        $repositoryMock = $this->createMock(ObjectRepository::class);
+        $expectedAdventures = [new Adventure(), new Adventure()];
+        $repositoryMock->method('findAll')->willReturn($expectedAdventures);
 
-        $entityManagerMock = $this->getMockBuilder(\Doctrine\ORM\EntityManagerInterface::class)
-                                  ->getMock();
+        $doctrineMock = $this->createMock(ManagerRegistry::class);
+        $doctrineMock->method('getRepository')->willReturn($repositoryMock);
 
-        $repositoryMock = $this->getMockBuilder(\Doctrine\Persistence\ObjectRepository::class)
-                               ->getMock();
-
-        $expectedAdventures = [
-            new Adventure(),
-            new Adventure(),
-        ];
-        $repositoryMock->expects($this->once())
-                       ->method('findAll')
-                       ->willReturn($expectedAdventures);
-
-        $doctrineMock->expects($this->once())
-                     ->method('getRepository')
-                     ->with(Adventure::class)
-                     ->willReturn($repositoryMock);
+        $entityManagerMock = $this->createMock(EntityManagerInterface::class);
 
         $inventory = new AdventureInventory($doctrineMock, $entityManagerMock);
 
         $result = $inventory->getAllAdventures();
 
-        $this->assertEquals($expectedAdventures, $result);
+        $this->assertSame($expectedAdventures, $result);
     }
 }
