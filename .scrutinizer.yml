@@ -3,7 +3,7 @@ imports:
 
 filter:
     excluded_paths: [vendor/*, test/*, src/Controller/SessionController.php,
-    src/Controller/DiceGameController]
+    src/Controller/DiceGameController.php]
 
 build:
     image: default-bionic
