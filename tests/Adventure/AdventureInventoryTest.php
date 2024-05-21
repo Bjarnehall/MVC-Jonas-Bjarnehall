@@ -77,9 +77,9 @@ class AdventureInventoryTest extends TestCase
         $doctrineMock = $this->createMock(ManagerRegistry::class);
 
         $doctrineMock->expects($this->once())
-                     ->method('getRepository')
-                     ->with(Adventure::class)
-                     ->willReturn($repositoryMock);
+            ->method('getRepository')
+            ->with(Adventure::class)
+            ->willReturn($repositoryMock);
 
         $entityManagerMock = $this->createMock(EntityManagerInterface::class);
         $inventory = new AdventureInventory($doctrineMock, $entityManagerMock);
@@ -95,15 +95,15 @@ class AdventureInventoryTest extends TestCase
         $repositoryMock = $this->createMock(ObjectRepository::class);
 
         $repositoryMock->expects($this->once())
-                       ->method('findOneBy')
-                       ->with(['codes' => $codes, 'keys' => $keys])
-                       ->willReturn(null);
+            ->method('findOneBy')
+            ->with(['codes' => $codes, 'keys' => $keys])
+            ->willReturn(null);
 
         $doctrineMock = $this->createMock(ManagerRegistry::class);
 
         $doctrineMock->expects($this->once())
-                     ->method('getRepository')
-                     ->with(Adventure::class)
+            ->method('getRepository')
+            ->with(Adventure::class)
                      ->willReturn($repositoryMock);
 
         $entityManagerMock = $this->createMock(EntityManagerInterface::class);

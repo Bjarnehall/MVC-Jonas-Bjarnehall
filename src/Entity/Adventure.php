@@ -17,7 +17,7 @@ class Adventure
     private ?string $notes = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $codes = null;
+    private ?string $codes = null;
 
     #[ORM\Column(nullable: true)]
     private ?int $keys = null;
@@ -39,12 +39,12 @@ class Adventure
         return $this;
     }
 
-    public function getCodes(): ?int
+    public function getCodes(): ?string
     {
         return $this->codes;
     }
 
-    public function setCodes(?int $codes): static
+    public function setCodes(?string $codes): static
     {
         $this->codes = $codes;
 

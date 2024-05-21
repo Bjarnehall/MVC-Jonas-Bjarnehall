@@ -69,6 +69,17 @@ class ProjectController extends AbstractController
         ]);
     }
     /**
+     * Game third room open cabin
+     */
+    #[Route("/proj/opencabin", name: "project_opencabin")]
+    public function proj_open_cabin(): Response
+    {
+        $adventures = $this->adventureInventory->getAllAdventures();
+        return $this->render('project/cabin.html.twig', [
+            'adventures' => $adventures,
+        ]);
+    }
+    /**
      * Game end page
      */
     #[Route("/proj/end", name: "project_end")]
@@ -104,6 +115,30 @@ class ProjectController extends AbstractController
         }
         $adventures = $this->adventureInventory->getAllAdventures();
         return $this->render('project/server_password.html.twig', [
+            'adventures' => $adventures,
+        ]);
+    }
+    /**
+     * Route for device
+     */
+    #[Route("/proj/device", name: "project_device")]
+    public function proj_device(Request $request): Response
+    {
+        if ($request->getMethod() === 'POST') {
+            $inputString = $request->request->get('inputString');
+
+            if ($inputString !== null && $inputString !== '') {
+
+                $success = $this->adventureInventory->saveRot13String($inputString);
+
+                if ($success) {
+                    return $this->redirectToRoute('project_opencabin');
+                }
+            }
+        }
+
+        $adventures = $this->adventureInventory->getAllAdventures();
+        return $this->render('project/cabin_device.html.twig', [
             'adventures' => $adventures,
         ]);
     }

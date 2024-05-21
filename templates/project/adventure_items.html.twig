@@ -1,6 +1,7 @@
 {# templates/adventure_items.html.twig #}
 <div class="adventures">
 	<ul>
+		<h1>Clues</h1>
 		{% for adventure in adventures %}
 			<li>
 				<strong></strong>
@@ -11,7 +12,7 @@
 				{{ adventure.keys }}
 			</li>
 		{% else %}
-			<li>No adventures found.</li>
+			<li>Nothing here</li>
 		{% endfor %}
 	</ul>
 </div>

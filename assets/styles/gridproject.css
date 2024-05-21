@@ -94,21 +94,7 @@
     font-size: 4rem;
 } */
 
-.buttonServer {
-    position: fixed;
-    left: 82%;
-    top: 48%;
-    transform: translate(-50%, -50%);
-}
 
-.buttonServer a {
-    color: #77ff0020;
-    font-size: 7rem;
-}
-.buttonServer a:hover {
-    color: #77ff00;
-    font-size: 7rem;
-}
 
 .clueQuoteOne {
     position: fixed;
@@ -281,4 +267,74 @@
     padding-left: 15px;
     height: 240px;
     width: 450px;
+}
+
+.buttonOpenCabin {
+    position: fixed;
+    left: 70%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonOpenCabin a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonOpenCabin a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+.buttonDevice {
+    position: fixed;
+    left: 70%;
+    top: 56%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonDevice a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonDevice a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+
+/*Server room*/
+.buttonOutServer {
+    position: fixed;
+    left: 14%;
+    top: 26%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonOutServer a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonOutServer a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}
+
+.buttonServer {
+    position: fixed;
+    left: 78%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonServer a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonServer a:hover {
+    color: #77ff00;
+    font-size: 7rem;
 }

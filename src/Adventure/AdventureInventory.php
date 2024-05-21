@@ -45,7 +45,7 @@ class AdventureInventory
     /**
     * Check if exist
     */
-    public function adventureExists(int $codes, int $keys): bool
+    public function adventureExists(string $codes, int $keys): bool
     {
         $repository = $this->doctrine->getRepository(Adventure::class);
         $existingAdventure = $repository->findOneBy(['codes' => $codes, 'keys' => $keys]);
@@ -56,7 +56,7 @@ class AdventureInventory
     */
     public function addNote(): bool
     {
-        $codes = 22456789;
+        $codes = "zhzvagebyyrg";
         $keys = 101;
         if ($this->adventureExists($codes, $keys)) {
             return false;
@@ -68,6 +68,28 @@ class AdventureInventory
         $adventure->setKeys($keys);
         $entityManager->persist($adventure);
         $entityManager->flush();
+        return true;
+    }
+
+    public function saveRot13String(string $inputString): bool
+    {
+        $rot13String = str_rot13($inputString);
+
+        $codes = $rot13String;
+        $keys = 102;
+
+        if ($this->adventureExists($codes, $keys)) {
+            return false;
+        }
+
+        $entityManager = $this->doctrine->getManager();
+        $adventure = new Adventure();
+        $adventure->setNotes("Decrypted message");
+        $adventure->setCodes($codes);
+        $adventure->setKeys($keys);
+        $entityManager->persist($adventure);
+        $entityManager->flush();
+
         return true;
     }
 }

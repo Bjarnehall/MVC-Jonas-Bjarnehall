@@ -4,7 +4,7 @@ namespace App\Adventure;
 
 class AdventureMechanics
 {
-    private string $correctPassword = '22456789';
+    private string $correctPassword = 'mumintrollet';
 
     public function checkPassword(string $password): bool
     {
