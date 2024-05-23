@@ -71,6 +71,26 @@ class AdventureInventory
         return true;
     }
 
+    /**
+    * Adds a cd to the inventory.
+    */
+    public function addCd(): bool
+    {
+        $codes = "Reboot Server CD";
+        $keys = 103;
+        if ($this->adventureExists($codes, $keys)) {
+            return false;
+        }
+        $entityManager = $this->doctrine->getManager();
+        $adventure = new Adventure();
+        $adventure->setNotes('<i class="fas fa-compact-disc"></i>');
+        $adventure->setCodes($codes);
+        $adventure->setKeys($keys);
+        $entityManager->persist($adventure);
+        $entityManager->flush();
+        return true;
+    }
+
     public function saveRot13String(string $inputString): bool
     {
         $rot13String = str_rot13($inputString);

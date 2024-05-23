@@ -4,9 +4,8 @@ namespace App\Adventure;
 
 class AdventureDevice
 {
-        public function encryptText($text)
+        public function encryptText(string $text): string
     {
-        // Apply Rot13 encryption to the text
         return str_rot13($text);
     }
 }

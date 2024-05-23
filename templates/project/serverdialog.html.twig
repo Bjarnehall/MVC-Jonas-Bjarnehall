@@ -1,0 +1,45 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}Adventure Game
+{% endblock %}
+
+
+{% block body %}
+	<div class="gameBox" style="background-image: url('{{ asset('img/serveroomdeco2.png') }}');">
+		<div
+			class="container">
+			<div class="buttonServer">
+							<a href="{{ path('project_server_final') }}">
+								<i class="fa-solid fa-power-off"></i>
+							</a>
+						</div>
+			<div class="container">
+				<div class="buttonOutServer">
+					<a href="{{ path('project_start') }}">
+
+						<i class="fa-solid fa-right-to-bracket"></i>
+					</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="inventory">
+					{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
+				</div>
+			</div>
+			<div class="container">
+				<div class="dialogserverOne">
+					<p>What have I done. Im so sorry I dont know whats gotten into me.<br> I have already
+                    let the virus into the system oh the regrets Im horrible. <br>Maybe there is a way to 
+                    fix this.</p>
+				</div>
+			</div>
+<div class="container">
+	<div class="buttonPickUpCd">
+		<a href="{{ path('adventure_add_cdSecond') }}">
+			<i class="fa-solid fa-right-to-bracket"></i>
+		</a>
+	</div>
+</div>
+
+		{% endblock %}
+

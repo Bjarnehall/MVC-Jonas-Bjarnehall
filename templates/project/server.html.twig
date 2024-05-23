@@ -5,13 +5,14 @@
 
 
 {% block body %}
-	<div class="gameBox" style="background-image: url('{{ asset('img/serverroomcharacter.png') }}');">
+	<div class="gameBox" style="background-image: url('{{ asset('img/serveroomdeco.png') }}');">
 		<div class="container">
-			<div class="buttonServer">
+			{# <div class="buttonServer">
 				<a href="{{ path('project_end') }}">
 					<i class="fa-solid fa-power-off"></i>
 				</a>
-			</div>
+			</div> #}
+		<div class="container">
 			<div class="buttonOutServer">
 				<a href="{{ path('project_start') }}">
 
@@ -19,11 +20,42 @@
 				</a>
 			</div>
 		</div>
-<div
-	class="inventory">
-	{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
-</div>
-</div>
+		<div class="container">
+			<div class="inventory">
+				{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
+			</div>
+		</div>
+		<div class="container">
+			<div class="dialogServerAnswerOne">
+			<a href="{{ path('project_server_dialog_one') }}">The question is what you are doing here!<br>
+			Just becuase you failed the database course you dont have to ruin everyones grades. <br>
+			I really dont know how you think?</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="dialogServerAnswerTwo">
+				<a href="{{ path('project_server_dialog_two') }}"> OPTION 2 The question is what you are doing here!
+					Just becuase you failed the database course you dont have to ruin everyones grades.
+					I should call your mother she will be ashamed of you!</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="dialogserverOne">
+				<p>What are you doing here?</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="dialogserverChose">
+				<h2>Pick an answer</h2>
+			</div>
+		</div>
+		<div class="container">
+			<div class="buttonPickUpCd">
+				<a href="{{ path('adventure_add_cd') }}">
+					<i class="fa-solid fa-right-to-bracket"></i>
+				</a>
+			</div>
+		</div>
 {% endblock %}
 
 

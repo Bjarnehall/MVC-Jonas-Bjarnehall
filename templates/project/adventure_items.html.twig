@@ -1,15 +1,13 @@
 {# templates/adventure_items.html.twig #}
 <div class="adventures">
 	<ul>
-		<h1>Clues</h1>
+		<h3>Clues</h3>
 		{% for adventure in adventures %}
 			<li>
 				<strong></strong>
-				{{ adventure.notes }}<br>
+				<p>{{ adventure.notes|raw }} |
 				<strong></strong>
-				{{ adventure.codes }}<br>
-				<strong></strong>
-				{{ adventure.keys }}
+				{{ adventure.codes }}</p>
 			</li>
 		{% else %}
 			<li>Nothing here</li>

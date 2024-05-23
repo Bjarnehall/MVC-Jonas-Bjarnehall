@@ -1,0 +1,23 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}Adventure Game
+{% endblock %}
+
+
+{% block body %}
+	<div class="gameBox" style="background-image: url('{{ asset('img/startrum1black.png') }}');">
+		<div class="container">
+			<div class="endPromt">
+				<h1>Grattis!<br>Du lyckades stänga av servern och stoppa det ondskefulla viruset från
+						att sprida sig. DETTA ÄR OPTION 2</h1>
+			</div>
+			<div class="clear">
+				<h1>
+					<a href="{{ path('project_clear') }}">Starta om</a>
+				</h1>
+			</div>
+
+		</div>
+
+	{% endblock %}
+

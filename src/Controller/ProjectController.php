@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Adventure;
 
 class ProjectController extends AbstractController
 {
@@ -83,18 +85,76 @@ class ProjectController extends AbstractController
      * Game end page
      */
     #[Route("/proj/end", name: "project_end")]
-    public function proj_end(): Response
+    public function proj_end(EntityManagerInterface $entityManager): Response
     {
-        return $this->render('project/end.html.twig');
+        $adventureRepository = $entityManager->getRepository(Adventure::class);
+        $adventure = $adventureRepository->findOneBy(['codes' => 'Reboot Server CD', 'keys' => 103]);
+
+        if ($adventure) {
+            return $this->render('project/end.html.twig');
+        } else {
+            $this->addFlash('error', 'Reboot Server CD not found.');
+            return $this->redirectToRoute('project_server_final');
+        }
     }
     /**
-     * Game serverroom
+     * Game end page
      */
+    #[Route("/proj/end_two", name: "project_end_two")]
+    public function proj_end_two(EntityManagerInterface $entityManager): Response
+    {
+        $adventureRepository = $entityManager->getRepository(Adventure::class);
+        $adventure = $adventureRepository->findOneBy(['codes' => 'Reboot Server CD', 'keys' => 103]);
+
+        if ($adventure) {
+            return $this->render('project/end_two.html.twig');
+        } else {
+            $this->addFlash('error', 'Reboot Server CD not found.');
+            return $this->redirectToRoute('project_server_final');
+        }
+    }
+
     #[Route("/proj/server/passed", name: "project_server_passed")]
     public function proj_server_passed(): Response
     {
         $adventures = $this->adventureInventory->getAllAdventures();
         return $this->render('project/server.html.twig', [
+            'adventures' => $adventures,
+        ]);
+    }
+
+    #[Route("/proj/server/dialog_one", name: "project_server_dialog_one")]
+    public function proj_server_dialog_one(): Response
+    {
+        $adventures = $this->adventureInventory->getAllAdventures();
+        return $this->render('project/serverdialog.html.twig', [
+            'adventures' => $adventures,
+        ]);
+    }
+
+    #[Route("/proj/server/dialog_two", name: "project_server_dialog_two")]
+    public function proj_server_dialog_two(): Response
+    {
+        $adventures = $this->adventureInventory->getAllAdventures();
+        return $this->render('project/serverdialog_two.html.twig', [
+            'adventures' => $adventures,
+        ]);
+    }
+
+    #[Route("/proj/server/final_two", name: "project_server_final_two")]
+    public function proj_server_final_two(): Response
+    {
+        $adventures = $this->adventureInventory->getAllAdventures();
+        return $this->render('project/serverfinal_two.html.twig', [
+            'adventures' => $adventures,
+        ]);
+    }
+
+    #[Route("/proj/server/final", name: "project_server_final")]
+    public function proj_server_final(): Response
+    {
+        $adventures = $this->adventureInventory->getAllAdventures();
+        return $this->render('project/serverfinal.html.twig', [
             'adventures' => $adventures,
         ]);
     }

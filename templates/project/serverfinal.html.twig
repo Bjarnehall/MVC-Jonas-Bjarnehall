@@ -1,0 +1,38 @@
+{% extends "baseproject.html.twig" %}
+
+{% block title %}Adventure Game
+{% endblock %}
+
+
+{% block body %}
+	<div class="gameBox" style="background-image: url('{{ asset('img/serveroomdecofinal.png') }}');">
+		<div class="container">
+			<div class="buttonServer">
+				<a href="{{ path('project_end') }}">
+					Use cd
+				</a>
+			</div>
+			<div class="container">
+				<div class="buttonOutServer">
+<a href="{{ path('project_server_dialog_one') }}">
+
+
+						<i class="fa-solid fa-right-to-bracket"></i>
+					</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="inventory">
+					{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
+				</div>
+			</div>
+{% for label, messages in app.flashes %}
+	<div class="flash-{{ label }}">
+		{% for message in messages %}
+			<p>{{ message }}</p>
+		{% endfor %}
+	</div>
+{% endfor %}
+
+		{% endblock %}
+

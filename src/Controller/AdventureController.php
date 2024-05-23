@@ -29,7 +29,7 @@ class AdventureController extends AbstractController
     #[Route('/adventure/add', name: 'adventure_add')]
     public function adventureAdd(): Response
     {
-        $codes = 22456789;
+        $codes = "zhzvagebyyrg";
         $keys = 101;
         if ($this->adventureInventory->adventureExists($codes, $keys)) {
             return $this->redirectToRoute('project_secondroom');
@@ -42,6 +42,69 @@ class AdventureController extends AbstractController
             ]);
         } else {
             return $this->redirectToRoute('project_secondroom');
+        }
+    }
+    /**
+     * Pick up a CD for Adventure.
+     */
+    #[Route('/adventure/addcd', name: 'adventure_add_cd')]
+    public function adventureAddCd(): Response
+    {
+        $codes = "Reboot Server CD";
+        $keys = 103;
+        if ($this->adventureInventory->adventureExists($codes, $keys)) {
+            return $this->redirectToRoute('project_server_passed');
+        }
+        $added = $this->adventureInventory->addCd();
+        if ($added) {
+            $adventures = $this->adventureInventory->getAllAdventures();
+            return $this->render('project/server.html.twig', [
+                'adventures' => $adventures,
+            ]);
+        } else {
+            return $this->redirectToRoute('project_server_passed');
+        }
+    }
+    /**
+     * Pick up a CD for Adventure.
+     */
+    #[Route('/adventure/addcdSecond', name: 'adventure_add_cdSecond')]
+    public function adventureAddCdSecond(): Response
+    {
+        $codes = "Reboot Server CD";
+        $keys = 103;
+        if ($this->adventureInventory->adventureExists($codes, $keys)) {
+            return $this->redirectToRoute('project_server_dialog_one');
+        }
+        $added = $this->adventureInventory->addCd();
+        if ($added) {
+            $adventures = $this->adventureInventory->getAllAdventures();
+            return $this->render('project/serverdialog.html.twig', [
+                'adventures' => $adventures,
+            ]);
+        } else {
+            return $this->redirectToRoute('project_server_dialog_one');
+        }
+    }
+    /**
+     * Pick up a CD for Adventure alternative path.
+     */
+    #[Route('/adventure/addcdSecond_two', name: 'adventure_add_cdSecond_two')]
+    public function adventureAddCdSecond_two(): Response
+    {
+        $codes = "Reboot Server CD";
+        $keys = 103;
+        if ($this->adventureInventory->adventureExists($codes, $keys)) {
+            return $this->redirectToRoute('project_server_dialog_two');
+        }
+        $added = $this->adventureInventory->addCd();
+        if ($added) {
+            $adventures = $this->adventureInventory->getAllAdventures();
+            return $this->render('project/serverdialog_two.html.twig', [
+                'adventures' => $adventures,
+            ]);
+        } else {
+            return $this->redirectToRoute('project_server_dialog_two');
         }
     }
     /**
