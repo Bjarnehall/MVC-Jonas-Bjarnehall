@@ -72,25 +72,45 @@ class ProjectControllerTest extends WebTestCase
         }
     }
 
-public function testProjThirdRoom(): void
-{
-    $adventureInventoryMock = $this->createMock(AdventureInventory::class);
-    $adventures = [new Adventure(), new Adventure()];
-    $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+    public function testProjThirdRoom(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
 
-    $client = static::createClient();
-    $container = $client->getContainer();
-    $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $client = static::createClient();
+        $container = $client->getContainer();
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
 
-    $client->request('GET', '/proj/thirdroom');
-    $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $client->request('GET', '/proj/thirdroom');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-    foreach ($adventures as $adventure) {
-        $notes = $adventure->getNotes();
-        if ($notes !== null) {
-            $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
         }
     }
-}
 
+    public function testProjOpenCabin(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+
+        $client = static::createClient();
+        $container = $client->getContainer();
+
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $client->request('GET', '/proj/opencabin');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
+        }
+    }
 }
