@@ -28,31 +28,23 @@ class ProjectControllerTest extends WebTestCase
         $this->assertSelectorTextContains('.about h2', 'Projekt examination MVC');
     }
 
-public function testProjStart()
+public function testProjStart(): void
 {
-    // Create a mock for the AdventureInventory class
     $adventureInventoryMock = $this->createMock(AdventureInventory::class);
-    $adventures = [new Adventure(), new Adventure()]; // Sample adventures
-    
-    // Stub the getAllAdventures method to return sample adventures
+    $adventures = [new Adventure(), new Adventure()];
+
     $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
-    
-    // Get the client for making requests
+
     $client = static::createClient();
-    
-    // Retrieve the service container
+
     $container = $client->getContainer();
-    
-    // Set the mock instance of AdventureInventory into the container
+
     $container->set(AdventureInventory::class, $adventureInventoryMock);
-    
-    // Make a request to the controller action
+
     $client->request('GET', '/proj/start');
-    
-    // Assert the response status code is 200 (OK)
+
     $this->assertEquals(200, $client->getResponse()->getStatusCode());
-    
-    // Assert that the returned HTML contains expected content
+
     foreach ($adventures as $adventure) {
         $notes = $adventure->getNotes();
         if ($notes !== null) {
@@ -61,4 +53,30 @@ public function testProjStart()
     }
 
 }
+
+public function testProjSecondRoom(): void
+{
+    $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+    $adventures = [new Adventure(), new Adventure()];
+
+    $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+
+    $client = static::createClient();
+
+    $container = $client->getContainer();
+
+    $container->set(AdventureInventory::class, $adventureInventoryMock);
+
+    $client->request('GET', '/proj/secondroom');
+
+    $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+    foreach ($adventures as $adventure) {
+        $notes = $adventure->getNotes();
+        if ($notes !== null) {
+            $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+        }
+    }
+}
+
 }
