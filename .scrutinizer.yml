@@ -7,7 +7,7 @@ filter:
     src/Controller/ReportTwig.php, src/Controller/LibraryController.php, src/Controller/Game21.php,
     src/Controller/CardGame.php, src/Repository/BooksRepository.php, src/Repository/ProductRepository.php,
     src/Controller/MetricsController.php, src/Entity/Product.php, src/Card/DeckTask.php,
-    src/Card/Game21Draw.php, src/DiceGameTask.php]
+    src/Card/Game21Draw.php, src/Dice/DiceGameTask.php, src/Entity/Books.php]
 
 build:
     image: default-bionic

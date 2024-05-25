@@ -28,47 +28,61 @@ class ProjectControllerTest extends WebTestCase
         $this->assertSelectorTextContains('.about h2', 'Projekt examination MVC');
     }
 
-public function testProjStart(): void
-{
-    $adventureInventoryMock = $this->createMock(AdventureInventory::class);
-    $adventures = [new Adventure(), new Adventure()];
+    public function testProjStart(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
 
-    $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+        $client = static::createClient();
+        $container = $client->getContainer();
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
 
-    $client = static::createClient();
+        $client->request('GET', '/proj/start');
 
-    $container = $client->getContainer();
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-    $container->set(AdventureInventory::class, $adventureInventoryMock);
-
-    $client->request('GET', '/proj/start');
-
-    $this->assertEquals(200, $client->getResponse()->getStatusCode());
-
-    foreach ($adventures as $adventure) {
-        $notes = $adventure->getNotes();
-        if ($notes !== null) {
-            $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
         }
     }
 
-}
+    public function testProjSecondRoom(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
 
-public function testProjSecondRoom(): void
+        $client = static::createClient();
+        $container = $client->getContainer();
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
+
+        $client->request('GET', '/proj/secondroom');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
+        }
+    }
+
+public function testProjThirdRoom(): void
 {
     $adventureInventoryMock = $this->createMock(AdventureInventory::class);
     $adventures = [new Adventure(), new Adventure()];
-
     $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
 
     $client = static::createClient();
-
     $container = $client->getContainer();
-
     $container->set(AdventureInventory::class, $adventureInventoryMock);
 
-    $client->request('GET', '/proj/secondroom');
-
+    $client->request('GET', '/proj/thirdroom');
     $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
     foreach ($adventures as $adventure) {
