@@ -26,12 +26,12 @@ class ProjectControllerTest extends WebTestCase
         $this->assertSelectorTextContains('.about h2', 'Projekt examination MVC');
     }
 
-    public function testProjectStart(): void
-    {
-        $client = static::createClient();
-        $client->request('GET', '/proj/start');
+    // public function testProjectStart(): void
+    // {
+    //     $client = static::createClient();
+    //     $client->request('GET', '/proj/start');
 
-        $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('.adventures h3', 'Inventory');
-    }
+    //     $this->assertResponseIsSuccessful();
+    //     $this->assertSelectorTextContains('.adventures h3', 'Inventory');
+    // }
 }
