@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716668336">
-  <project timestamp="1716668336">
+<coverage generated="1716668770">
+  <project timestamp="1716668770">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Adventure/AdventureDevice.php">
       <class name="App\Adventure\AdventureDevice" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
@@ -698,7 +698,7 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/ProjectController.php">
       <class name="App\Controller\ProjectController" namespace="global">
-        <metrics complexity="24" methods="16" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="28" elements="87" coveredelements="35"/>
+        <metrics complexity="24" methods="16" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="30" elements="87" coveredelements="37"/>
       </class>
       <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="8"/>
       <line num="21" type="stmt" count="8"/>
@@ -727,20 +727,20 @@
       <line num="80" type="stmt" count="1"/>
       <line num="81" type="stmt" count="1"/>
       <line num="82" type="stmt" count="1"/>
-      <line num="87" type="method" name="proj_end" visibility="public" complexity="2" crap="2.15" count="1"/>
+      <line num="87" type="method" name="proj_end" visibility="public" complexity="2" crap="2.02" count="1"/>
       <line num="90" type="stmt" count="1"/>
       <line num="91" type="stmt" count="1"/>
       <line num="93" type="stmt" count="1"/>
-      <line num="94" type="stmt" count="1"/>
-      <line num="96" type="stmt" count="0"/>
-      <line num="97" type="stmt" count="0"/>
-      <line num="103" type="method" name="proj_end_two" visibility="public" complexity="2" crap="2.15" count="1"/>
+      <line num="94" type="stmt" count="0"/>
+      <line num="96" type="stmt" count="1"/>
+      <line num="97" type="stmt" count="1"/>
+      <line num="103" type="method" name="proj_end_two" visibility="public" complexity="2" crap="2.02" count="1"/>
       <line num="106" type="stmt" count="1"/>
       <line num="107" type="stmt" count="1"/>
       <line num="109" type="stmt" count="1"/>
-      <line num="110" type="stmt" count="1"/>
-      <line num="112" type="stmt" count="0"/>
-      <line num="113" type="stmt" count="0"/>
+      <line num="110" type="stmt" count="0"/>
+      <line num="112" type="stmt" count="1"/>
+      <line num="113" type="stmt" count="1"/>
       <line num="117" type="method" name="proj_server_passed" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="120" type="stmt" count="0"/>
       <line num="121" type="stmt" count="0"/>
@@ -787,7 +787,7 @@
       <line num="201" type="stmt" count="0"/>
       <line num="202" type="stmt" count="0"/>
       <line num="203" type="stmt" count="0"/>
-      <metrics loc="206" ncloc="176" classes="1" methods="16" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="28" elements="87" coveredelements="35"/>
+      <metrics loc="206" ncloc="176" classes="1" methods="16" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="30" elements="87" coveredelements="37"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/ReportTwig.php">
       <class name="App\Controller\ReportTwig" namespace="global">
@@ -1100,6 +1100,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="65" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="230" elements="889" coveredelements="295"/>
+    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="65" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="232" elements="889" coveredelements="297"/>
   </project>
 </coverage>

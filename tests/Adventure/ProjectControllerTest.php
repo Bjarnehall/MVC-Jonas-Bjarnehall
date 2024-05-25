@@ -125,7 +125,7 @@ public function testProjEnd(): void
     $container->set(AdventureInventory::class, $adventureInventoryMock);
 
     $client->request('GET', '/proj/end');
-    $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    $this->assertEquals(302, $client->getResponse()->getStatusCode());
 
     foreach ($adventures as $adventure) {
         $notes = $adventure->getNotes();
@@ -146,7 +146,7 @@ public function testProjEndTwo(): void
     $container->set(AdventureInventory::class, $adventureInventoryMock);
 
     $client->request('GET', '/proj/end_two');
-    $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    $this->assertEquals(302, $client->getResponse()->getStatusCode());
 
     foreach ($adventures as $adventure) {
         $notes = $adventure->getNotes();
