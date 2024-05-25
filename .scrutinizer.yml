@@ -6,7 +6,7 @@ filter:
     src/Controller/DiceGameController.php, src/Controller/Lucky.php,
     src/Controller/ReportTwig.php, src/Controller/LibraryController.php, src/Controller/Game21.php,
     src/Controller/CardGame.php, src/Controller/Api.php, src/Library/Library.php, src/Repository/BooksRepository,
-    src/Repository/ProductRepository]
+    src/Repository/ProductRepository, src/Card/DeckTask, src/Card/Game21Draw]
 
 build:
     image: default-bionic
