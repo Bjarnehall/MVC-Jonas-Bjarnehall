@@ -13,6 +13,6 @@ class ProjectControllerTest extends WebTestCase
 
         $this->assertResponseIsSuccessful();
 
-        $this->assertSelectorTextContains('body', 'project/home.html.twig');
+        $this->assertSelectorTextContains('.buttonStart a', 'PLAY GAME');
     }
 }
