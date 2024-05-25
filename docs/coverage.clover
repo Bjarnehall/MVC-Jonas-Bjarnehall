@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716464883">
-  <project timestamp="1716464883">
+<coverage generated="1716655023">
+  <project timestamp="1716655023">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Adventure/AdventureDevice.php">
       <class name="App\Adventure\AdventureDevice" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </class>
       <line num="7" type="method" name="encryptText" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="9" type="stmt" count="1"/>
-      <metrics loc="11" ncloc="11" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      <metrics loc="12" ncloc="12" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Adventure/AdventureInventory.php">
       <class name="App\Adventure\AdventureInventory" namespace="global">
@@ -1100,6 +1100,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="35" loc="2637" ncloc="2078" classes="33" methods="163" coveredmethods="55" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="199" elements="889" coveredelements="254"/>
+    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="55" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="199" elements="889" coveredelements="254"/>
   </project>
 </coverage>

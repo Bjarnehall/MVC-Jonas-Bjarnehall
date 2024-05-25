@@ -43,7 +43,6 @@
     max-width: 100%;
 }
 
-
 .gameBox {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
@@ -54,19 +53,15 @@
     background-position: center;
 }
 
-
 .gameBox {
     background-size: 100% 100%;
 }
-
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-
 
 .buttonEnd{
     width: 300px;
@@ -75,9 +70,6 @@
     color: #FFF;
     font-size: 2rem;
 }
-
-
-
 
 .inventory {
     position: fixed;
@@ -94,21 +86,17 @@
 
 .endPromt {
     position: fixed;
-    left: 50%;
+    left: 30%;
     top: 40%;
     transform: translate(-50%, -50%);
     border-radius: 1.3rem;
-    color: rgb(4, 255, 0);
+    color: rgb(255, 255, 255);
     padding-right: 15px;
     padding-left: 15px;
-    height: 240px;
     width: 450px;
+    background-color: rgb(56, 56, 56);
+    font-size: 1.2rem;
 }
-
-/*Server room*/
-
-
-
 
 .dialogserverChose {
     position: fixed;
@@ -117,4 +105,3 @@
     transform: translate(-50%, -50%);
     color: rgba(255, 255, 255, 0.952);
 }
-

@@ -1,0 +1,31 @@
+{
+  "entrypoints": {
+    "project": {
+      "js": [
+        "build/runtime.05dacd30.js",
+        "build/project.37f083ae.js"
+      ],
+      "css": [
+        "build/project.a9b29c40.css"
+      ]
+    },
+    "casino": {
+      "js": [
+        "build/runtime.05dacd30.js",
+        "build/casino.24f1a2c1.js"
+      ],
+      "css": [
+        "build/casino.a73f263a.css"
+      ]
+    },
+    "app": {
+      "js": [
+        "build/runtime.05dacd30.js",
+        "build/app.652303d0.js"
+      ],
+      "css": [
+        "build/app.9ba5bd5d.css"
+      ]
+    }
+  }
+}

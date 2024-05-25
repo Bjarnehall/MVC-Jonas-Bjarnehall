@@ -47,6 +47,36 @@
     padding-bottom: 10px;
 }
 
+.Hint a {
+    color: #FFF;
+}
+
+.HintEnd {
+    position: fixed;
+    left: 82%;
+    top: 15%;
+    /* transform: translate(-50%, -50%); */
+    height: 140px;
+    width: 200px;
+}
+
+.HintEnd {
+    color: #ffffff;
+    font-size: 1.4rem;
+    background-color: rgb(50, 50, 50);
+    border-radius: 5%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.HintEnd a {
+    color: #FFF;
+}
+
+.HintEnd a:hover {
+    color:chartreuse;
+}
+
 .buttonServerEnter {
     position: fixed;
     left: 75%;

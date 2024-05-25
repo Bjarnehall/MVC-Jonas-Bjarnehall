@@ -2,22 +2,21 @@
 
 {% block title %}Adventure Game
 {% endblock %}
-
-
 {% block body %}
 	<div class="gameBoxHome" style="background-image: url('{{ asset('img/finaltwo.png') }}');">
 		<div class="container">
 			<div class="endPromt">
-				<h1>Grattis!<br>Du lyckades stänga av servern och stoppa det ondskefulla viruset från
-						att sprida sig. DETTA ÄR OPTION 2</h1>
+				<h1>Good work!<br>The server is safe and the database is restored thank you
+				brave civilian. You did the right call to call the cops so we can keep an
+				eye on this bad student.</h1>
 			</div>
-			<div class="clear">
-				<h1>
-					<a href="{{ path('project_clear') }}">Starta om</a>
-				</h1>
-			</div>
-
-		</div>
-
-	{% endblock %}
+<div class="container">
+	<div class="HintEnd">
+		<a href="{{ path('project_clear') }}">
+			<h1>Starta om</h1>
+		</a>
+	</div>
+</div>
+</div>
+{% endblock %}
 
