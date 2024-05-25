@@ -5,7 +5,7 @@ filter:
     excluded_paths: [vendor/*, test/*, src/Controller/SessionController.php,
     src/Controller/DiceGameController.php, src/Controller/Lucky.php,
     src/Controller/ReportTwig.php, src/Controller/LibraryController.php, src/Controller/Game21.php,
-    src/Controller/CardGame.php, src/Controller/Api.php, src/Library/Library.php,
+    src/Controller/CardGame.php, src/Controller/Api.php, tests/LibraryTest.php, src/Library/Library.php,
     src/Repository/ProductRepository.php, tests/Card/DeckTaskTest.php, src/Card/DeckTask.php,
     tests/Card/Game21DrawTest.php,
     src/Card/Game21Draw.php]
