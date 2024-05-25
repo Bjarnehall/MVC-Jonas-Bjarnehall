@@ -32,6 +32,6 @@ class ProjectControllerTest extends WebTestCase
         $client->request('GET', '/proj/start');
 
         $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('.adventures h3', 'Inventory');
+        $this->assertSelectorTextContains('.Hint h2', 'Hint');
     }
 }
