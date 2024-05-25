@@ -5,8 +5,9 @@ filter:
     excluded_paths: [vendor/*, test/*, src/Controller/SessionController.php,
     src/Controller/DiceGameController.php, src/Controller/Lucky.php,
     src/Controller/ReportTwig.php, src/Controller/LibraryController.php, src/Controller/Game21.php,
-    src/Controller/CardGame.php, src/Controller/Api.php, src/Library/Library.php, src/Repository/BooksRepository,
-    src/Repository/ProductRepository, src/Card/DeckTask, src/Card/Game21Draw]
+    src/Controller/CardGame.php, src/Controller/Api.php, src/Library/Library.php,
+    src/Repository/BooksRepository.php, src/Repository/ProductRepository.php, src/Card/DeckTask.php,
+    src/Card/Game21Draw.php]
 
 build:
     image: default-bionic
