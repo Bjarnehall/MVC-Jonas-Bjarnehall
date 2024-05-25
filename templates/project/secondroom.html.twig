@@ -5,32 +5,33 @@
 
 
 {% block body %}
-	<div class="gameBox" style="background-image: url('{{ asset('img/office.png') }}');">
+	<div class="gameBoxHome" style="background-image: url('{{ asset('img/office.png') }}');">
 		<div class="container">
 			<div class="buttonBackFromOffice">
 			<a href="{{ path('project_start') }}">
-				<i class="fa-solid fa-right-to-bracket"></i>
+<i class="fa-solid fa-right-to-bracket"></i>
+
+
 			</a>
 			</div>
 		</div>
 		<div class="container">
 			<div class="buttonPickUp">
 			<a href="{{ path('adventure_add') }}">
-			<i class="fa-solid fa-right-to-bracket"></i>
+			<i class="fa-solid fa-box-open"></i>
 			</a>
 			</div>
 		</div>
 		<div class="container">
 			<div class="buttonThirdRoom">
 			<a href="{{ path('project_thirdroom')}}">
-			<i class="fa-solid fa-right-to-bracket"></i>
+			<i class="fa-solid fa-door-open"></i>
 			</a>
 			</div>
 	</div>
 <div class="container">
 	<div
 		class="inventory">
-		{# Include the adventure list partial template #}
 		{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
 	</div>
 </div>

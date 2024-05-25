@@ -1,0 +1,44 @@
+
+.doorForm {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(50, 50, 50);
+    border-radius: 1.3rem;
+    color: rgb(4, 255, 0);
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 440px;
+    width: 450px;
+    font-size: 2rem;
+}
+
+.doorForm button {
+    background-color: rgb(4, 255, 0);
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.doorForm input {
+    background-color: rgb(4, 255, 0);
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.buttonBackFromServer {
+    position: fixed;
+    left: 82%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonBackFromServer a {
+    color: #77ff0052;
+    font-size: 7rem;
+}
+
+.buttonBackFromServer a:hover {
+    color: #77ff00;
+    font-size: 7rem;
+}

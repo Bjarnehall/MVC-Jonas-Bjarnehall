@@ -5,7 +5,7 @@
 
 
 {% block body %}
-	<div class="gameBox" style="background-image: url('{{ asset('img/office2.png') }}');">
+	<div class="gameBoxHome" style="background-image: url('{{ asset('img/office2.png') }}');">
 
 <div class="container">
 	<div class="buttonBackToSecond">
@@ -17,7 +17,7 @@
 <div class="container">
 	<div class="buttonOpenCabin">
 		<a href="{{ path('project_opencabin')}}">
-			<i class="fa-solid fa-right-to-bracket"></i>
+		<i class="fa-solid fa-door-open"></i>
 		</a>
 	</div>
 </div>
@@ -26,13 +26,11 @@
 	<div class="buttonInventory">
 		<div
 			class="inventory">
-			{# Include the adventure list partial template #}
 			{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
 		</div>
 	</div>
 	<div
 		class="inventory">
-		{# Include the adventure list partial template #}
 		{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
 	</div>
 {% endblock %}

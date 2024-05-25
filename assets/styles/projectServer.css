@@ -1,0 +1,126 @@
+
+
+.dialogserverOne {
+    position: fixed;
+    left: 34%;
+    top: 29%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: rgb(0, 0, 0);
+    border-radius: 5%;
+}
+
+.dialogserverOne p {
+    padding: 10px;
+}
+
+.dialogServerAnswerOne {
+    position: fixed;
+    left: 45%;
+    top: 22%;
+    background-color: #ffffff00;
+    color: rgba(255, 255, 255, 0.345);
+    border-radius: 5%;
+    width: 250px;
+    padding: 10px;
+}
+
+.dialogServerAnswerOne a {
+    color: #00000020;
+}
+
+.dialogServerAnswerOne :hover {
+    color: #000000;
+    background-color: #bbff99;
+    border-radius: 5%;
+    width: 250px;
+}
+
+.dialogServerAnswerTwo {
+    position: fixed;
+    left: 62%;
+    top: 20%;
+    background-color: #ffffff00;
+    color: rgba(0, 0, 0, 0.172);
+    border-radius: 5%;
+    width: 250px;
+}
+
+.dialogServerAnswerTwo a {
+    color: #00000020;
+}
+
+.dialogServerAnswerTwo :hover {
+    color: #000000;
+    background-color: #ff9292;
+    border-radius: 5%;
+    width: 250px;
+}
+
+.buttonPickUpCd {
+    position: fixed;
+    left: 55%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonPickUpCd a {
+    color: #77ff0000;
+    font-size: 7rem;
+}
+
+.buttonPickUpCd a:hover {
+    color: #27d4ff;
+    font-size: 5rem;
+}
+
+.buttonOutServer {
+    position: fixed;
+    left: 13%;
+    top: 39%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonOutServer a {
+    color: #77ff0020;
+    font-size: 7rem;
+}
+
+.buttonOutServer a:hover {
+    color: #77ff00;
+    font-size: 6rem;
+}
+
+.buttonServer {
+    position: fixed;
+    left: 48%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonServer a {
+    color: #77ff0000;
+    font-size: 7rem;
+}
+
+.buttonServer a:hover {
+    color: #ff4ffc;
+    font-size: 15rem;
+}
+
+.buttonServerComputer {
+    position: fixed;
+    left: 26%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonServerComputer a {
+    color: #77ff0000;
+    font-size: 7rem;
+}
+
+.buttonServerComputer a:hover {
+    color: #ffffff;
+    font-size: 7rem;
+}

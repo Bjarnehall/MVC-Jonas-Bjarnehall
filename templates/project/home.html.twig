@@ -5,22 +5,15 @@
 
 
 {% block body %}
-<div class="about">
-
-<h1>Adventure</h1>
+<div class="gameBoxHome" style="background-image: url('{{ asset('img/homepage.png') }}');">
 
 <div class="container">
 	<div class="buttonStart">
 		<a href="{{ path('project_start') }}">
 			PLAY GAME
+		</a><br>
+		<a href="{{ path('project_clear') }}">Reset game
 		</a>
 	</div>
-</div>
-<div class="clear">
-	<h1>
-		<a href="{{ path('project_clear') }}">Reset game</a>
-	</h1>
-</div>
-
 </div>
 {% endblock %}

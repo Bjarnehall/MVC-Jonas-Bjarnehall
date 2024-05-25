@@ -5,13 +5,7 @@
 
 
 {% block body %}
-	<div class="gameBox" style="background-image: url('{{ asset('img/serveroomdeco.png') }}');">
-		<div class="container">
-			{# <div class="buttonServer">
-				<a href="{{ path('project_end') }}">
-					<i class="fa-solid fa-power-off"></i>
-				</a>
-			</div> #}
+	<div class="gameBoxHome" style="background-image: url('{{ asset('img/serveroomdeco.png') }}');">
 		<div class="container">
 			<div class="buttonOutServer">
 				<a href="{{ path('project_start') }}">
@@ -27,32 +21,39 @@
 		</div>
 		<div class="container">
 			<div class="dialogServerAnswerOne">
-			<a href="{{ path('project_server_dialog_one') }}">The question is what you are doing here!<br>
-			Just becuase you failed the database course you dont have to ruin everyones grades. <br>
-			I really dont know how you think?</a>
+			<a href="{{ path('project_server_dialog_one') }}">What I'm doing here?!<br>
+			I know what youre up to and it no good. I know how it feels when you do not
+			get the grades you feel that you deserve. But nothing will be better with 
+			this revenge, please stop what youre doing and I will try to get you out 
+			of any trouble this will couse for you!</a>
 			</div>
 		</div>
 		<div class="container">
 			<div class="dialogServerAnswerTwo">
-				<a href="{{ path('project_server_dialog_two') }}"> OPTION 2 The question is what you are doing here!
-					Just becuase you failed the database course you dont have to ruin everyones grades.
-					I should call your mother she will be ashamed of you!</a>
+				<a href="{{ path('project_server_dialog_two') }}">You just been cought!<br>
+				This is not going to end well for you. Breaking into the serverroom 
+				loading a virus on the server just beacouse you are to bad to pass 
+				a course! Shame on you, I will call the police and tell them exactly
+				what you have done and you will be begging your knees of not to be sent
+				to jail!</a>
 			</div>
 		</div>
 		<div class="container">
 			<div class="dialogserverOne">
-				<p>What are you doing here?</p>
+				<p>What are you doing here?<br> Get out nothing to see here!</p>
 			</div>
 		</div>
 		<div class="container">
-			<div class="dialogserverChose">
-				<h2>Pick an answer</h2>
+			<div class="Hint">
+				<h2>Hint</h2>
+				<p>Pick one of the textboxes to reply.</p>
 			</div>
+		</div>
 		</div>
 		<div class="container">
 			<div class="buttonPickUpCd">
 				<a href="{{ path('adventure_add_cd') }}">
-					<i class="fa-solid fa-right-to-bracket"></i>
+				<i class="fa-solid fa-compact-disc"></i>
 				</a>
 			</div>
 		</div>

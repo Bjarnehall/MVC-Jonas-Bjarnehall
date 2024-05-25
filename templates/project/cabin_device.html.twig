@@ -5,13 +5,15 @@
 
 
 {% block body %}
-	<div class="gameBox" style="background-image: url('{{ asset('img/cabin.png') }}');">
+<div class="gameBox" style="background-image: url('{{ asset('img/startrum1black.png') }}');">
+
         <div class="container">
             <div class="doorForm">
-                <h2>The DEVICE</h2>
+                <h2>Sectret Decrypting<br>
+				Device 9000 MEGA</h2>
                 <form method="post">
                     <div class="form-group">
-                        <label for="inputString">Enter a string:</label>
+                        <label for="inputString"></label>
                         <input type="text" id="inputString" name="inputString">
                     </div>
                     <button type="submit" class="btn btn-primary">Decrypt message</button>
@@ -19,24 +21,26 @@
             </div>
         </div>
 		<div class="container">
-			<div class="buttonBackToSecond">
-				<a href="{{ path('project_secondroom')}}">
-					<i class="fa-solid fa-right-to-bracket"></i>
-				</a>
-			</div>
-		</div>
-		<div class="container">
 			<div class="buttonInventory">
 				<div
 					class="inventory">
-					{# Include the adventure list partial template #}
 					{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
 				</div>
 			</div>
-{# {% if rot13String is not null %}
-	<p>Transformed String:
-		{{ rot13String }}</p>
-{% endif %} #}
+<div class="container">
+	<div class="buttonBackFromServer">
+		<a href="{{ path('project_opencabin') }}">
+			<i class="fa-solid fa-arrow-rotate-left"></i>
+		</a>
+	</div>
+</div>
+<div class="container">
+	<div class="HintDevice">
+		<h2>Hint</h2>
+		<p>If you found any notes or messages try to enter that into the device!</p>
+	</div>
+</div>
 
-		{% endblock %}
+
+{% endblock %}
 

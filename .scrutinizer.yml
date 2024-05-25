@@ -4,7 +4,7 @@ imports:
 filter:
     excluded_paths: [vendor/*, test/*, src/Controller/SessionController.php,
     src/Controller/DiceGameController.php, src/Controller/Lucky.php,
-    src/Controller/ReportTwig.php]
+    src/Controller/ReportTwig.php, src/Controller/LibraryController.php, src/Controller/Game21.php]
 
 build:
     image: default-bionic

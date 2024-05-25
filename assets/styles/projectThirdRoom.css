@@ -1,0 +1,35 @@
+
+
+.buttonOpenCabin {
+    position: fixed;
+    left: 71%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonOpenCabin a {
+    color: #77ff0000;
+    font-size: 15rem;
+}
+
+.buttonOpenCabin a:hover {
+    color: #f89933;
+    font-size: 15rem;
+}
+
+.buttonBackToSecond {
+    position: fixed;
+    left: 14%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonBackToSecond a {
+    color: #77ff0000;
+    font-size: 7rem;
+}
+
+.buttonBackToSecond a:hover {
+    color: #77ff00;
+    font-size: 6rem;
+}

@@ -1,0 +1,82 @@
+
+
+
+.clueQuoteOne {
+    position: fixed;
+    left: 39%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    height: 260px;
+    width: 260px;
+}
+
+.clueQuoteOne {
+    color: #00000000;
+    font-size: 0.65rem;
+    background-color: #ffffff00;
+    border-radius: 5%;
+}
+
+.clueQuoteOne :hover {
+    color: #000000;
+    font-size: 1.1rem;
+    background-color: #FFF;
+    border-radius: 5%;
+    padding: 15px;
+    position: fixed;
+    left: 68%;
+    top: -46%;
+    width: 480px;
+}
+
+.Hint {
+    position: fixed;
+    left: 82%;
+    top: 15%;
+    /* transform: translate(-50%, -50%); */
+    height: 180px;
+    width: 230px;
+}
+
+.Hint {
+    color: #ffffff;
+    font-size: 1.4rem;
+    background-color: rgb(50, 50, 50);
+    border-radius: 5%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.buttonServerEnter {
+    position: fixed;
+    left: 75%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonServerEnter a {
+    color: #77ff0000;
+    font-size: 8rem;
+}
+
+.buttonServerEnter a:hover {
+    color: rgb(161, 161, 161);
+    font-size: 5rem;
+}
+
+.buttonRedDoor {
+    position: fixed;
+    left: 14%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonRedDoor a {
+    color: #77ff0000;
+    font-size: 8rem;
+}
+
+.buttonRedDoor a:hover {
+    color: rgb(161, 161, 161);
+    font-size: 7rem;
+}

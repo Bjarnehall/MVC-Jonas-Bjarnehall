@@ -1,0 +1,39 @@
+
+.gameBoxHome {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column: 1/span 24;
+    grid-template-rows: repeat(24, 1fr);
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.gameBoxHome {
+    background-size: 100% 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.buttonStart {
+    position: fixed;
+    left: 14%;
+    top: 72%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 370px;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+}
+
+.buttonStart a {
+    color: #ffffff9a;
+    font-size: 3rem;
+    margin-left: 65px;
+}
+
+.buttonStart a:hover {
+    color: #ff0800;
+    font-size: 3.5rem;
+}

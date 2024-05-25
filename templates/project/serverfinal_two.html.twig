@@ -5,18 +5,17 @@
 
 
 {% block body %}
-	<div class="gameBox" style="background-image: url('{{ asset('img/serveroomdecofinal.png') }}');">
+	<div class="gameBoxHome" style="background-image: url('{{ asset('img/serveroomdecofinal.png') }}');">
 		<div class="container">
 			<div class="buttonServer">
 				<a href="{{ path('project_end_two') }}">
-					Use cd
+				<i class="fa-solid fa-eject"></i>
+				<p>Enter reboot disc to save tha database</p>
 				</a>
 			</div>
 			<div class="container">
 				<div class="buttonOutServer">
-					<a href="{{ path('project_server_dialog_one') }}">
-
-
+					<a href="{{ path('project_server_dialog_two') }}">
 						<i class="fa-solid fa-right-to-bracket"></i>
 					</a>
 				</div>

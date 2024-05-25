@@ -5,7 +5,7 @@
 
 
 {% block body %}
-	<div class="gameBox" style="background-image: url('{{ asset('img/cabin.png') }}');">
+	<div class="gameBoxHome" style="background-image: url('{{ asset('img/cabin.png') }}');">
 
 		<div class="container">
 			<div class="buttonBackToSecond">
@@ -18,19 +18,17 @@
 			<div class="buttonInventory">
 				<div
 					class="inventory">
-					{# Include the adventure list partial template #}
 					{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
 				</div>
 			</div>
 			<div
 				class="inventory">
-				{# Include the adventure list partial template #}
 				{% include 'project/adventure_items.html.twig' with {'adventures': adventures} %}
 			</div>
 <div class="container">
 	<div class="buttonDevice">
 		<a href="{{ path('project_device') }}">
-			<i class="fa-solid fa-right-to-bracket"></i>
+		<i class="fa-solid fa-microchip"></i>
 		</a>
 	</div>
 </div>

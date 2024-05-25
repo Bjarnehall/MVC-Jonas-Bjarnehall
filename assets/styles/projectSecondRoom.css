@@ -1,0 +1,52 @@
+
+
+.buttonBackFromOffice {
+    position: fixed;
+    left: 88%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonBackFromOffice a {
+    color: #77ff0000;
+    font-size: 7rem;
+}
+
+.buttonBackFromOffice a:hover {
+    color: #77ff00;
+    font-size: 5rem;
+}
+
+.buttonPickUp {
+    position: fixed;
+    left: 65%;
+    top: 63%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonPickUp a {
+    color: #77ff0000;
+    font-size: 8rem;
+}
+
+.buttonPickUp a:hover {
+    color: #00bbff;
+    font-size: 8rem;
+}
+
+.buttonThirdRoom {
+    position: fixed;
+    left: 39%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonThirdRoom a {
+    color: #77ff0000;
+    font-size: 8rem;
+}
+
+.buttonThirdRoom a:hover {
+    color: #d0d0d0;
+    font-size: 7rem;
+}

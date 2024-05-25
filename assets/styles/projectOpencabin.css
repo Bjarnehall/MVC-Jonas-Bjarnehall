@@ -1,0 +1,35 @@
+
+.buttonDevice {
+    position: fixed;
+    left: 67%;
+    top: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonDevice a {
+    color: #77ff0000;
+    font-size: 9rem;
+}
+
+.buttonDevice a:hover {
+    color: #00d0ff;
+    font-size: 8rem;
+}
+
+.HintDevice {
+    position: fixed;
+    left: 12%;
+    top: 15%;
+    /* transform: translate(-50%, -50%); */
+    height: 180px;
+    width: 230px;
+}
+
+.HintDevice {
+    color: #ffffff;
+    font-size: 1.4rem;
+    background-color: rgb(50, 50, 50);
+    border-radius: 5%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}

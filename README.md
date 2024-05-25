@@ -1,7 +1,94 @@
+THE DATABASE MYSTERY
+---------------
+The database mystery är ett spel som skrivits i PHP med hjälp av ramverket Symfony. Spelet är ett 
+examinerande projekt för kursen MVC på Blekinge tekniska högskola. Nedan följer en beskrivning av
+hur spelet är uppbyggt.
+
+OBS! Spelet är tänk att spelas på normal desktop på fullskärm det är inte mobilanpassat och fungerar
+dåligt i annat format.
+
+CSS
+-----
+Spelet har en egen css stil som utgår ifrån filen /project.css där tillhörande
+filer även impporteras.
+
+Routes / spelets gång
+----------
+/proj/about
+About sidan nås via "Om" i navbaren och beskriver kortfattat vad projektet handlar om.
+
+/proj
+Landningsidan visar en bakrundsbild för spelet "The Database Mystery". Här finns möjlighet att
+"Play Game" eller "Reset Game". Reset game tömmer den info som spelaren samlat i sin inventory.
+Play Game tar spelaren till spelets första rum.
+
+/proj/start
+Startrummet i spelet består av en miljö med två dörrar en NPC som vi kan interagera med genom
+muspekaren. Vi har även en inventory som vid starten av spelet är tom. Det finns även en ledtråd
+att vi ska interagera med NPC. Den ena dörren är låst och det är den spelaren uppmanas att hitta 
+ett sätt att komma in i dörren på. Om spelaren försöker uppmanas denne att ange ett lösenord.
+Eftersom att dörren är låst antas spelaren fortsätta genom den andra dörren.
+
+/proj/server
+När spelaren försöker komma in i serverrummet möts denne av ett formulär där ett lösenord måste anges.
+Om spelaren inte har lösenordet finns inget annat alternativ än att gå tillbaka.
+
+/proj/secondroom
+Här är första rummet spelaren har accesses till, här finns en ledtråd skriven på väggen "Take out 
+the strash!//Jime" Genom ledtråden antas spelaren att leta i papperkorgen där den första ledtråden finns.
+Ledtråden består av en papperslapp med en obegriplig text på, om användaren försöker använda detta som
+lösenord till servern kommer den inte att komma in. Spelaren har möjlighet att gå genom ytterligare en
+dörr där spelet fortsätter.
+
+/proj/thirdroom
+I tredje rummet möts spelaren av en garderob som är möjlig att öppna genom att klicka på den.
+spelaren kan även gå tillbaka till tidigare rum.
+
+/proj/opencabin
+När spelaren öppnat skåpet skymtas ett kretskort i en låda vid klick på kretskortet öppnas 
+en decrypting device.
+
+/proj/device
+Spelaren möts av ett formulär för "Secret Decrypting Device" där denne uppmanas "Decrypt Message"
+en ledtråd talar om för spelaren att använda de ledtrådar de hittat. Det dekrypterade medellandet
+sparas i databasen och läggs till i inventory.
+
+Spelaren antas nu gå tillbaka till start och försöka ta sig in i serverrummet. Om spelaren lyckas.
+
+/proj/server/passed
+Inne i serverrummet möts vi av killen som försöker sabba databasen. Två olika val kan göras i form 
+av att välja mellan två svar till förövaren. Det finns även en cd skiva som kan plockas upp och 
+läggas till i inventory. Valet spelaren tar i konversationen påverkar inte spelet mer än att 
+konversatioen med förövaren skiljer sig och slut skärmen när spelet är avklarat skiljer sig åt.
+
+/proj/server/dialog_on alternativt /proj/server/dialog_two
+Förövaren ger ett svar tillbaka, möjlighet att plocka upp cd skivan finns fortfarande och en möjlighet
+att enteragera med datorn finns nu.
+
+/proj/server/final
+Här är sista momentet i spelet och spelaren har nu möjlighet att använda cd skivan för att reboota
+sytemet och rädda databasen.
+
+/proj/end
+Här visas en slut bild med information om att databasen nu är räddad. Spelaren kan starta om spelet om
+så önskas och då återställs även databasen för inventory.
+
+
+Scrutinizer proj
+-----------------
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/?branch=main)
+
+[![Code Coverage](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/?branch=main)
+
+[![Build Status](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/build-status/main)
+
+
+Ytterligare information
+-------------------------------------------------
 ![PHP IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/php-scaled.jpg)
 
 Detta kursrepo innehåller arbetet för acronym jobe23 på BTH i samband med en kurs som heter MVC. Kursen använder sig av ramverket Symfony och kommer bland annat behandla objektorienterad programmering i PHP samt enhetstestning. Repot kommer uppdateras i samband med kursens gång.
-
 
 Instruktioner
 -------------
@@ -64,10 +151,7 @@ Skapa en databas
 php bin/console doctrine:database:create
 
 
-Inför kmom05
-Skapa en databas som innehåller en tabell med böcker. Lägg in minst tre böcker (riktiga eller påhittade) med deras titel, ISBN och författare samt en bild som representerar boken.
-
-Data till databasen
+Data till databas tabellen Books
 
 Bok 1:
 Titel: DUNE

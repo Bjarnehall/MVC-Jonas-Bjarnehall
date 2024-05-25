@@ -5,14 +5,15 @@
 
 
 {% block body %}
-	<div class="gameBox" style="background-image: url('{{ asset('img/serveroomdeco2.png') }}');">
+	<div class="gameBoxHome" style="background-image: url('{{ asset('img/serveroomdeco2.png') }}');">
 		<div
 			class="container">
-			<div class="buttonServer">
-							<a href="{{ path('project_server_final') }}">
-								<i class="fa-solid fa-power-off"></i>
-							</a>
-						</div>
+<div class="buttonServerComputer">
+	<a href="{{ path('project_server_final') }}">
+		<i class="fa-solid fa-power-off"></i>
+	</a>
+</div>
+
 			<div class="container">
 				<div class="buttonOutServer">
 					<a href="{{ path('project_start') }}">
@@ -28,18 +29,22 @@
 			</div>
 			<div class="container">
 				<div class="dialogserverOne">
-					<p>What have I done. Im so sorry I dont know whats gotten into me.<br> I have already
-                    let the virus into the system oh the regrets Im horrible. <br>Maybe there is a way to 
-                    fix this.</p>
+					<p>Im so sorry what have I done...<br> 
+					The anger got a hold on me
+					it's like I lost control,<br> I really hope I do not get in trouble
+					thanks for <br>understanding youre a real friend!<br>To bad tho is that 
+					I've already booted the virus and it's already began.<br> There must 
+					be something we can do right?
+					</p>
 				</div>
 			</div>
 <div class="container">
 	<div class="buttonPickUpCd">
-		<a href="{{ path('adventure_add_cdSecond') }}">
-			<i class="fa-solid fa-right-to-bracket"></i>
+			<a href="{{ path('adventure_add_cdSecond') }}">
+			<i class="fa-solid fa-compact-disc"></i>
 		</a>
 	</div>
 </div>
 
-		{% endblock %}
+{% endblock %}
 
