@@ -113,4 +113,40 @@ class ProjectControllerTest extends WebTestCase
             }
         }
     }
+
+public function testProjEnd(): void
+{
+    // Get the client for making requests
+    $client = static::createClient();
+    
+    // Get the EntityManager service
+    $entityManager = $client->getContainer()->get('doctrine')->getManager();
+    
+    // Retrieve the AdventureRepository
+    $adventureRepository = $entityManager->getRepository(Adventure::class);
+    
+    // Create a sample Adventure
+    $sampleAdventure = new Adventure();
+    $sampleAdventure->setCodes('Reboot Server CD');
+    $sampleAdventure->setKeys(103);
+    $entityManager->persist($sampleAdventure);
+    $entityManager->flush();
+    
+    // Make a request to the controller action
+    $client->request('GET', '/proj/end');
+    
+    // Check if the adventure is found
+    $foundAdventure = $adventureRepository->findOneBy(['codes' => 'Reboot Server CD', 'keys' => 103]);
+    
+    // Assert the response
+    if ($foundAdventure) {
+        $this->assertResponseIsSuccessful();
+        $this->assertSelectorExists('.end-content');
+    } else {
+        $this->assertResponseRedirects('/proj/server_final');
+        $crawler = $client->followRedirect();
+        $this->assertSelectorTextContains('.alert.alert-danger', 'Reboot Server CD not found.');
+    }
+}
+
 }
