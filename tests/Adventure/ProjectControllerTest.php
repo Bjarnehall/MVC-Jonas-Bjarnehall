@@ -116,25 +116,38 @@ class ProjectControllerTest extends WebTestCase
 
 public function testProjEnd(): void
 {
-    // Create a mock for the AdventureInventory class
     $adventureInventoryMock = $this->createMock(AdventureInventory::class);
     $adventures = [new Adventure(), new Adventure()];
     $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
 
-    // Get the client for making requests
     $client = static::createClient();
     $container = $client->getContainer();
-
-    // Set the AdventureInventory mock into the container
     $container->set(AdventureInventory::class, $adventureInventoryMock);
 
-    // Make a request to the controller action
     $client->request('GET', '/proj/end');
-
-    // Assert the response status code
     $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-    // Assert that the returned HTML contains expected content
+    foreach ($adventures as $adventure) {
+        $notes = $adventure->getNotes();
+        if ($notes !== null) {
+            $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+        }
+    }
+}
+
+public function testProjEndTwo(): void
+{
+    $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+    $adventures = [new Adventure(), new Adventure()];
+    $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+
+    $client = static::createClient();
+    $container = $client->getContainer();
+    $container->set(AdventureInventory::class, $adventureInventoryMock);
+
+    $client->request('GET', '/proj/end_two');
+    $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
     foreach ($adventures as $adventure) {
         $notes = $adventure->getNotes();
         if ($notes !== null) {
