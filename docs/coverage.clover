@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716667776">
-  <project timestamp="1716667776">
+<coverage generated="1716668097">
+  <project timestamp="1716668097">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Adventure/AdventureDevice.php">
       <class name="App\Adventure\AdventureDevice" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
@@ -13,9 +13,9 @@
       <class name="App\Adventure\AdventureInventory" namespace="global">
         <metrics complexity="11" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="12" elements="56" coveredelements="16"/>
       </class>
-      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-      <line num="16" type="stmt" count="7"/>
-      <line num="17" type="stmt" count="7"/>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
+      <line num="16" type="stmt" count="6"/>
+      <line num="17" type="stmt" count="6"/>
       <line num="24" type="method" name="getAllAdventures" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="26" type="stmt" count="1"/>
       <line num="27" type="stmt" count="1"/>
@@ -890,26 +890,26 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Entity/Adventure.php">
       <class name="App\Entity\Adventure" namespace="global">
-        <metrics complexity="7" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="6" elements="17" coveredelements="10"/>
+        <metrics complexity="7" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="2" elements="17" coveredelements="4"/>
       </class>
       <line num="25" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="27" type="stmt" count="0"/>
-      <line num="30" type="method" name="getNotes" visibility="public" complexity="1" crap="1" count="4"/>
-      <line num="32" type="stmt" count="4"/>
+      <line num="30" type="method" name="getNotes" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="32" type="stmt" count="5"/>
       <line num="35" type="method" name="setNotes" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="37" type="stmt" count="0"/>
       <line num="39" type="stmt" count="0"/>
       <line num="42" type="method" name="getCodes" visibility="public" complexity="1" crap="1" count="4"/>
       <line num="44" type="stmt" count="4"/>
-      <line num="47" type="method" name="setCodes" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="49" type="stmt" count="1"/>
-      <line num="51" type="stmt" count="1"/>
+      <line num="47" type="method" name="setCodes" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="49" type="stmt" count="0"/>
+      <line num="51" type="stmt" count="0"/>
       <line num="54" type="method" name="getKeys" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="56" type="stmt" count="0"/>
-      <line num="59" type="method" name="setKeys" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="61" type="stmt" count="1"/>
-      <line num="63" type="stmt" count="1"/>
-      <metrics loc="66" ncloc="66" classes="1" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="6" elements="17" coveredelements="10"/>
+      <line num="59" type="method" name="setKeys" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="61" type="stmt" count="0"/>
+      <line num="63" type="stmt" count="0"/>
+      <metrics loc="66" ncloc="66" classes="1" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="2" elements="17" coveredelements="4"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Entity/Books.php">
       <class name="App\Entity\Books" namespace="global">
@@ -1100,6 +1100,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="67" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="230" elements="889" coveredelements="297"/>
+    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="65" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="226" elements="889" coveredelements="291"/>
   </project>
 </coverage>
