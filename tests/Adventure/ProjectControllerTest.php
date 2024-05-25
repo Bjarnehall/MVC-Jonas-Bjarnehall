@@ -33,5 +33,6 @@ class ProjectControllerTest extends WebTestCase
 
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('.Hint h2', 'Hint');
+        $this->assertSelectorTextContains('.Hint p', 'Hover over the character In the hat!');
     }
 }
