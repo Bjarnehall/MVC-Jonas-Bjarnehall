@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716706961">
-  <project timestamp="1716706961">
+<coverage generated="1716707518">
+  <project timestamp="1716707518">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Adventure/AdventureDevice.php">
       <class name="App\Adventure\AdventureDevice" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
@@ -235,38 +235,38 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/AdventureController.php">
       <class name="App\Controller\AdventureController" namespace="global">
-        <metrics complexity="15" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="18" elements="60" coveredelements="20"/>
+        <metrics complexity="15" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="30" elements="60" coveredelements="32"/>
       </class>
-      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
-      <line num="16" type="stmt" count="3"/>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="16" type="stmt" count="5"/>
       <line num="19" type="method" name="index" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="22" type="stmt" count="0"/>
       <line num="23" type="stmt" count="0"/>
       <line num="24" type="stmt" count="0"/>
-      <line num="29" type="method" name="adventureAdd" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="32" type="stmt" count="0"/>
-      <line num="33" type="stmt" count="0"/>
-      <line num="34" type="stmt" count="0"/>
+      <line num="29" type="method" name="adventureAdd" visibility="public" complexity="3" crap="3.85" count="1"/>
+      <line num="32" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
       <line num="35" type="stmt" count="0"/>
-      <line num="37" type="stmt" count="0"/>
-      <line num="38" type="stmt" count="0"/>
+      <line num="37" type="stmt" count="1"/>
+      <line num="38" type="stmt" count="1"/>
       <line num="39" type="stmt" count="0"/>
       <line num="40" type="stmt" count="0"/>
       <line num="41" type="stmt" count="0"/>
       <line num="42" type="stmt" count="0"/>
-      <line num="44" type="stmt" count="0"/>
-      <line num="50" type="method" name="adventureAddCd" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="53" type="stmt" count="0"/>
-      <line num="54" type="stmt" count="0"/>
-      <line num="55" type="stmt" count="0"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="50" type="method" name="adventureAddCd" visibility="public" complexity="3" crap="3.85" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="54" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
       <line num="56" type="stmt" count="0"/>
-      <line num="58" type="stmt" count="0"/>
-      <line num="59" type="stmt" count="0"/>
+      <line num="58" type="stmt" count="1"/>
+      <line num="59" type="stmt" count="1"/>
       <line num="60" type="stmt" count="0"/>
       <line num="61" type="stmt" count="0"/>
       <line num="62" type="stmt" count="0"/>
       <line num="63" type="stmt" count="0"/>
-      <line num="65" type="stmt" count="0"/>
+      <line num="65" type="stmt" count="1"/>
       <line num="71" type="method" name="adventureAddCdSecond" visibility="public" complexity="3" crap="3.85" count="1"/>
       <line num="74" type="stmt" count="1"/>
       <line num="75" type="stmt" count="1"/>
@@ -297,7 +297,7 @@
       <line num="119" type="stmt" count="1"/>
       <line num="120" type="stmt" count="1"/>
       <line num="121" type="stmt" count="1"/>
-      <metrics loc="125" ncloc="110" classes="1" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="18" elements="60" coveredelements="20"/>
+      <metrics loc="125" ncloc="110" classes="1" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="30" elements="60" coveredelements="32"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/Api.php">
       <class name="App\Controller\Api" namespace="global">
@@ -894,8 +894,8 @@
       </class>
       <line num="25" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="27" type="stmt" count="0"/>
-      <line num="30" type="method" name="getNotes" visibility="public" complexity="1" crap="1" count="12"/>
-      <line num="32" type="stmt" count="12"/>
+      <line num="30" type="method" name="getNotes" visibility="public" complexity="1" crap="1" count="14"/>
+      <line num="32" type="stmt" count="14"/>
       <line num="35" type="method" name="setNotes" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="37" type="stmt" count="0"/>
       <line num="39" type="stmt" count="0"/>
@@ -1100,6 +1100,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="71" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="259" elements="889" coveredelements="330"/>
+    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="71" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="271" elements="889" coveredelements="342"/>
   </project>
 </coverage>
