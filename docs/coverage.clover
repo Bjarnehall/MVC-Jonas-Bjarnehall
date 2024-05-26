@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716704813">
-  <project timestamp="1716704813">
+<coverage generated="1716705467">
+  <project timestamp="1716705467">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Adventure/AdventureDevice.php">
       <class name="App\Adventure\AdventureDevice" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
@@ -698,11 +698,11 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/ProjectController.php">
       <class name="App\Controller\ProjectController" namespace="global">
-        <metrics complexity="24" methods="16" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="24" elements="87" coveredelements="32"/>
+        <metrics complexity="24" methods="16" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="40" elements="87" coveredelements="52"/>
       </class>
-      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-      <line num="21" type="stmt" count="7"/>
-      <line num="22" type="stmt" count="7"/>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
+      <line num="21" type="stmt" count="11"/>
+      <line num="22" type="stmt" count="11"/>
       <line num="27" type="method" name="proj_home" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="30" type="stmt" count="1"/>
       <line num="35" type="method" name="proj_about" visibility="public" complexity="1" crap="1" count="1"/>
@@ -746,26 +746,26 @@
       <line num="121" type="stmt" count="1"/>
       <line num="122" type="stmt" count="1"/>
       <line num="123" type="stmt" count="1"/>
-      <line num="126" type="method" name="proj_server_dialog_one" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="129" type="stmt" count="0"/>
-      <line num="130" type="stmt" count="0"/>
-      <line num="131" type="stmt" count="0"/>
-      <line num="132" type="stmt" count="0"/>
-      <line num="135" type="method" name="proj_server_dialog_two" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="138" type="stmt" count="0"/>
-      <line num="139" type="stmt" count="0"/>
-      <line num="140" type="stmt" count="0"/>
-      <line num="141" type="stmt" count="0"/>
-      <line num="144" type="method" name="proj_server_final_two" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="147" type="stmt" count="0"/>
-      <line num="148" type="stmt" count="0"/>
-      <line num="149" type="stmt" count="0"/>
-      <line num="150" type="stmt" count="0"/>
-      <line num="153" type="method" name="proj_server_final" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="156" type="stmt" count="0"/>
-      <line num="157" type="stmt" count="0"/>
-      <line num="158" type="stmt" count="0"/>
-      <line num="159" type="stmt" count="0"/>
+      <line num="126" type="method" name="proj_server_dialog_one" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="129" type="stmt" count="1"/>
+      <line num="130" type="stmt" count="1"/>
+      <line num="131" type="stmt" count="1"/>
+      <line num="132" type="stmt" count="1"/>
+      <line num="135" type="method" name="proj_server_dialog_two" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="138" type="stmt" count="1"/>
+      <line num="139" type="stmt" count="1"/>
+      <line num="140" type="stmt" count="1"/>
+      <line num="141" type="stmt" count="1"/>
+      <line num="144" type="method" name="proj_server_final_two" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="147" type="stmt" count="1"/>
+      <line num="148" type="stmt" count="1"/>
+      <line num="149" type="stmt" count="1"/>
+      <line num="150" type="stmt" count="1"/>
+      <line num="153" type="method" name="proj_server_final" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="156" type="stmt" count="1"/>
+      <line num="157" type="stmt" count="1"/>
+      <line num="158" type="stmt" count="1"/>
+      <line num="159" type="stmt" count="1"/>
       <line num="164" type="method" name="proj_server" visibility="public" complexity="3" crap="12" count="0"/>
       <line num="167" type="stmt" count="0"/>
       <line num="168" type="stmt" count="0"/>
@@ -787,7 +787,7 @@
       <line num="201" type="stmt" count="0"/>
       <line num="202" type="stmt" count="0"/>
       <line num="203" type="stmt" count="0"/>
-      <metrics loc="206" ncloc="176" classes="1" methods="16" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="24" elements="87" coveredelements="32"/>
+      <metrics loc="206" ncloc="176" classes="1" methods="16" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="71" coveredstatements="40" elements="87" coveredelements="52"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/ReportTwig.php">
       <class name="App\Controller\ReportTwig" namespace="global">
@@ -894,13 +894,13 @@
       </class>
       <line num="25" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="27" type="stmt" count="0"/>
-      <line num="30" type="method" name="getNotes" visibility="public" complexity="1" crap="1" count="5"/>
-      <line num="32" type="stmt" count="5"/>
+      <line num="30" type="method" name="getNotes" visibility="public" complexity="1" crap="1" count="9"/>
+      <line num="32" type="stmt" count="9"/>
       <line num="35" type="method" name="setNotes" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="37" type="stmt" count="0"/>
       <line num="39" type="stmt" count="0"/>
-      <line num="42" type="method" name="getCodes" visibility="public" complexity="1" crap="1" count="5"/>
-      <line num="44" type="stmt" count="5"/>
+      <line num="42" type="method" name="getCodes" visibility="public" complexity="1" crap="1" count="9"/>
+      <line num="44" type="stmt" count="9"/>
       <line num="47" type="method" name="setCodes" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="49" type="stmt" count="0"/>
       <line num="51" type="stmt" count="0"/>
@@ -1100,6 +1100,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="65" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="225" elements="889" coveredelements="290"/>
+    <metrics files="35" loc="2638" ncloc="2079" classes="33" methods="163" coveredmethods="69" conditionals="0" coveredconditionals="0" statements="726" coveredstatements="241" elements="889" coveredelements="310"/>
   </project>
 </coverage>

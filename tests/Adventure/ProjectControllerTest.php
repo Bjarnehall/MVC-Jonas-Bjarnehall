@@ -113,14 +113,7 @@ class ProjectControllerTest extends WebTestCase
             }
         }
     }
-    //     #[Route("/proj/server/passed", name: "project_server_passed")]
-    // public function proj_server_passed(): Response
-    // {
-    //     $adventures = $this->adventureInventory->getAllAdventures();
-    //     return $this->render('project/server.html.twig', [
-    //         'adventures' => $adventures,
-    //     ]);
-    // }
+
     public function testProjServerPassed(): void
     {
         $adventureInventoryMock = $this->createMock(AdventureInventory::class);
@@ -132,6 +125,90 @@ class ProjectControllerTest extends WebTestCase
 
         $container->set(AdventureInventory::class, $adventureInventoryMock);
         $client->request('GET', '/proj/server/passed');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
+        }
+    }
+
+    public function testProjServerDialogOne(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+
+        $client = static::createClient();
+        $container = $client->getContainer();
+
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $client->request('GET', '/proj/server/dialog_one');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
+        }
+    }
+
+    public function testProjServerDialogTwo(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+
+        $client = static::createClient();
+        $container = $client->getContainer();
+
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $client->request('GET', '/proj/server/dialog_two');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
+        }
+    }
+
+    public function testProjServerFinalTwo(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+
+        $client = static::createClient();
+        $container = $client->getContainer();
+
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $client->request('GET', '/proj/server/final_two');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
+        }
+    }
+
+    public function testProjServerFinal(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+
+        $client = static::createClient();
+        $container = $client->getContainer();
+
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $client->request('GET', '/proj/server/final');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
         foreach ($adventures as $adventure) {
