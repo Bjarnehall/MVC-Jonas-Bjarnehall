@@ -78,10 +78,11 @@
     transform: translate(-50%, -50%);
     background-color: rgb(50, 50, 50);
     border-radius: 1.3rem;
-    color: rgb(255, 255, 255);
-    padding-right: 15px;
+    color: #ff0800;
+    padding-right: 10px;
     height: 340px;
-    width: 240px;
+    width: 300px;
+    font-size: 1.2rem;
 }
 
 .endPromt {

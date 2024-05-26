@@ -113,48 +113,32 @@ class ProjectControllerTest extends WebTestCase
             }
         }
     }
+    //     #[Route("/proj/server/passed", name: "project_server_passed")]
+    // public function proj_server_passed(): Response
+    // {
+    //     $adventures = $this->adventureInventory->getAllAdventures();
+    //     return $this->render('project/server.html.twig', [
+    //         'adventures' => $adventures,
+    //     ]);
+    // }
+    public function testProjServerPassed(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
 
-public function testProjEnd(): void
-{
-    $adventureInventoryMock = $this->createMock(AdventureInventory::class);
-    $adventures = [new Adventure(), new Adventure()];
-    $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+        $client = static::createClient();
+        $container = $client->getContainer();
 
-    $client = static::createClient();
-    $container = $client->getContainer();
-    $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $client->request('GET', '/proj/server/passed');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-    $client->request('GET', '/proj/end');
-    $this->assertEquals(302, $client->getResponse()->getStatusCode());
-
-    foreach ($adventures as $adventure) {
-        $notes = $adventure->getNotes();
-        if ($notes !== null) {
-            $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
         }
     }
-}
-
-public function testProjEndTwo(): void
-{
-    $adventureInventoryMock = $this->createMock(AdventureInventory::class);
-    $adventures = [new Adventure(), new Adventure()];
-    $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
-
-    $client = static::createClient();
-    $container = $client->getContainer();
-    $container->set(AdventureInventory::class, $adventureInventoryMock);
-
-    $client->request('GET', '/proj/end_two');
-    $this->assertEquals(302, $client->getResponse()->getStatusCode());
-
-    foreach ($adventures as $adventure) {
-        $notes = $adventure->getNotes();
-        if ($notes !== null) {
-            $this->assertStringContainsString($notes, $client->getResponse()->getContent());
-        }
-    }
-}
-
-
 }

@@ -17,12 +17,13 @@
 .dialogServerAnswerOne {
     position: fixed;
     left: 45%;
-    top: 22%;
+    top: 17%;
     background-color: #ffffff00;
     color: rgba(255, 255, 255, 0.345);
     border-radius: 5%;
-    width: 250px;
+    width: 260px;
     padding: 10px;
+    font-size: 1.2rem;
 }
 
 .dialogServerAnswerOne a {
@@ -39,11 +40,12 @@
 .dialogServerAnswerTwo {
     position: fixed;
     left: 62%;
-    top: 20%;
+    top: 18%;
     background-color: #ffffff00;
     color: rgba(0, 0, 0, 0.172);
     border-radius: 5%;
-    width: 250px;
+    width: 260px;
+    font-size: 1.2rem;
 }
 
 .dialogServerAnswerTwo a {
@@ -104,8 +106,8 @@
 }
 
 .buttonServer a:hover {
-    color: #ff4ffc;
-    font-size: 15rem;
+    color: #ff0800;
+    font-size: 12rem;
 }
 
 .buttonServerComputer {

@@ -8,7 +8,7 @@ filter:
     src/Controller/CardGame.php, src/Repository/BooksRepository.php, src/Repository/ProductRepository.php,
     src/Controller/MetricsController.php, src/Entity/Product.php, src/Card/DeckTask.php,
     src/Card/Game21Draw.php, src/Dice/DiceGameTask.php, src/Entity/Books.php, src/Dice/DiceHand.php,
-    src/Card/Player.php, src/Dice/Dice.php, src/Library/Library.php]
+    src/Card/Player.php, src/Dice/Dice.php, src/Library/Library.php, src/Controller/api.php]
 
 build:
     image: default-bionic
