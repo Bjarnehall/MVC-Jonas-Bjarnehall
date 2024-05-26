@@ -27,7 +27,13 @@ I ett prototyp stadie utvecklades spelet enligt detta flöde och testades innan 
 
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart3.png)
 
+Flödesschema i ett senare skede av utvecklingen där de största delen av spelet är helt klart uppdelat i två kapitel.
+
+Kapitel 1
+
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/FlowChart4.png)
+
+Kapitel 2
 
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/FlowChart5.png)
 
