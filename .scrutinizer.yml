@@ -10,7 +10,7 @@ filter:
     src/Card/Game21Draw.php, src/Dice/DiceGameTask.php, src/Entity/Books.php, src/Dice/DiceHand.php,
     src/Card/Player.php, src/Dice/Dice.php, src/Library/Library.php, src/Controller/Api.php,
     src/Card/Card.php, src/Lucky/Luck.php, src/Card/Game.php, src/Card/CardHand.php, src/Dice/DiceGraphic.php,
-    src/Card/DeckOfCards.php]
+    src/Card/DeckOfCards.php, src/Lucky/RandomPetImageSelector.php]
 
 build:
     image: default-bionic
