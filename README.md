@@ -14,7 +14,7 @@ filer även impporteras.
 
 Spelets logik
 ------------
-<img src="{{ asset('img/Flowchart1.png') }}" alt="FlowchartGame" width="720">
+![FlowchartGame](assets/img/Flowchart1.png)
 
 Routes / spelets gång
 ----------
