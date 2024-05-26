@@ -218,4 +218,55 @@ class AdventureInventoryTest extends TestCase
         $result = $adventureInventory->addNote();
         $this->assertFalse($result);
     }
+
+    public function testAddCdWhenNotExists(): void
+    {
+        $codes = "Reboot Server CD";
+        $keys = 103;
+
+        $doctrineMock = $this->createMock(ManagerRegistry::class);
+        $entityManagerMock = $this->createMock(EntityManagerInterface::class);
+        $doctrineMock->method('getManager')->willReturn($entityManagerMock);
+
+        $adventureInventory = $this->getMockBuilder(AdventureInventory::class)
+            ->onlyMethods(['adventureExists'])
+            ->setConstructorArgs([$doctrineMock, $entityManagerMock])
+            ->getMock();
+
+        $adventureInventory->method('adventureExists')->with($codes, $keys)->willReturn(false);
+
+        $entityManagerMock->expects($this->once())->method('persist')->with($this->callback(function ($adventure) use ($codes, $keys) {
+            return $adventure instanceof Adventure
+                && $adventure->getNotes() === '<i class="fas fa-compact-disc"></i>'
+                && $adventure->getCodes() === $codes
+                && $adventure->getKeys() === $keys;
+        }));
+        $entityManagerMock->expects($this->once())->method('flush');
+
+        $result = $adventureInventory->addCd();
+        $this->assertTrue($result);
+    }
+
+    public function testAddCdWhenExists(): void
+    {
+        $codes = "Reboot Server CD";
+        $keys = 103;
+
+        $doctrineMock = $this->createMock(ManagerRegistry::class);
+        $entityManagerMock = $this->createMock(EntityManagerInterface::class);
+        $doctrineMock->method('getManager')->willReturn($entityManagerMock);
+
+        $adventureInventory = $this->getMockBuilder(AdventureInventory::class)
+            ->onlyMethods(['adventureExists'])
+            ->setConstructorArgs([$doctrineMock, $entityManagerMock])
+            ->getMock();
+
+        $adventureInventory->method('adventureExists')->with($codes, $keys)->willReturn(true);
+
+        $entityManagerMock->expects($this->never())->method('persist');
+        $entityManagerMock->expects($this->never())->method('flush');
+
+        $result = $adventureInventory->addCd();
+        $this->assertFalse($result);
+    }
 }
