@@ -23,7 +23,13 @@ För att spelet ska bli instressant behövs en möjlighet att gå mellan olika r
 
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart2.png)
 
+I ett prototyp stadie utvecklades spelet enligt detta flöde och testades innan vidare utveckling fortsatt.
+
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart3.png)
+
+![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart4.png)
+
+![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart5.png)
 
 Routes / spelets gång
 
