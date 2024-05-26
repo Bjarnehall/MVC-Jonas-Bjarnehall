@@ -49,4 +49,26 @@ class AdventureControllerTest extends WebTestCase
             }
         }
     }
+
+    public function testAdventureAddCdS(): void
+    {
+        $adventureInventoryMock = $this->createMock(AdventureInventory::class);
+        $adventures = [new Adventure(), new Adventure()];
+        $adventureInventoryMock->method('getAllAdventures')->willReturn($adventures);
+
+        $client = static::createClient();
+        $container = $client->getContainer();
+
+        $container->set(AdventureInventory::class, $adventureInventoryMock);
+        $client->request('GET', '/adventure/addcdSecond');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+
+        foreach ($adventures as $adventure) {
+            $notes = $adventure->getNotes();
+            if ($notes !== null) {
+                $this->assertStringContainsString($notes, $client->getResponse()->getContent());
+            }
+        }
+    }
+
 }
