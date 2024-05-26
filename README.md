@@ -38,8 +38,8 @@ Kapitel 2
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/FlowChart5.png)
 
 Routes / spelets gång
-
 ----------
+
 /proj/about
 About sidan nås via "Om" i navbaren och beskriver kortfattat vad projektet handlar om.
 
