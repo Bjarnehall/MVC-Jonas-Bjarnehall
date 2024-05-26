@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Adventure\AdventureInventory;
+use App\Adventure\AdventureGrades;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -111,9 +112,11 @@ class AdventureController extends AbstractController
      * Clears the clues for Adventure.
      */
     #[Route('/adventure/clear', name: 'project_clear')]
-    public function proj_clear(): Response
+    public function proj_clear(AdventureGrades $adventureGrades): Response
     {
+        $adventureGrades->deleteAllGrades();
         $this->adventureInventory->clearAdventures();
+
         $adventures = $this->adventureInventory->getAllAdventures();
 
         return $this->render('project/home.html.twig', [

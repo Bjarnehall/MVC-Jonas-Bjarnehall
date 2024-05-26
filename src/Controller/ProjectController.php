@@ -10,6 +10,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Adventure;
+use App\Adventure\AdventureGrades;
+use App\Entity\Grades;
 
 class ProjectController extends AbstractController
 {
@@ -85,29 +87,49 @@ class ProjectController extends AbstractController
      * Game end page
      */
     #[Route("/proj/end", name: "project_end")]
-    public function proj_end(EntityManagerInterface $entityManager): Response
+    public function proj_end(EntityManagerInterface $entityManager, AdventureGrades $adventureGrades): Response
     {
         $adventureRepository = $entityManager->getRepository(Adventure::class);
         $adventure = $adventureRepository->findOneBy(['codes' => 'Reboot Server CD', 'keys' => 103]);
 
         if ($adventure) {
-            return $this->render('project/end.html.twig');
+            $persons = [
+                ['name' => 'Johan Andersson', 'course' => 'DATABASE', 'grade' => 'MVG'],
+                ['name' => 'Anita Karlsson', 'course' => 'DATABASE', 'grade' => 'VG'],
+                ['name' => 'Sture Snesteg', 'course' => 'DATABASE', 'grade' => 'IG'],
+            ];
+
+            $adventureGrades->addGrades($persons);
+            $gradesData = $adventureGrades->getGradesData();
+
+            return $this->render('project/end.html.twig', [
+                'grades' => $gradesData,
+            ]);
         } else {
             $this->addFlash('error', 'Reboot Server CD not found.');
             return $this->redirectToRoute('project_server_final');
         }
     }
-    /**
-     * Game end page
-     */
+
     #[Route("/proj/end_two", name: "project_end_two")]
-    public function proj_end_two(EntityManagerInterface $entityManager): Response
+    public function proj_end_two(EntityManagerInterface $entityManager, AdventureGrades $adventureGrades): Response
     {
         $adventureRepository = $entityManager->getRepository(Adventure::class);
         $adventure = $adventureRepository->findOneBy(['codes' => 'Reboot Server CD', 'keys' => 103]);
 
         if ($adventure) {
-            return $this->render('project/end_two.html.twig');
+            $persons = [
+                ['name' => 'Johan Andersson', 'course' => 'DATABASE', 'grade' => 'MVG'],
+                ['name' => 'Anita Karlsson', 'course' => 'DATABASE', 'grade' => 'VG'],
+                ['name' => 'Sture Snesteg', 'course' => 'DATABASE', 'grade' => 'IG'],
+            ];
+
+            $adventureGrades->addGrades($persons);
+            $gradesData = $adventureGrades->getGradesData();
+
+            return $this->render('project/end_two.html.twig', [
+                'grades' => $gradesData,
+            ]);
         } else {
             $this->addFlash('error', 'Reboot Server CD not found.');
             return $this->redirectToRoute('project_server_final');

@@ -1,6 +1,81 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\App\\Adventure\\AdventureDevice",
+            "name": "AdventureDevice",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureDevice.html"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureDevice\u003A\u003AencryptText\u0028\u0029",
+            "name": "encryptText",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureDevice.html#method_encryptText"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory",
+            "name": "AdventureInventory",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureInventory.html"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureInventory.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003AgetAllAdventures\u0028\u0029",
+            "name": "getAllAdventures",
+            "summary": "Get\u0020all\u0020Adventure",
+            "url": "classes/App-Adventure-AdventureInventory.html#method_getAllAdventures"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003AclearAdventures\u0028\u0029",
+            "name": "clearAdventures",
+            "summary": "Reset\u0020clues\u0020from\u0020Adventure",
+            "url": "classes/App-Adventure-AdventureInventory.html#method_clearAdventures"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003AadventureExists\u0028\u0029",
+            "name": "adventureExists",
+            "summary": "Check\u0020if\u0020exist",
+            "url": "classes/App-Adventure-AdventureInventory.html#method_adventureExists"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003AaddNote\u0028\u0029",
+            "name": "addNote",
+            "summary": "Adds\u0020a\u0020note\u0020to\u0020the\u0020inventory.",
+            "url": "classes/App-Adventure-AdventureInventory.html#method_addNote"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003AaddCd\u0028\u0029",
+            "name": "addCd",
+            "summary": "Adds\u0020a\u0020cd\u0020to\u0020the\u0020inventory.",
+            "url": "classes/App-Adventure-AdventureInventory.html#method_addCd"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003AsaveRot13String\u0028\u0029",
+            "name": "saveRot13String",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureInventory.html#method_saveRot13String"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003A\u0024doctrine",
+            "name": "doctrine",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureInventory.html#property_doctrine"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureInventory\u003A\u003A\u0024entityManager",
+            "name": "entityManager",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureInventory.html#property_entityManager"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureMechanics",
+            "name": "AdventureMechanics",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureMechanics.html"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureMechanics\u003A\u003AcheckPassword\u0028\u0029",
+            "name": "checkPassword",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureMechanics.html#method_checkPassword"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureMechanics\u003A\u003A\u0024correctPassword",
+            "name": "correctPassword",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureMechanics.html#property_correctPassword"
+        },                {
             "fqsen": "\\App\\Card\\Card",
             "name": "Card",
             "summary": "Represents\u0020a\u0020single\u0020playing\u0020card\u0020with\u0020a\u0020suit\u0020and\u0020value.",
@@ -96,6 +171,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Card-DeckOfCards.html#property_cards"
         },                {
+            "fqsen": "\\App\\Card\\DeckTask",
+            "name": "DeckTask",
+            "summary": "",
+            "url": "classes/App-Card-DeckTask.html"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTask\u003A\u003AensureShuffledDeckExists\u0028\u0029",
+            "name": "ensureShuffledDeckExists",
+            "summary": "",
+            "url": "classes/App-Card-DeckTask.html#method_ensureShuffledDeckExists"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTask\u003A\u003AshuffleDeck\u0028\u0029",
+            "name": "shuffleDeck",
+            "summary": "",
+            "url": "classes/App-Card-DeckTask.html#method_shuffleDeck"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTask\u003A\u003AdrawCardFromDeck\u0028\u0029",
+            "name": "drawCardFromDeck",
+            "summary": "",
+            "url": "classes/App-Card-DeckTask.html#method_drawCardFromDeck"
+        },                {
             "fqsen": "\\App\\Card\\Game",
             "name": "Game",
             "summary": "",
@@ -115,6 +210,21 @@ Search.appendIndex(
             "name": "session",
             "summary": "Session\u0020management\u0020for\u0020the\u0020game.",
             "url": "classes/App-Card-Game.html#property_session"
+        },                {
+            "fqsen": "\\App\\Card\\Game21Draw",
+            "name": "Game21Draw",
+            "summary": "",
+            "url": "classes/App-Card-Game21Draw.html"
+        },                {
+            "fqsen": "\\App\\Card\\Game21Draw\u003A\u003AdrawCard\u0028\u0029",
+            "name": "drawCard",
+            "summary": "",
+            "url": "classes/App-Card-Game21Draw.html#method_drawCard"
+        },                {
+            "fqsen": "\\App\\Card\\Game21Draw\u003A\u003AgetDeckFromSession\u0028\u0029",
+            "name": "getDeckFromSession",
+            "summary": "",
+            "url": "classes/App-Card-Game21Draw.html#method_getDeckFromSession"
         },                {
             "fqsen": "\\App\\Card\\Player",
             "name": "Player",
@@ -151,6 +261,51 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Card-Player.html#property_hand"
         },                {
+            "fqsen": "\\App\\Controller\\AdventureController",
+            "name": "AdventureController",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#method_index"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003AadventureAdd\u0028\u0029",
+            "name": "adventureAdd",
+            "summary": "Pick\u0020up\u0020a\u0020clue\u0020for\u0020Adventure.",
+            "url": "classes/App-Controller-AdventureController.html#method_adventureAdd"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003AadventureAddCd\u0028\u0029",
+            "name": "adventureAddCd",
+            "summary": "Pick\u0020up\u0020a\u0020CD\u0020for\u0020Adventure.",
+            "url": "classes/App-Controller-AdventureController.html#method_adventureAddCd"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003AadventureAddCdSecond\u0028\u0029",
+            "name": "adventureAddCdSecond",
+            "summary": "Pick\u0020up\u0020a\u0020CD\u0020for\u0020Adventure.",
+            "url": "classes/App-Controller-AdventureController.html#method_adventureAddCdSecond"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003AadventureAddCdSecond_two\u0028\u0029",
+            "name": "adventureAddCdSecond_two",
+            "summary": "Pick\u0020up\u0020a\u0020CD\u0020for\u0020Adventure\u0020alternative\u0020path.",
+            "url": "classes/App-Controller-AdventureController.html#method_adventureAddCdSecond_two"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003Aproj_clear\u0028\u0029",
+            "name": "proj_clear",
+            "summary": "Clears\u0020the\u0020clues\u0020for\u0020Adventure.",
+            "url": "classes/App-Controller-AdventureController.html#method_proj_clear"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003A\u0024adventureInventory",
+            "name": "adventureInventory",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#property_adventureInventory"
+        },                {
             "fqsen": "\\App\\Controller\\Api",
             "name": "Api",
             "summary": "",
@@ -170,6 +325,11 @@ Search.appendIndex(
             "name": "CardGame",
             "summary": "",
             "url": "classes/App-Controller-CardGame.html"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGame\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Controller-CardGame.html#method___construct"
         },                {
             "fqsen": "\\App\\Controller\\CardGame\u003A\u003Aindex\u0028\u0029",
             "name": "index",
@@ -221,6 +381,36 @@ Search.appendIndex(
             "summary": "Displays\u0020multiple\u0020cards\u0020as\u0020a\u0020JSON\u0020response.",
             "url": "classes/App-Controller-CardGame.html#method_apiDrawCards"
         },                {
+            "fqsen": "\\App\\Controller\\CardGame\u003A\u003AgetDeck\u0028\u0029",
+            "name": "getDeck",
+            "summary": "",
+            "url": "classes/App-Controller-CardGame.html#method_getDeck"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGame\u003A\u003AdeserializeDeck\u0028\u0029",
+            "name": "deserializeDeck",
+            "summary": "",
+            "url": "classes/App-Controller-CardGame.html#method_deserializeDeck"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGame\u003A\u003AdrawCards\u0028\u0029",
+            "name": "drawCards",
+            "summary": "",
+            "url": "classes/App-Controller-CardGame.html#method_drawCards"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGame\u003A\u003AformatCardsData\u0028\u0029",
+            "name": "formatCardsData",
+            "summary": "",
+            "url": "classes/App-Controller-CardGame.html#method_formatCardsData"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGame\u003A\u003AhandleErrorResponse\u0028\u0029",
+            "name": "handleErrorResponse",
+            "summary": "Handles\u0020error\u0020responses\u0020by\u0020returning\u0020a\u0020JSON\u0020response.",
+            "url": "classes/App-Controller-CardGame.html#method_handleErrorResponse"
+        },                {
+            "fqsen": "\\App\\Controller\\CardGame\u003A\u003A\u0024deckTask",
+            "name": "deckTask",
+            "summary": "",
+            "url": "classes/App-Controller-CardGame.html#property_deckTask"
+        },                {
             "fqsen": "\\App\\Controller\\DiceGameController",
             "name": "DiceGameController",
             "summary": "",
@@ -228,47 +418,47 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Ahome\u0028\u0029",
             "name": "home",
-            "summary": "",
+            "summary": "Display\u0020the\u0020homepage\u0020of\u0020the\u0020Pig\u0020game.",
             "url": "classes/App-Controller-DiceGameController.html#method_home"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestRollDice\u0028\u0029",
             "name": "testRollDice",
-            "summary": "",
+            "summary": "Test\u0020rolling\u0020a\u0020single\u0020dice.",
             "url": "classes/App-Controller-DiceGameController.html#method_testRollDice"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestRollDices\u0028\u0029",
             "name": "testRollDices",
-            "summary": "",
+            "summary": "Test\u0020rolling\u0020multiple\u0020dices.",
             "url": "classes/App-Controller-DiceGameController.html#method_testRollDices"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestDiceHand\u0028\u0029",
             "name": "testDiceHand",
-            "summary": "",
+            "summary": "Test\u0020rolling\u0020a\u0020dice\u0020hand.",
             "url": "classes/App-Controller-DiceGameController.html#method_testDiceHand"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Ainit\u0028\u0029",
             "name": "init",
-            "summary": "",
+            "summary": "Initialize\u0020the\u0020Pig\u0020game\u0020\u0028GET\u0029.",
             "url": "classes/App-Controller-DiceGameController.html#method_init"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AinitCallback\u0028\u0029",
             "name": "initCallback",
-            "summary": "",
+            "summary": "Initialize\u0020the\u0020Pig\u0020game\u0020\u0028POST\u0029.",
             "url": "classes/App-Controller-DiceGameController.html#method_initCallback"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Aplay\u0028\u0029",
             "name": "play",
-            "summary": "",
+            "summary": "Play\u0020the\u0020Pig\u0020game\u0020\u0028GET\u0029.",
             "url": "classes/App-Controller-DiceGameController.html#method_play"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Aroll\u0028\u0029",
             "name": "roll",
-            "summary": "",
+            "summary": "Roll\u0020the\u0020dice\u0020in\u0020the\u0020Pig\u0020game\u0020\u0028POST\u0029.",
             "url": "classes/App-Controller-DiceGameController.html#method_roll"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Asave\u0028\u0029",
             "name": "save",
-            "summary": "",
+            "summary": "Save\u0020the\u0020current\u0020round\u0020total\u0020in\u0020the\u0020Pig\u0020game\u0020\u0028POST\u0029.",
             "url": "classes/App-Controller-DiceGameController.html#method_save"
         },                {
             "fqsen": "\\App\\Controller\\Game21",
@@ -391,10 +581,20 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-Lucky.html"
         },                {
+            "fqsen": "\\App\\Controller\\Lucky\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Controller-Lucky.html#method___construct"
+        },                {
             "fqsen": "\\App\\Controller\\Lucky\u003A\u003Alucky\u0028\u0029",
             "name": "lucky",
             "summary": "",
             "url": "classes/App-Controller-Lucky.html#method_lucky"
+        },                {
+            "fqsen": "\\App\\Controller\\Lucky\u003A\u003A\u0024randomPetImageSelector",
+            "name": "randomPetImageSelector",
+            "summary": "",
+            "url": "classes/App-Controller-Lucky.html#property_randomPetImageSelector"
         },                {
             "fqsen": "\\App\\Controller\\MetricsController",
             "name": "MetricsController",
@@ -405,6 +605,101 @@ Search.appendIndex(
             "name": "mepage",
             "summary": "",
             "url": "classes/App-Controller-MetricsController.html#method_mepage"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController",
+            "name": "ProjectController",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_home\u0028\u0029",
+            "name": "proj_home",
+            "summary": "Game\u0020home\u0020page",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_home"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_about\u0028\u0029",
+            "name": "proj_about",
+            "summary": "Game\u0020about\u0020page",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_about"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_start\u0028\u0029",
+            "name": "proj_start",
+            "summary": "Game\u0020start\u0020room",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_start"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_second_room\u0028\u0029",
+            "name": "proj_second_room",
+            "summary": "Game\u0020second\u0020room",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_second_room"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_third_room\u0028\u0029",
+            "name": "proj_third_room",
+            "summary": "Game\u0020third\u0020room",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_third_room"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_open_cabin\u0028\u0029",
+            "name": "proj_open_cabin",
+            "summary": "Game\u0020third\u0020room\u0020open\u0020cabin",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_open_cabin"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_end\u0028\u0029",
+            "name": "proj_end",
+            "summary": "Game\u0020end\u0020page",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_end"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_end_two\u0028\u0029",
+            "name": "proj_end_two",
+            "summary": "Game\u0020end\u0020page",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_end_two"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_passed\u0028\u0029",
+            "name": "proj_server_passed",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_server_passed"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_dialog_one\u0028\u0029",
+            "name": "proj_server_dialog_one",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_server_dialog_one"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_dialog_two\u0028\u0029",
+            "name": "proj_server_dialog_two",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_server_dialog_two"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_final_two\u0028\u0029",
+            "name": "proj_server_final_two",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_server_final_two"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_final\u0028\u0029",
+            "name": "proj_server_final",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_server_final"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server\u0028\u0029",
+            "name": "proj_server",
+            "summary": "Game\u0020password\u0020check\u0020for\u0020serverroom",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_server"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_device\u0028\u0029",
+            "name": "proj_device",
+            "summary": "Route\u0020for\u0020device",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_device"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003A\u0024adventureMechanics",
+            "name": "adventureMechanics",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#property_adventureMechanics"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003A\u0024adventureInventory",
+            "name": "adventureInventory",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#property_adventureInventory"
         },                {
             "fqsen": "\\App\\Controller\\ReportTwig",
             "name": "ReportTwig",
@@ -466,6 +761,26 @@ Search.appendIndex(
             "summary": "The\u0020value\u0020of\u0020the\u0020dice\u0020roll.",
             "url": "classes/App-Dice-Dice.html#property_value"
         },                {
+            "fqsen": "\\App\\Dice\\DiceGameTask",
+            "name": "DiceGameTask",
+            "summary": "",
+            "url": "classes/App-Dice-DiceGameTask.html"
+        },                {
+            "fqsen": "\\App\\Dice\\DiceGameTask\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Dice-DiceGameTask.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Dice\\DiceGameTask\u003A\u003ArollAndUpdateRound\u0028\u0029",
+            "name": "rollAndUpdateRound",
+            "summary": "",
+            "url": "classes/App-Dice-DiceGameTask.html#method_rollAndUpdateRound"
+        },                {
+            "fqsen": "\\App\\Dice\\DiceGameTask\u003A\u003ArollDiceHand\u0028\u0029",
+            "name": "rollDiceHand",
+            "summary": "",
+            "url": "classes/App-Dice-DiceGameTask.html#method_rollDiceHand"
+        },                {
             "fqsen": "\\App\\Dice\\DiceGraphic",
             "name": "DiceGraphic",
             "summary": "",
@@ -520,6 +835,66 @@ Search.appendIndex(
             "name": "hand",
             "summary": "",
             "url": "classes/App-Dice-DiceHand.html#property_hand"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure",
+            "name": "Adventure",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003AgetNotes\u0028\u0029",
+            "name": "getNotes",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#method_getNotes"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003AsetNotes\u0028\u0029",
+            "name": "setNotes",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#method_setNotes"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003AgetCodes\u0028\u0029",
+            "name": "getCodes",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#method_getCodes"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003AsetCodes\u0028\u0029",
+            "name": "setCodes",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#method_setCodes"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003AgetKeys\u0028\u0029",
+            "name": "getKeys",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#method_getKeys"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003AsetKeys\u0028\u0029",
+            "name": "setKeys",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#method_setKeys"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003A\u0024notes",
+            "name": "notes",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#property_notes"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003A\u0024codes",
+            "name": "codes",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#property_codes"
+        },                {
+            "fqsen": "\\App\\Entity\\Adventure\u003A\u003A\u0024keys",
+            "name": "keys",
+            "summary": "",
+            "url": "classes/App-Entity-Adventure.html#property_keys"
         },                {
             "fqsen": "\\App\\Entity\\Books",
             "name": "Books",
@@ -683,13 +1058,23 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Library\\Library\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructor.",
             "url": "classes/App-Library-Library.html#method___construct"
         },                {
             "fqsen": "\\App\\Library\\Library\u003A\u003AcreateOrUpdateBook\u0028\u0029",
             "name": "createOrUpdateBook",
-            "summary": "",
+            "summary": "Creates\u0020or\u0020updates\u0020a\u0020book",
             "url": "classes/App-Library-Library.html#method_createOrUpdateBook"
+        },                {
+            "fqsen": "\\App\\Library\\Library\u003A\u003AsetBookProperties\u0028\u0029",
+            "name": "setBookProperties",
+            "summary": "Sets\u0020the\u0020properties\u0020of\u0020the\u0020book.",
+            "url": "classes/App-Library-Library.html#method_setBookProperties"
+        },                {
+            "fqsen": "\\App\\Library\\Library\u003A\u003AhandleFileUpload\u0028\u0029",
+            "name": "handleFileUpload",
+            "summary": "Handles\u0020file\u0020upload\u0020and\u0020sets\u0020the\u0020image\u0020property\u0020of\u0020the\u0020book.",
+            "url": "classes/App-Library-Library.html#method_handleFileUpload"
         },                {
             "fqsen": "\\App\\Library\\Library\u003A\u003A\u0024doctrine",
             "name": "doctrine",
@@ -703,28 +1088,78 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Lucky\\Luck\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructor.",
             "url": "classes/App-Lucky-Luck.html#method___construct"
         },                {
             "fqsen": "\\App\\Lucky\\Luck\u003A\u003AgetGreeting\u0028\u0029",
             "name": "getGreeting",
-            "summary": "",
+            "summary": "Get\u0020the\u0020greeting\u0020based\u0020on\u0020the\u0020time\u0020of\u0020day.",
             "url": "classes/App-Lucky-Luck.html#method_getGreeting"
         },                {
             "fqsen": "\\App\\Lucky\\Luck\u003A\u003AgetTranslatedDayOfWeek\u0028\u0029",
             "name": "getTranslatedDayOfWeek",
-            "summary": "",
+            "summary": "Get\u0020the\u0020translated\u0020name\u0020of\u0020the\u0020current\u0020day\u0020of\u0020the\u0020week.",
             "url": "classes/App-Lucky-Luck.html#method_getTranslatedDayOfWeek"
         },                {
             "fqsen": "\\App\\Lucky\\Luck\u003A\u003AgetWordForToday\u0028\u0029",
             "name": "getWordForToday",
-            "summary": "",
+            "summary": "Get\u0020the\u0020quote\u0020for\u0020current\u0020day\u0020of\u0020the\u0020week.",
             "url": "classes/App-Lucky-Luck.html#method_getWordForToday"
+        },                {
+            "fqsen": "\\App\\Lucky\\Luck\u003A\u003AgetDayOfWeek\u0028\u0029",
+            "name": "getDayOfWeek",
+            "summary": "Get\u0020the\u0020name\u0020of\u0020the\u0020current\u0020day\u0020of\u0020the\u0020week.",
+            "url": "classes/App-Lucky-Luck.html#method_getDayOfWeek"
+        },                {
+            "fqsen": "\\App\\Lucky\\Luck\u003A\u003AgetTimeHour\u0028\u0029",
+            "name": "getTimeHour",
+            "summary": "Get\u0020the\u0020current\u0020hour\u0020of\u0020the\u0020day.",
+            "url": "classes/App-Lucky-Luck.html#method_getTimeHour"
         },                {
             "fqsen": "\\App\\Lucky\\Luck\u003A\u003A\u0024dateTime",
             "name": "dateTime",
             "summary": "",
             "url": "classes/App-Lucky-Luck.html#property_dateTime"
+        },                {
+            "fqsen": "\\App\\Lucky\\RandomPetImageSelector",
+            "name": "RandomPetImageSelector",
+            "summary": "",
+            "url": "classes/App-Lucky-RandomPetImageSelector.html"
+        },                {
+            "fqsen": "\\App\\Lucky\\RandomPetImageSelector\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/App-Lucky-RandomPetImageSelector.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Lucky\\RandomPetImageSelector\u003A\u003AgetRandomPetImage\u0028\u0029",
+            "name": "getRandomPetImage",
+            "summary": "",
+            "url": "classes/App-Lucky-RandomPetImageSelector.html#method_getRandomPetImage"
+        },                {
+            "fqsen": "\\App\\Lucky\\RandomPetImageSelector\u003A\u003A\u0024filesystem",
+            "name": "filesystem",
+            "summary": "",
+            "url": "classes/App-Lucky-RandomPetImageSelector.html#property_filesystem"
+        },                {
+            "fqsen": "\\App\\Lucky\\RandomPetImageSelector\u003A\u003A\u0024imagePath",
+            "name": "imagePath",
+            "summary": "",
+            "url": "classes/App-Lucky-RandomPetImageSelector.html#property_imagePath"
+        },                {
+            "fqsen": "\\App\\Lucky\\RandomPetImageSelector\u003A\u003A\u0024petImages",
+            "name": "petImages",
+            "summary": "",
+            "url": "classes/App-Lucky-RandomPetImageSelector.html#property_petImages"
+        },                {
+            "fqsen": "\\App\\Repository\\AdventureRepository",
+            "name": "AdventureRepository",
+            "summary": "",
+            "url": "classes/App-Repository-AdventureRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\AdventureRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-AdventureRepository.html#method___construct"
         },                {
             "fqsen": "\\App\\Repository\\BooksRepository",
             "name": "BooksRepository",
@@ -760,6 +1195,11 @@ Search.appendIndex(
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
+        },                {
+            "fqsen": "\\App\\Adventure",
+            "name": "Adventure",
+            "summary": "",
+            "url": "namespaces/app-adventure.html"
         },                {
             "fqsen": "\\App\\Card",
             "name": "Card",

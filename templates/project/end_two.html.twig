@@ -18,5 +18,28 @@
 	</div>
 </div>
 </div>
+<div class="container">
+	<h2>Grades Data</h2>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Course</th>
+				<th>Grade</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for grade in grades %}
+				<tr>
+					<td>{{ grade.name }}</td>
+					<td>{{ grade.course }}</td>
+					<td>{{ grade.grade }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+</div>
 {% endblock %}
 
