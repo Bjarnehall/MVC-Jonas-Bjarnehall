@@ -12,6 +12,10 @@ CSS
 Spelet har en egen css stil som utgår ifrån filen /project.css där tillhörande
 filer även impporteras.
 
+Spelets logik
+------------
+<img src="{{ asset('img/Flowchart1.png') }}" alt="FlowchartGame" width="720">
+
 Routes / spelets gång
 ----------
 /proj/about
@@ -74,8 +78,10 @@ Här visas en slut bild med information om att databasen nu är räddad. Spelare
 så önskas och då återställs även databasen för inventory.
 
 
-Scrutinizer proj
+Scrutinizer
 -----------------
+I denna verison av detta repo är de filer som inte har med Spelet "The Database Mystery" att göra 
+excluderats i scrutinizer badges avser alltså spelets kod.
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/?branch=main)
 
