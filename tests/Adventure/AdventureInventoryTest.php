@@ -4,6 +4,7 @@ namespace App\Tests\Adventure\AdventureInventory;
 
 use PHPUnit\Framework\TestCase;
 use App\Adventure\AdventureInventory;
+use App\Adventure\AdventureMechanics;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectRepository;
@@ -111,4 +112,35 @@ class AdventureInventoryTest extends TestCase
 
         $this->assertFalse($inventory->adventureExists($codes, $keys));
     }
+
+    public function testSaveRot13StringWhenNotExists(): void
+    {
+        $inputString = "Helloworld";
+        $rot13String = str_rot13($inputString);
+        $codes = $rot13String;
+        $keys = 102;
+
+        $doctrineMock = $this->createMock(ManagerRegistry::class);
+        $entityManagerMock = $this->createMock(EntityManagerInterface::class);
+        $doctrineMock->method('getManager')->willReturn($entityManagerMock);
+
+        $adventureInventory = $this->getMockBuilder(AdventureInventory::class)
+            ->onlyMethods(['adventureExists'])
+            ->setConstructorArgs([$doctrineMock, $entityManagerMock])
+            ->getMock();
+        
+        $adventureInventory->method('adventureExists')->with($codes, $keys)->willReturn(false);
+
+         $entityManagerMock->expects($this->once())->method('persist')->with($this->callback(function($adventure) use ($codes, $keys) {
+            return $adventure instanceof Adventure
+                && $adventure->getNotes() === "Decrypted message"
+                && $adventure->getCodes() === $codes
+                && $adventure->getKeys() === $keys;
+        }));
+        $entityManagerMock->expects($this->once())->method('flush');
+
+        $result = $adventureInventory->saveRot13String($inputString);
+        $this->assertTrue($result);
+    }
+
 }
