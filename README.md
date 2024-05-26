@@ -14,7 +14,7 @@ filer även impporteras.
 
 Spelets logik
 ------------
-![FlowchartGame](assets/img/Flowchart1.png)
+![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart1.png)
 
 Routes / spelets gång
 ----------
