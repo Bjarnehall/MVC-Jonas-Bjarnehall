@@ -14,10 +14,13 @@ filer även impporteras.
 
 Spelets logik
 ------------
-Spelet går ut på att stänga av/reboota servern för att rädda databasen, en förenklad verision av spelet ser ut på detta sett.
+Spelet går ut på att stänga av/reboota servern för att rädda databasen, en förenklad verision av spelet ser ut på detta sett.<br>
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart1.png)
-
+<br>
+För att spelet ska bli instressant behövs en möjlighet att gå mellan olika rum.<br>
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart2.png)
+<br>
+![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart3.png)
 Routes / spelets gång
 ----------
 /proj/about
