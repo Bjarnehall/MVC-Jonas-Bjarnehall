@@ -27,9 +27,9 @@ I ett prototyp stadie utvecklades spelet enligt detta flöde och testades innan 
 
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart3.png)
 
-![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart4.png)
+![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/FlowChart4.png)
 
-![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart5.png)
+![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/FlowChart5.png)
 
 Routes / spelets gång
 
