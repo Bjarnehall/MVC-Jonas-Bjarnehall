@@ -17,14 +17,17 @@ class ProjectController extends AbstractController
 {
     private AdventureMechanics $adventureMechanics;
     private AdventureInventory $adventureInventory;
+    private AdventureGrades $adventureGrades;
 
     public function __construct(
         AdventureMechanics $adventureMechanics,
-        AdventureInventory $adventureInventory
+        AdventureInventory $adventureInventory,
+        AdventureGrades $adventureGrades
     )
     {
         $this->adventureMechanics = $adventureMechanics;
         $this->adventureInventory = $adventureInventory;
+        $this->adventureGrades = $adventureGrades;
     }
     /**
      * Game home page
@@ -104,13 +107,8 @@ class ProjectController extends AbstractController
         $adventure = $adventureRepository->findOneBy(['codes' => 'Reboot Server CD', 'keys' => 103]);
 
         if ($adventure) {
-            $persons = [
-                ['name' => 'Johan Andersson', 'course' => 'DATABASE', 'grade' => 'MVG'],
-                ['name' => 'Anita Karlsson', 'course' => 'DATABASE', 'grade' => 'VG'],
-                ['name' => 'Sture Snesteg', 'course' => 'DATABASE', 'grade' => 'IG'],
-            ];
-
-            $adventureGrades->addGrades($persons);
+            $persons = $this->adventureGrades->getPersons();
+            $this->adventureGrades->addGrades($persons);
             $gradesData = $adventureGrades->getGradesData();
 
             return $this->render('project/end.html.twig', [
@@ -121,7 +119,9 @@ class ProjectController extends AbstractController
             return $this->redirectToRoute('project_server_final');
         }
     }
-
+    /**
+     * Game end page
+     */
     #[Route("/proj/end_two", name: "project_end_two")]
     public function proj_end_two(EntityManagerInterface $entityManager, AdventureGrades $adventureGrades): Response
     {
@@ -129,13 +129,8 @@ class ProjectController extends AbstractController
         $adventure = $adventureRepository->findOneBy(['codes' => 'Reboot Server CD', 'keys' => 103]);
 
         if ($adventure) {
-            $persons = [
-                ['name' => 'Johan Andersson', 'course' => 'DATABASE', 'grade' => 'MVG'],
-                ['name' => 'Anita Karlsson', 'course' => 'DATABASE', 'grade' => 'VG'],
-                ['name' => 'Sture Snesteg', 'course' => 'DATABASE', 'grade' => 'IG'],
-            ];
-
-            $adventureGrades->addGrades($persons);
+            $persons = $this->adventureGrades->getPersons();
+            $this->adventureGrades->addGrades($persons);
             $gradesData = $adventureGrades->getGradesData();
 
             return $this->render('project/end_two.html.twig', [
@@ -146,7 +141,9 @@ class ProjectController extends AbstractController
             return $this->redirectToRoute('project_server_final');
         }
     }
-
+    /**
+     * Game serverrom
+     */
     #[Route("/proj/server/passed", name: "project_server_passed")]
     public function proj_server_passed(): Response
     {
@@ -155,7 +152,9 @@ class ProjectController extends AbstractController
             'adventures' => $adventures,
         ]);
     }
-
+    /**
+     * Game option result
+     */
     #[Route("/proj/server/dialog_one", name: "project_server_dialog_one")]
     public function proj_server_dialog_one(): Response
     {
@@ -164,7 +163,9 @@ class ProjectController extends AbstractController
             'adventures' => $adventures,
         ]);
     }
-
+    /**
+     * Game option result
+     */
     #[Route("/proj/server/dialog_two", name: "project_server_dialog_two")]
     public function proj_server_dialog_two(): Response
     {
@@ -173,7 +174,9 @@ class ProjectController extends AbstractController
             'adventures' => $adventures,
         ]);
     }
-
+    /**
+     * game end
+     */
     #[Route("/proj/server/final_two", name: "project_server_final_two")]
     public function proj_server_final_two(): Response
     {
@@ -182,7 +185,9 @@ class ProjectController extends AbstractController
             'adventures' => $adventures,
         ]);
     }
-
+    /**
+     * Game end
+     */
     #[Route("/proj/server/final", name: "project_server_final")]
     public function proj_server_final(): Response
     {
@@ -214,28 +219,6 @@ class ProjectController extends AbstractController
     /**
      * Route for device
      */
-    // #[Route("/proj/device", name: "project_device")]
-    // public function proj_device(Request $request): Response
-    // {
-    //     if ($request->getMethod() === 'POST') {
-    //         $inputString = $request->request->get('inputString');
-
-    //         if ($inputString !== null && $inputString !== '') {
-
-    //             $success = $this->adventureInventory->saveRot13String($inputString);
-
-    //             if ($success) {
-    //                 return $this->redirectToRoute('project_opencabin');
-    //             }
-    //         }
-    //     }
-    //     $adventures = $this->adventureInventory->getAllAdventures();
-    //     return $this->render('project/cabin_device.html.twig', [
-    //         'adventures' => $adventures,
-    //     ]);
-    // }
-
-
     #[Route("/proj/device", name: "project_device")]
     public function proj_device(Request $request): Response
     {
@@ -246,7 +229,6 @@ class ProjectController extends AbstractController
                 return $this->redirectToRoute('project_opencabin');
             }
         }
-
         $adventures = $this->adventureInventory->getAllAdventures();
         return $this->render('project/cabin_device.html.twig', [
             'adventures' => $adventures,

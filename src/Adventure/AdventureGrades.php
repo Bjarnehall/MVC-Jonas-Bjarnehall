@@ -15,6 +15,17 @@ class AdventureGrades
         $this->entityManager = $entityManager;
     }
     /**
+    * @return array<array{name: string, course: string, grade: string}>
+    */
+    public function getPersons(): array
+    {
+        return [
+            ['name' => 'Johan Andersson', 'course' => 'DATABASE', 'grade' => 'MVG'],
+            ['name' => 'Anita Karlsson', 'course' => 'DATABASE', 'grade' => 'VG'],
+            ['name' => 'Sture Snesteg', 'course' => 'DATABASE', 'grade' => 'IG'],
+        ];
+    }
+    /**
      * @param array<array{name: string, course: string, grade: string}> $persons
      */
     public function addGrades(array $persons): void
