@@ -11,6 +11,8 @@
                 <p><li><a href="#kmom03"><p>kmom03</p></a></li></p>
                 <p><li><a href="#kmom04"><p>kmom04</p></a></li></p>
                 <p><li><a href="#kmom05"><p>kmom05</p></a></li></p>
+                <p><li><a href="#kmom06"><p>kmom06</p></a></li></p>
+                <p><li><a href="#kmom10"><p>kmom10</p></a></li></p>
             </ul>
 </div>
 <div class="presentation">
@@ -169,10 +171,75 @@ prioritera den tiden man har där.
 Min TIL detta kursmoment är att Introduktionen till PHP metrics detta är ett verktyg jag gillar starkt och hoppas använda
 i framtiden.
 </p>
+<br>
+<h2 id="kmom10">kmom10</h2>
+<br>
+<h3>Krav 1-3</h3>
+<p>
+I det avslutande kursmomentet valde jag att bygga ett äventyrsspel. Jag började med ett ritblock och penna för att göra
+en skiss av mitt spel. Idén landar i att bygga ett spel där spelaren möts av problemet att någon försöker förstöra skolans databas
+på grund av missnöjdhet med sitt betyg i "Databas" kursen.
+</p>
+<p>
+Jag definerade den enklaste möjliga lösning för mitt spel och kom fram till följande:<br>
+startrum -> serverrum -> stoppa servern - > börja om
+</p>
+<img src="{{ asset('img/Flowchart1.png') }}" alt="FlowchartGame" width="520">
 
-
-
-
+<p>
+Jag skapade en så färdig lösning som möjligt av denna förenklade verision av spelet innan jag fortsatte med att implementera
+övriga rum och hinder för att lyckas i spelet. I min första variant gjorde jag en ny css template, routes emellan de olika
+rummen och bilder skapades i Gimp med hjälp av matrial från Pixbay. Senare valde jag att utforma mitt första hinder i spelet
+genom att skapa ett POST formulär som tar emot en sträng och kontrollerar om det är rätt för att isåfall ge access till
+serverrummet. Spelets utveckling fortsatte sedan och i slutändan blev det fyra visuella rum med ett antal till hörande routes
+och templates för att skapa interaktivitet. Spelaren måste lista ut lösenordet och i ett avrummen finns en ledtråd i from av 
+en "papperslapp" att hitta. Den text som finns på papperslappen fungerar inte för att ta sig in och spelaren får fortsätta leta. 
+I ett av rummen finns det ett verktyg "decrypt device" när spelaren kör texten från papperslappen i verktyget ges ett okrypterat 
+meddelande tillbaka vilken är själva lösenordet. Spelaren kan nu ta sig in i serverummet där denne möts av en karaktär som kan 
+kominuceras med, här påverkar valet av konversationen vilket svar man får tillbaka och även vilken bild och sluttext som visas 
+när spelet är över. Spelaren får veta att det är försent att stoppa förstörelsen av databasen och uppmanas lösa detta. I rummet 
+finns ett objekt i form av en CD skiva som spelaren kan plocka upp, denna används för att återställa servern och 
+spelaren har nu klarat spelet.
+</p>
+<p>
+I mitt spel har jag använt en mängd templates som renderas genom olika routes, "adventure_items.html.twig" är en del template och 
+inkluderas i ett flertal templates i form av en inventory för spelaren.c
+</p>
+<p>
+Förutom spelet finns även en about sida som kortfattat beskriver projektet och även en matig README fil på github finns där
+den mesta informationen om spelet finns samt resultat från enhetstestning. Enhetstestningen har utförts med hjälp av PHPunit
+där rapporter skapats igenom Scrutinizer, jag har exkluderat de filer som inte har med projektet att göra. Utöver enhetstesting
+har jag använt det linters som vi kört med i kursen för att förbättra min kod även Metrics har användts där framför allt det 
+kluster diagram för komplexitet/maintainabillity används.
+</p>
+<h3>Krav 5 ORM</h3>
+<p>
+Redan från projektets början valde jag att implementera en databas till mitt spel. Här lagras de objekt som kan interageras med
+av spelaren i form av ledtrådar och verktyg. Jag löste detta genom att använda den guide för doctrine som vi använt tidigare i
+kursen för att skapa två Entitys: Adventure och Grades. Den förstnämda används som inventory i spelet och den sista är det som
+ska räddas i spelet. När spelet startar töms båda entiteterna på dess rader och under spelets gång fylls Adventure på genom 
+att plocka upp objekt eller generera med hjälp av verktyg i spelet. I Grades läggs rader till när sista momentet i spelet är 
+avklarat och presenteras sedan som en tabell i slutscenen. Egentligen hade dessa rader kunnat ligga i tabellen under spelets 
+gång och spelaren hade inte märkt någon skillnad men då spelet går ut på att rädda databasen kändes det mer genuint att låta 
+tabellen vara tom tills dess att spelet är avklarat.
+</p>
+<p>
+Att få bygga ett äventyrsspel har varit en kul utmaning och jag hade gärna fortsatt med mitt spel genom att bygga fler kapitel 
+och nya problem att lösa. Projektet kändes lagom svårt och jag tycker att det har varit en bra uppdelning på kraven och vilka 
+som är optionella. Friheten att kunna välja typ av projekt och inte vara tvungen att fortsätta på den kod som byggt under kursens
+gång uppskattas. Att utföra projektet har tagit mycket tid där särskilt mycket tid har lagts på enhetstestning. Med det sagt 
+så tycker jag om att arbeta med enhetstestning och det är kul att få bygga något såpass komplett som detta projekt.
+</p>
+<p>
+Kursen MVC har gett en inblick i en mer proffisionell syn på programering och jag gillar det skarpt. Att få arbeta med ett så
+pass komplett ramverk som Symfony har varit givande men även introduktionen till det objektorienterade arbetsättet med kod har 
+gett en ny insikt till programvara och problemlösning. Att få testa nya sätt att arbeta med databasen har varit spännande likväl
+som det har varit roligt att få introducerats till testning av kod vilket gick till på ett helt annat sätt än jag föreställt mig
+innan kursen. Den mängd verktyg såsom Symfony, Scrutiniser, PHPUnit, Metrics och de linters vi arbetat med är något jag kommer
+ha stor nytta av framtiden. Något jag saknar från kursen är hur man driftsätter ett projekt i Symfony i "verkligheten" när man 
+inte har tillgång till studentservern. Även längre mer djupgående övningsuppgifter i de olika kursmomenten hade önskats.
+Betyget jag skulle ge denna kurs är 8/10 och jag kan varmt rekomendera denna kurs!  
+</p>
 </div>
 {% endblock %}
 

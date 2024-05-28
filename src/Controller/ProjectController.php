@@ -18,7 +18,10 @@ class ProjectController extends AbstractController
     private AdventureMechanics $adventureMechanics;
     private AdventureInventory $adventureInventory;
 
-    public function __construct(AdventureMechanics $adventureMechanics, AdventureInventory $adventureInventory)
+    public function __construct(
+        AdventureMechanics $adventureMechanics,
+        AdventureInventory $adventureInventory
+    )
     {
         $this->adventureMechanics = $adventureMechanics;
         $this->adventureInventory = $adventureInventory;
@@ -38,6 +41,14 @@ class ProjectController extends AbstractController
     public function proj_about(): Response
     {
         return $this->render('project/about.html.twig');
+    }
+    /**
+     * Game about database page
+     */
+    #[Route("/proj/about/database", name: "project_about_database")]
+    public function proj_about_database(): Response
+    {
+        return $this->render('project/about_database.html.twig');
     }
     /**
      * Game start room
@@ -203,19 +214,36 @@ class ProjectController extends AbstractController
     /**
      * Route for device
      */
+    // #[Route("/proj/device", name: "project_device")]
+    // public function proj_device(Request $request): Response
+    // {
+    //     if ($request->getMethod() === 'POST') {
+    //         $inputString = $request->request->get('inputString');
+
+    //         if ($inputString !== null && $inputString !== '') {
+
+    //             $success = $this->adventureInventory->saveRot13String($inputString);
+
+    //             if ($success) {
+    //                 return $this->redirectToRoute('project_opencabin');
+    //             }
+    //         }
+    //     }
+    //     $adventures = $this->adventureInventory->getAllAdventures();
+    //     return $this->render('project/cabin_device.html.twig', [
+    //         'adventures' => $adventures,
+    //     ]);
+    // }
+
+
     #[Route("/proj/device", name: "project_device")]
     public function proj_device(Request $request): Response
     {
         if ($request->getMethod() === 'POST') {
-            $inputString = $request->request->get('inputString');
+            $success = $this->adventureMechanics->handleInputString($request);
 
-            if ($inputString !== null && $inputString !== '') {
-
-                $success = $this->adventureInventory->saveRot13String($inputString);
-
-                if ($success) {
-                    return $this->redirectToRoute('project_opencabin');
-                }
+            if ($success) {
+                return $this->redirectToRoute('project_opencabin');
             }
         }
 
