@@ -125,7 +125,7 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    AdventureMechanics
+    AdventureGrades
 
     
             <div class="phpdocumentor-element__package">
@@ -144,9 +144,9 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureMechanics.php"><a href="files/src-adventure-adventuremechanics.html"><abbr title="src/Adventure/AdventureMechanics.php">AdventureMechanics.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureGrades.php"><a href="files/src-adventure-adventuregrades.html"><abbr title="src/Adventure/AdventureGrades.php">AdventureGrades.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">9</span>
 
     </aside>
 
@@ -158,7 +158,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/App-Adventure-AdventureMechanics.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Adventure-AdventureGrades.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -172,50 +172,53 @@
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/App-Adventure-AdventureMechanics.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Adventure-AdventureGrades.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Adventure-AdventureMechanics.html#property_adventureInventory">$adventureInventory</a>
+    <a href="classes/App-Adventure-AdventureGrades.html#property_entityManager">$entityManager</a>
     <span>
-                        &nbsp;: <a href="classes/App-Adventure-AdventureInventory.html"><abbr title="\App\Adventure\AdventureInventory">AdventureInventory</abbr></a>            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Adventure-AdventureMechanics.html#property_correctPassword">$correctPassword</a>
-    <span>
-                        &nbsp;: string            </span>
+                        &nbsp;: <abbr title="\Doctrine\ORM\EntityManagerInterface">EntityManagerInterface</abbr>            </span>
 </dt>
 
     </dl>
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/App-Adventure-AdventureMechanics.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Adventure-AdventureGrades.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Adventure-AdventureMechanics.html#method___construct">__construct()</a>
+    <a href="classes/App-Adventure-AdventureGrades.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Construktor</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Adventure-AdventureMechanics.html#method_checkPassword">checkPassword()</a>
+    <a href="classes/App-Adventure-AdventureGrades.html#method_addGrades">addGrades()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd>Function for checking password</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Adventure-AdventureMechanics.html#method_handleInputString">handleInputString()</a>
+    <a href="classes/App-Adventure-AdventureGrades.html#method_deleteAllGrades">deleteAllGrades()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd>Device mechanics for input string</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Adventure-AdventureGrades.html#method_getGradesData">getGradesData()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, array{name: string, course: string, grade: string}&gt;    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Adventure-AdventureGrades.html#method_getPersons">getPersons()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, array{name: string, course: string, grade: string}&gt;    </span>
+</dt>
 
     </dl>
 
@@ -228,7 +231,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/App-Adventure-AdventureMechanics.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Adventure-AdventureGrades.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -238,15 +241,15 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_adventureInventory">
-        $adventureInventory
-        <a href="classes/App-Adventure-AdventureMechanics.html#property_adventureInventory" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_entityManager">
+        $entityManager
+        <a href="classes/App-Adventure-AdventureGrades.html#property_entityManager" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureMechanics.php"><a href="files/src-adventure-adventuremechanics.html"><abbr title="src/Adventure/AdventureMechanics.php">AdventureMechanics.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureGrades.php"><a href="files/src-adventure-adventuregrades.html"><abbr title="src/Adventure/AdventureGrades.php">AdventureGrades.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">11</span>
 
@@ -255,42 +258,9 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><a href="classes/App-Adventure-AdventureInventory.html"><abbr title="\App\Adventure\AdventureInventory">AdventureInventory</abbr></a></span>
-    <span class="phpdocumentor-signature__name">$adventureInventory</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\Doctrine\ORM\EntityManagerInterface">EntityManagerInterface</abbr></span>
+    <span class="phpdocumentor-signature__name">$entityManager</span>
     </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_correctPassword">
-        $correctPassword
-        <a href="classes/App-Adventure-AdventureMechanics.html#property_correctPassword" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureMechanics.php"><a href="files/src-adventure-adventuremechanics.html"><abbr title="src/Adventure/AdventureMechanics.php">AdventureMechanics.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">10</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$correctPassword</span>
-     = <span class="phpdocumentor-signature__default-value">&#039;mumintrollet&#039;</span></code>
 
     
     
@@ -302,7 +272,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/App-Adventure-AdventureMechanics.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Adventure-AdventureGrades.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -313,21 +283,20 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/App-Adventure-AdventureMechanics.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Adventure-AdventureGrades.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureMechanics.php"><a href="files/src-adventure-adventuremechanics.html"><abbr title="src/Adventure/AdventureMechanics.php">AdventureMechanics.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureGrades.php"><a href="files/src-adventure-adventuregrades.html"><abbr title="src/Adventure/AdventureGrades.php">AdventureGrades.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Construktor</p>
-
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Adventure-AdventureInventory.html"><abbr title="\App\Adventure\AdventureInventory">AdventureInventory</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$adventureInventory</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\ORM\EntityManagerInterface">EntityManagerInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$entityManager</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -335,8 +304,8 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$adventureInventory</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Adventure-AdventureInventory.html"><abbr title="\App\Adventure\AdventureInventory">AdventureInventory</abbr></a></span>
+                <span class="phpdocumentor-signature__argument__name">$entityManager</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\ORM\EntityManagerInterface">EntityManagerInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -353,23 +322,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_checkPassword">
-        checkPassword()
-        <a href="classes/App-Adventure-AdventureMechanics.html#method_checkPassword" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_addGrades">
+        addGrades()
+        <a href="classes/App-Adventure-AdventureGrades.html#method_addGrades" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureMechanics.php"><a href="files/src-adventure-adventuremechanics.html"><abbr title="src/Adventure/AdventureMechanics.php">AdventureMechanics.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureGrades.php"><a href="files/src-adventure-adventuregrades.html"><abbr title="src/Adventure/AdventureGrades.php">AdventureGrades.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Function for checking password</p>
-
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">checkPassword</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">addGrades</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, array{name: string, course: string, grade: string}&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$persons</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -377,8 +345,8 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$password</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$persons</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, array{name: string, course: string, grade: string}&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -387,9 +355,71 @@
 
     
 
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_deleteAllGrades">
+        deleteAllGrades()
+        <a href="classes/App-Adventure-AdventureGrades.html#method_deleteAllGrades" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureGrades.php"><a href="files/src-adventure-adventuregrades.html"><abbr title="src/Adventure/AdventureGrades.php">AdventureGrades.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">71</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">deleteAllGrades</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getGradesData">
+        getGradesData()
+        <a href="classes/App-Adventure-AdventureGrades.html#method_getGradesData" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureGrades.php"><a href="files/src-adventure-adventuregrades.html"><abbr title="src/Adventure/AdventureGrades.php">AdventureGrades.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">54</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getGradesData</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, array{name: string, course: string, grade: string}&gt;</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, array{name: string, course: string, grade: string}&gt;</span>
             </section>
 
 </article>
@@ -399,43 +429,32 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_handleInputString">
-        handleInputString()
-        <a href="classes/App-Adventure-AdventureMechanics.html#method_handleInputString" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getPersons">
+        getPersons()
+        <a href="classes/App-Adventure-AdventureGrades.html#method_getPersons" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureMechanics.php"><a href="files/src-adventure-adventuremechanics.html"><abbr title="src/Adventure/AdventureMechanics.php">AdventureMechanics.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Adventure/AdventureGrades.php"><a href="files/src-adventure-adventuregrades.html"><abbr title="src/Adventure/AdventureGrades.php">AdventureGrades.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Device mechanics for input string</p>
-
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">handleInputString</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">getPersons</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, array{name: string, course: string, grade: string}&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$request</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Request">Request</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
+    
     
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, array{name: string, course: string, grade: string}&gt;</span>
             </section>
 
 </article>
@@ -445,7 +464,7 @@
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Adventure/AdventureMechanics.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Adventure/AdventureGrades.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -544,25 +563,26 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/App-Adventure-AdventureMechanics.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/App-Adventure-AdventureMechanics.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/App-Adventure-AdventureGrades.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/App-Adventure-AdventureGrades.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/App-Adventure-AdventureMechanics.html#property_adventureInventory">$adventureInventory<a href="classes/App-Adventure-AdventureMechanics.html"></li>
-                                                    <li><a href="classes/App-Adventure-AdventureMechanics.html#property_correctPassword">$correctPassword<a href="classes/App-Adventure-AdventureMechanics.html"></li>
+                                                    <li><a href="classes/App-Adventure-AdventureGrades.html#property_entityManager">$entityManager<a href="classes/App-Adventure-AdventureGrades.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/App-Adventure-AdventureMechanics.html#method___construct">__construct()</a></li>
-                                            <li><a href="classes/App-Adventure-AdventureMechanics.html#method_checkPassword">checkPassword()</a></li>
-                                            <li><a href="classes/App-Adventure-AdventureMechanics.html#method_handleInputString">handleInputString()</a></li>
+                                            <li><a href="classes/App-Adventure-AdventureGrades.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/App-Adventure-AdventureGrades.html#method_addGrades">addGrades()</a></li>
+                                            <li><a href="classes/App-Adventure-AdventureGrades.html#method_deleteAllGrades">deleteAllGrades()</a></li>
+                                            <li><a href="classes/App-Adventure-AdventureGrades.html#method_getGradesData">getGradesData()</a></li>
+                                            <li><a href="classes/App-Adventure-AdventureGrades.html#method_getPersons">getPersons()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -582,7 +602,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/App-Adventure-AdventureMechanics.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/App-Adventure-AdventureGrades.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

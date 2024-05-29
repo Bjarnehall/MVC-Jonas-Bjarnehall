@@ -86,4 +86,34 @@ class AdventureGradesTest extends TestCase
 
         $this->assertSame($expectedResult, $result);
     }
+
+    public function testDeleteAllGrades(): void
+    {
+        $grade1 = new Grades();
+        $grade1->setName('Johan Andersson')->setCourse('DATABASE')->setGrade('MVG');
+        
+        $grade2 = new Grades();
+        $grade2->setName('Anita Karlsson')->setCourse('DATABASE')->setGrade('VG');
+
+        $grade3 = new Grades();
+        $grade3->setName('Sture Snesteg')->setCourse('DATABASE')->setGrade('IG');
+
+        $allGrades = [$grade1, $grade2, $grade3];
+
+        $repositoryMock = $this->createMock(\Doctrine\ORM\EntityRepository::class);
+        $repositoryMock->method('findAll')->willReturn($allGrades);
+
+        $entityManagerMock = $this->createMock(EntityManagerInterface::class);
+        $entityManagerMock->method('getRepository')->willReturn($repositoryMock);
+
+        $entityManagerMock->expects($this->exactly(count($allGrades)))
+            ->method('remove')
+            ->withConsecutive([$grade1], [$grade2]);
+
+        $entityManagerMock->expects($this->once())->method('flush');
+
+        $adventureGrades = new AdventureGrades($entityManagerMock);
+
+        $adventureGrades->deleteAllGrades();
+    }
 }

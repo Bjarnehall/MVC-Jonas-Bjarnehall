@@ -11,6 +11,41 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Adventure-AdventureDevice.html#method_encryptText"
         },                {
+            "fqsen": "\\App\\Adventure\\AdventureGrades",
+            "name": "AdventureGrades",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureGrades.html"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureGrades\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureGrades.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureGrades\u003A\u003AgetPersons\u0028\u0029",
+            "name": "getPersons",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureGrades.html#method_getPersons"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureGrades\u003A\u003AaddGrades\u0028\u0029",
+            "name": "addGrades",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureGrades.html#method_addGrades"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureGrades\u003A\u003AgetGradesData\u0028\u0029",
+            "name": "getGradesData",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureGrades.html#method_getGradesData"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureGrades\u003A\u003AdeleteAllGrades\u0028\u0029",
+            "name": "deleteAllGrades",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureGrades.html#method_deleteAllGrades"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureGrades\u003A\u003A\u0024entityManager",
+            "name": "entityManager",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureGrades.html#property_entityManager"
+        },                {
             "fqsen": "\\App\\Adventure\\AdventureInventory",
             "name": "AdventureInventory",
             "summary": "",
@@ -66,15 +101,30 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Adventure-AdventureMechanics.html"
         },                {
+            "fqsen": "\\App\\Adventure\\AdventureMechanics\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construktor",
+            "url": "classes/App-Adventure-AdventureMechanics.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureMechanics\u003A\u003AhandleInputString\u0028\u0029",
+            "name": "handleInputString",
+            "summary": "Device\u0020mechanics\u0020for\u0020input\u0020string",
+            "url": "classes/App-Adventure-AdventureMechanics.html#method_handleInputString"
+        },                {
             "fqsen": "\\App\\Adventure\\AdventureMechanics\u003A\u003AcheckPassword\u0028\u0029",
             "name": "checkPassword",
-            "summary": "",
+            "summary": "Function\u0020for\u0020checking\u0020password",
             "url": "classes/App-Adventure-AdventureMechanics.html#method_checkPassword"
         },                {
             "fqsen": "\\App\\Adventure\\AdventureMechanics\u003A\u003A\u0024correctPassword",
             "name": "correctPassword",
             "summary": "",
             "url": "classes/App-Adventure-AdventureMechanics.html#property_correctPassword"
+        },                {
+            "fqsen": "\\App\\Adventure\\AdventureMechanics\u003A\u003A\u0024adventureInventory",
+            "name": "adventureInventory",
+            "summary": "",
+            "url": "classes/App-Adventure-AdventureMechanics.html#property_adventureInventory"
         },                {
             "fqsen": "\\App\\Card\\Card",
             "name": "Card",
@@ -626,6 +676,11 @@ Search.appendIndex(
             "summary": "Game\u0020about\u0020page",
             "url": "classes/App-Controller-ProjectController.html#method_proj_about"
         },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_about_database\u0028\u0029",
+            "name": "proj_about_database",
+            "summary": "Game\u0020about\u0020database\u0020page",
+            "url": "classes/App-Controller-ProjectController.html#method_proj_about_database"
+        },                {
             "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_start\u0028\u0029",
             "name": "proj_start",
             "summary": "Game\u0020start\u0020room",
@@ -658,27 +713,27 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_passed\u0028\u0029",
             "name": "proj_server_passed",
-            "summary": "",
+            "summary": "Game\u0020serverrom",
             "url": "classes/App-Controller-ProjectController.html#method_proj_server_passed"
         },                {
             "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_dialog_one\u0028\u0029",
             "name": "proj_server_dialog_one",
-            "summary": "",
+            "summary": "Game\u0020option\u0020result",
             "url": "classes/App-Controller-ProjectController.html#method_proj_server_dialog_one"
         },                {
             "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_dialog_two\u0028\u0029",
             "name": "proj_server_dialog_two",
-            "summary": "",
+            "summary": "Game\u0020option\u0020result",
             "url": "classes/App-Controller-ProjectController.html#method_proj_server_dialog_two"
         },                {
             "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_final_two\u0028\u0029",
             "name": "proj_server_final_two",
-            "summary": "",
+            "summary": "game\u0020end",
             "url": "classes/App-Controller-ProjectController.html#method_proj_server_final_two"
         },                {
             "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server_final\u0028\u0029",
             "name": "proj_server_final",
-            "summary": "",
+            "summary": "Game\u0020end",
             "url": "classes/App-Controller-ProjectController.html#method_proj_server_final"
         },                {
             "fqsen": "\\App\\Controller\\ProjectController\u003A\u003Aproj_server\u0028\u0029",
@@ -700,6 +755,11 @@ Search.appendIndex(
             "name": "adventureInventory",
             "summary": "",
             "url": "classes/App-Controller-ProjectController.html#property_adventureInventory"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003A\u0024adventureGrades",
+            "name": "adventureGrades",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#property_adventureGrades"
         },                {
             "fqsen": "\\App\\Controller\\ReportTwig",
             "name": "ReportTwig",
@@ -1001,6 +1061,66 @@ Search.appendIndex(
             "summary": "Handle\u0020blobs",
             "url": "classes/App-Entity-Books.html#property_imgBase64"
         },                {
+            "fqsen": "\\App\\Entity\\Grades",
+            "name": "Grades",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#method_getName"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003AsetName\u0028\u0029",
+            "name": "setName",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#method_setName"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003AgetCourse\u0028\u0029",
+            "name": "getCourse",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#method_getCourse"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003AsetCourse\u0028\u0029",
+            "name": "setCourse",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#method_setCourse"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003AgetGrade\u0028\u0029",
+            "name": "getGrade",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#method_getGrade"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003AsetGrade\u0028\u0029",
+            "name": "setGrade",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#method_setGrade"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#property_name"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003A\u0024course",
+            "name": "course",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#property_course"
+        },                {
+            "fqsen": "\\App\\Entity\\Grades\u003A\u003A\u0024grade",
+            "name": "grade",
+            "summary": "",
+            "url": "classes/App-Entity-Grades.html#property_grade"
+        },                {
             "fqsen": "\\App\\Entity\\Product",
             "name": "Product",
             "summary": "",
@@ -1170,6 +1290,16 @@ Search.appendIndex(
             "name": "__construct",
             "summary": "",
             "url": "classes/App-Repository-BooksRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\GradesRepository",
+            "name": "GradesRepository",
+            "summary": "",
+            "url": "classes/App-Repository-GradesRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\GradesRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-GradesRepository.html#method___construct"
         },                {
             "fqsen": "\\App\\Repository\\ProductRepository",
             "name": "ProductRepository",
