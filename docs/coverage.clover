@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716999444">
-  <project timestamp="1716999444">
+<coverage generated="1717001485">
+  <project timestamp="1717001485">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Adventure/AdventureDevice.php">
       <class name="App\Adventure\AdventureDevice" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
@@ -119,8 +119,8 @@
       <class name="App\Adventure\AdventureMechanics" namespace="global">
         <metrics complexity="5" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="2" elements="9" coveredelements="4"/>
       </class>
-      <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
-      <line num="17" type="stmt" count="13"/>
+      <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
+      <line num="17" type="stmt" count="14"/>
       <line num="22" type="method" name="handleInputString" visibility="public" complexity="3" crap="12" count="0"/>
       <line num="24" type="stmt" count="0"/>
       <line num="26" type="stmt" count="0"/>
