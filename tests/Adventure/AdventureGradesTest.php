@@ -4,6 +4,8 @@ use App\Adventure\AdventureGrades;
 use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\TestCase;
 use App\Entity\Grades;
+use Doctrine\Persistence\ObjectRepository;
+use Doctrine\Persistence\ManagerRegistry;
 
 class AdventureGradesTest extends TestCase
 {
@@ -53,24 +55,35 @@ class AdventureGradesTest extends TestCase
 
         $adventureGrades->addGrades($persons);
     }
-    // public function addGrades(array $persons): void
-    // {
-    //     foreach ($persons as $person) {
-    //         $name = $person['name'];
-    //         $course = $person['course'];
-    //         $grade = $person['grade'];
 
-    //         if (!$name || !$course || !$grade) {
-    //             continue;
-    //         }
+    public function testGetGradesData(): void
+    {
+        $grade1 = new Grades();
+        $grade1->setName('Johan Andersson')->setCourse('DATABASE')->setGrade('MVG');
+        
+        $grade2 = new Grades();
+        $grade2->setName('Anita Karlsson')->setCourse('DATABASE')->setGrade('VG');
 
-    //         $grades = new Grades();
-    //         $grades->setName($name)
-    //                ->setCourse($course)
-    //                ->setGrade($grade);
-    //         $this->entityManager->persist($grades);
-    //     }
+        $grade3 = new Grades();
+        $grade3->setName('Sture Snesteg')->setCourse('DATABASE')->setGrade('IG');
+        
+        $expectedGrades = [$grade1, $grade2, $grade3];
 
-    //     $this->entityManager->flush();
-    // }
+        $repositoryMock = $this->createMock(\Doctrine\ORM\EntityRepository::class);
+        $repositoryMock->method('findAll')->willReturn($expectedGrades);
+
+        $entityManagerMock = $this->createMock(EntityManagerInterface::class);
+        $entityManagerMock->method('getRepository')->willReturn($repositoryMock);
+
+        $adventureGrades = new AdventureGrades($entityManagerMock);
+
+        $result = $adventureGrades->getGradesData();
+        $expectedResult = [
+            ['name' => 'Johan Andersson', 'course' => 'DATABASE', 'grade' => 'MVG'],
+            ['name' => 'Anita Karlsson', 'course' => 'DATABASE', 'grade' => 'VG'],
+            ['name' => 'Sture Snesteg', 'course' => 'DATABASE', 'grade' => 'IG'],
+        ];
+
+        $this->assertSame($expectedResult, $result);
+    }
 }
