@@ -111,9 +111,7 @@ class AdventureGradesTest extends TestCase
             ->withConsecutive([$grade1], [$grade2]);
 
         $entityManagerMock->expects($this->once())->method('flush');
-
         $adventureGrades = new AdventureGrades($entityManagerMock);
-
         $adventureGrades->deleteAllGrades();
     }
 }

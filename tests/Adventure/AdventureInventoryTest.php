@@ -88,7 +88,7 @@ class AdventureInventoryTest extends TestCase
         $this->assertTrue($inventory->adventureExists($codes, $keys));
     }
 
-    public function testAdventureDoesNotExist(): void
+    public function testAdventureNotExist(): void
     {
         $codes = "zhzvagebyyrg";
         $keys = 101;
@@ -113,7 +113,7 @@ class AdventureInventoryTest extends TestCase
         $this->assertFalse($inventory->adventureExists($codes, $keys));
     }
 
-    public function testSaveRot13StringWhenNotExists(): void
+    public function testSaveRot13StringNotExists(): void
     {
         $inputString = "Helloworld";
         $rot13String = str_rot13($inputString);
@@ -143,7 +143,7 @@ class AdventureInventoryTest extends TestCase
         $this->assertTrue($result);
     }
 
-    public function testSaveRot13StringWhenExists(): void
+    public function testSaveRot13StringExists(): void
     {
         $inputString = "Helloworld";
         $rot13String = str_rot13($inputString);
