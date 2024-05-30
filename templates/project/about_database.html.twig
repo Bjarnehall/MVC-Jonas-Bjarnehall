@@ -6,10 +6,10 @@
 
 {% block body %}
 	<div class="about">
-		<h2>Databasen för The Databasse Mystery</h2>
+		<h2>Databasen för The Database Mystery</h2>
 		<p>I mitt spel har jag använt mig av en databaslösning för att hantera inventory och själva problemet som
-        spelet går ut på nämligen att rädda databasen. I spelet är det någon som vill förstöra skolans databas och 
-        målet för spelaren är att stoppa detta. Under spelets gång finns det "Items" som sparas i table "Adventure"
+        spelet går ut på, nämligen, att rädda databasen. I spelet är det någon som vill förstöra skolans databas och 
+        målet för spelaren är att stoppa detta. Under spelets gång finns det "Items" som sparas i table "Adventure" 
         och det är dessa "items" man kan interagera med under spelets gång. I slutet av spelet får spelaren reda på
         att databasen redan är förstörd och en "reboot disc" från inventoryn kan användas för att återställa databasen.
         När discen används läggs förbestämda rader till i table "Grades" och visas sedan upp på sidan för spelets slut.
@@ -42,14 +42,14 @@
         De fördelar jag ser med ORM i jämförelse med det tillvägagångsätt som vi arbetat med i databaskursen är i första
         hand smidigheten att kunna bygga de funktioner man vill ska kunna interagera med databasen. Hela biten med CRUD
         är väldigt enkelt i doctrine i kontrast till de SQL satser och funktioner som var tvunget att byggas i databaskursen.
-        Jag har delade känslor kring vilket som är bäst att arbeta med, jag gillar den kontrollen över databasen som fås 
-        när man jobbar direkt med databasen det blir mindre abstrakt och om man vill göra ändringar i databasen känns det 
+        Jag har delade känslor kring vilket som är bäst att arbeta med. Jag gillar den kontrollen man har över databasen som fås 
+        när man jobbar direkt med databasen vilket gör det mindre abstrakt och om man vill göra ändringar i databasen känns det 
         enklare/bättre när man interagerar direkt med databasen. Men när det är en enkel implementation som i mitt spel
         så är det väldigt bekvämt med ORM. Den största nackdelen med ORM är att det blir så abstrakt och förståelsen för 
         hur databasen faktiskt är uppbyggd minskar. Jag ser det som att cykla med stödhjul det fungerar i de flesta fall
         lika bra men när något blir fel eller man vill göra något mer avancerat är man inte lika förberedd på hur man ska
         gå tillväga. Då de båda arbetsätten har olika fördelar/nackdelar och det är inte enkelt att generalisera över vilket
-        som är bäst men om jag är tvungen att välja så arbetar jag hellre med databasen på det mer konkreta sättet som vi
+        som är bäst men om jag är tvungen att välja så arbetar jag helst med databasen på det mer konkreta sättet som vi
         gjorde i databaskursen.
         </p>
 	</div>

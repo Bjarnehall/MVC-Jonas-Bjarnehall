@@ -37,6 +37,14 @@ class ProjectController extends AbstractController
         return $this->render('project/home.html.twig');
     }
     /**
+     * Cheat
+     */
+    #[Route("/proj/cheat", name: "project_cheat")]
+    public function proj_cheat(): Response
+    {
+        return $this->render('project/cheat.html.twig');
+    }
+    /**
      * Game about page
      */
     #[Route("/proj/about", name: "project_about")]

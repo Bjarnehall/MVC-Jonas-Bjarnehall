@@ -176,43 +176,48 @@ i framtiden.
 <br>
 <h3>Krav 1-3</h3>
 <p>
-I det avslutande kursmomentet valde jag att bygga ett äventyrsspel. Jag började med ett ritblock och penna för att göra
-en skiss av mitt spel. Idén landar i att bygga ett spel där spelaren möts av problemet att någon försöker förstöra skolans databas
-på grund av missnöjdhet med sitt betyg i "Databas" kursen.
+I det avslutande kursmomentet har jag valt att bygga ett äventyrsspel. Jag började med ett ritblock och penna för att göra
+en skiss av spelet. Idén landar i att bygga ett spel där spelaren möts av problemet att någon försöker förstöra skolans databas
+på grund av missnöjdhet med sitt betyg i kursen Databas.
 </p>
 <p>
 Jag definerade den enklaste möjliga lösning för mitt spel och kom fram till följande:<br>
 startrum -> serverrum -> stoppa servern - > börja om
 </p>
-<img src="{{ asset('img/Flowchart1.png') }}" alt="FlowchartGame" width="520">
+
 
 <p>
 Jag skapade en så färdig lösning som möjligt av denna förenklade verision av spelet innan jag fortsatte med att implementera
-övriga rum och hinder för att lyckas i spelet. I min första variant gjorde jag en ny css template, routes emellan de olika
+övriga rum och hinder för att komma vidare i spelet. I min första version gjorde jag en ny css template, routes emellan de olika
 rummen och bilder skapades i Gimp med hjälp av matrial från Pixbay. Senare valde jag att utforma mitt första hinder i spelet
-genom att skapa ett POST formulär som tar emot en sträng och kontrollerar om det är rätt för att isåfall ge access till
-serverrummet. Spelets utveckling fortsatte sedan och i slutändan blev det fyra visuella rum med ett antal till hörande routes
-och templates för att skapa interaktivitet. Spelaren måste lista ut lösenordet och i ett avrummen finns en ledtråd i from av 
+genom att skapa ett POST formulär som tar emot en sträng i form av ett lösenord och kontrollerar om det är rätt för att isåfall ge access till
+serverrummet.<br><br>
+Spelets utveckling fortsatte sedan och i slutändan blev det fyra unika rum med ett antal till hörande routes
+och templates för att skapa interaktivitet och liv i spelet. 
+Spelaren måste lista ut lösenordet och i ett av rummen finns en ledtråd i from av 
 en "papperslapp" att hitta. Den text som finns på papperslappen fungerar inte för att ta sig in och spelaren får fortsätta leta. 
-I ett av rummen finns det ett verktyg "decrypt device" när spelaren kör texten från papperslappen i verktyget ges ett okrypterat 
-meddelande tillbaka vilken är själva lösenordet. Spelaren kan nu ta sig in i serverummet där denne möts av en karaktär som kan 
-kominuceras med, här påverkar valet av konversationen vilket svar man får tillbaka och även vilken bild och sluttext som visas 
-när spelet är över. Spelaren får veta att det är försent att stoppa förstörelsen av databasen och uppmanas lösa detta. I rummet 
+I ett av rummen finns det ett verktyg "decrypt device" och när spelaren kör texten från papperslappen i verktyget ges ett okrypterat 
+meddelande tillbaka vilket är själva lösenordet. Verktyget i sig använder en ROT13 lösning för texten. Spelaren kan nu ta sig in i serverummet där denne möts av en karaktär som man kan 
+kommunicera med, här påverkar valet av konversationen vilket svar man får tillbaka och även vilken bild och slutscen som visas 
+när spelet är över. Det ena alternativet är att vara snäll och förstående mot förövaren medans det andra är att vara hård mot 
+förövaren. Spelaren får veta att det är försent att stoppa förstörelsen av databasen och uppmanas lösa detta. I rummet 
 finns ett objekt i form av en CD skiva som spelaren kan plocka upp, denna används för att återställa servern och 
 spelaren har nu klarat spelet.
 </p>
 <p>
-I mitt spel har jag använt en mängd templates som renderas genom olika routes, "adventure_items.html.twig" är en del template och 
-inkluderas i ett flertal templates i form av en inventory för spelaren.c
+I mitt spel har jag använt en mängd templates som renderas genom olika routes för att visa upp rum och skapa ett dynamiskt spel, 
+"adventure_items.html.twig" är en del-template och inkluderas i ett flertal andra templates i form av en inventory för spelaren.
 </p>
 <p>
-Förutom spelet finns även en about sida som kortfattat beskriver projektet och även en matig README fil på github finns där
+Förutom spelet finns även en about sida som kortfattat beskriver projektet och även en matig README fil på github där
 den mesta informationen om spelet finns samt resultat från enhetstestning. Enhetstestningen har utförts med hjälp av PHPunit
-där rapporter skapats igenom Scrutinizer, jag har exkluderat de filer som inte har med projektet att göra. Utöver enhetstesting
-har jag använt det linters som vi kört med i kursen för att förbättra min kod även Metrics har användts där framför allt det 
-kluster diagram för komplexitet/maintainabillity används.
+där rapporter skapats med hjälp Scrutinizer, jag har exkluderat de filer som inte har med projektet att göra. Utöver enhetstesting
+har jag använt de linters som vi använt tidigare i kursen för att förbättra min kod, även Metrics har användts framförallt det 
+kluster diagram för komplexitet/maintainabillity har kommit till användning.
+{# <img src="{{ asset('img/scrutinizer.png') }}" alt="picture of symfony" width="630"> #}
+
 </p>
-<h3>Krav 5 ORM</h3>
+<h4>ORM Databas</h4>
 <p>
 Redan från projektets början valde jag att implementera en databas till mitt spel. Här lagras de objekt som kan interageras med
 av spelaren i form av ledtrådar och verktyg. Jag löste detta genom att använda den guide för doctrine som vi använt tidigare i
@@ -221,15 +226,33 @@ ska räddas i spelet. När spelet startar töms båda entiteterna på dess rader
 att plocka upp objekt eller generera med hjälp av verktyg i spelet. I Grades läggs rader till när sista momentet i spelet är 
 avklarat och presenteras sedan som en tabell i slutscenen. Egentligen hade dessa rader kunnat ligga i tabellen under spelets 
 gång och spelaren hade inte märkt någon skillnad men då spelet går ut på att rädda databasen kändes det mer genuint att låta 
-tabellen vara tom tills dess att spelet är avklarat.
+tabellen vara tom till dess att spelet är avklarat.
 </p>
+<h4>Avancerade features</h4><p>
+När det gäller avancerade features vill jag lyfta själva utformningen av mitt spel snarare än att belysa tekniskt svåra detaljer.
+Spelets invnentory och problemlösning kretsar kring databasen snarare än att databasen endast presenterar ett 
+innehåll. Spelaren måste plocka upp en ledtråd som sparas och presenteras i inventory där informationen senare används för
+att köras i ett ROT13 verktyg och sparas som ett nytt item i inventory. Reboot disken som måste plockas upp och finnas i inventory
+för att senare användas till att klara av spelet och först då ladda data in i databasen för att presentera en tabell på den information
+som ska räddas i databasen. Att tabellen inte finns i databasen sedan tidigare utan laddas först vid spelets slut anser jag som en kreativ metod.</p>
+<p>Vidare finns det ett moraliskt val i spelet att göra om man vill vara snäll eller hård mot förövaren som senare leder spelaren genom
+två olika routes för fortsatt spel, vilket ger ett dynamiskt spel.</p>
+<p>Dessa enskilda lösningar var för sig kanske inte är fruktansvärt svåra rent tekniskt men jag vill framför allt lyfta
+kreativiteten med lösningarna och spelets utformning. Sammanfattningsvis vill jag poängtera att spelets utformning är skalbar
+och en utbyggnad av spelet är möjlig där ett system för inloggning och fortsatt spel av användaren vore en rimlig vidareutvekling i
+kontrast till ett program som förlitar sig på en session.</p>
+
+<h4>Allmänt om projektet</h4>
 <p>
 Att få bygga ett äventyrsspel har varit en kul utmaning och jag hade gärna fortsatt med mitt spel genom att bygga fler kapitel 
 och nya problem att lösa. Projektet kändes lagom svårt och jag tycker att det har varit en bra uppdelning på kraven och vilka 
-som är optionella. Friheten att kunna välja typ av projekt och inte vara tvungen att fortsätta på den kod som byggt under kursens
+som är optionella. Friheten att kunna välja typ av projekt och inte vara tvungen att fortsätta på den kod som byggts under kursens
 gång uppskattas. Att utföra projektet har tagit mycket tid där särskilt mycket tid har lagts på enhetstestning. Med det sagt 
-så tycker jag om att arbeta med enhetstestning och det är kul att få bygga något såpass komplett som detta projekt.
+så tycker jag om att arbeta med enhetstestning och det är kul att få bygga något såpass komplett som detta projekt. Det fokus på
+problemlösning och utformning där en tydlig plan från ett tidigt skede krävts har utmanat mig som programmerare på ett utvecklande 
+sätt där lika mycket tid krävts åt att fundera kring utvecklingen som sjävla kodningen i sig.
 </p>
+<h4>Tankar om kursen</h4>
 <p>
 Kursen MVC har gett en inblick i en mer proffisionell syn på programering och jag gillar det skarpt. Att få arbeta med ett så
 pass komplett ramverk som Symfony har varit givande men även introduktionen till det objektorienterade arbetsättet med kod har 
@@ -237,9 +260,9 @@ gett en ny insikt till programvara och problemlösning. Att få testa nya sätt 
 som det har varit roligt att få introducerats till testning av kod vilket gick till på ett helt annat sätt än jag föreställt mig
 innan kursen. Den mängd verktyg såsom Symfony, Scrutiniser, PHPUnit, Metrics och de linters vi arbetat med är något jag kommer
 ha stor nytta av framtiden. Något jag saknar från kursen är hur man driftsätter ett projekt i Symfony i "verkligheten" när man 
-inte har tillgång till studentservern. Även längre mer djupgående övningsuppgifter i de olika kursmomenten hade önskats.
+inte har tillgång till studentservern. Även längre och mer djupgående övningsuppgifter i de olika kursmomenten hade önskats.
 Betyget jag skulle ge denna kurs är 8/10 och jag kan varmt rekomendera denna kurs!  
-</p>
+</p><br>
 </div>
 {% endblock %}
 

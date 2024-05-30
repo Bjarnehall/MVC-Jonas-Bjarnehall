@@ -15,7 +15,7 @@ php -S localhost:8888 -t public
 
 Nedan följer en beskrivning av hur spelet är uppbyggt.
 
-OBS! Spelet är tänk att spelas på normal desktop vy på fullskärm det är inte mobilanpassat och fungerar
+OBS! Spelet är tänkt att spelas på normal desktop vy på fullskärm det är inte mobilanpassat och fungerar
 dåligt på mindre skärmar.
 
 CSS
@@ -61,11 +61,10 @@ Landningsidan visar en bakrundsbild för spelet "The Database Mystery". Här fin
 Play Game tar spelaren till spelets första rum.
 
 /proj/start
-Startrummet i spelet består av en miljö med två dörrar en NPC som vi kan interagera med genom
-muspekaren. Vi har även en inventory som vid starten av spelet är tom. Det finns även en ledtråd
-att vi ska interagera med NPC. Den ena dörren är låst och det är den spelaren uppmanas att hitta 
-ett sätt att komma in i dörren på. Om spelaren försöker uppmanas denne att ange ett lösenord.
-Eftersom att dörren är låst antas spelaren fortsätta genom den andra dörren.
+Startrummet i spelet består av en miljö med två dörrar och en NPC som vi kan interagera med genom
+muspekaren. Vi har även en inventory som vid starten av spelet är tom. Det finns även en ledtråd som tyder på 
+att vi ska interagera med NPC. Den ena dörren är låst och det är här som spelaren uppmanas att hitta 
+ett sätt att komma in i rummet på. Eftersom att dörren är låst antas spelaren fortsätta genom den andra dörren.
 
 /proj/server
 När spelaren försöker komma in i serverrummet möts denne av ett formulär där ett lösenord måste anges.
@@ -73,14 +72,14 @@ Om spelaren inte har lösenordet finns inget annat alternativ än att gå tillba
 
 /proj/secondroom
 Här är första rummet spelaren har accesses till, här finns en ledtråd skriven på väggen "Take out 
-the strash!//Jim" Genom ledtråden antas spelaren att leta i papperkorgen där den första ledtråden finns.
+the strash!//Jim" Genom ledtråden antas spelaren leta i papperkorgen där den första ledtråden finns.
 Ledtråden består av en papperslapp med en obegriplig text på, om användaren försöker använda detta som
 lösenord till servern kommer den inte att lyckas. Spelaren har möjlighet att gå genom ytterligare en
 dörr där spelet fortsätter.
 
 /proj/thirdroom
 I tredje rummet möts spelaren av en garderob som är möjlig att öppna genom att klicka på den.
-spelaren kan även gå tillbaka till tidigare rum.
+Spelaren kan även gå tillbaka till tidigare rum.
 
 /proj/opencabin
 När spelaren öppnat skåpet skymtas ett kretskort i en låda vid klick på kretskortet öppnas 
@@ -88,7 +87,7 @@ en decrypting device.
 
 /proj/device
 Spelaren möts av ett formulär för "Secret Decrypting Device" där denne uppmanas "Decrypt Message"
-en ledtråd talar om för spelaren att använda de ledtrådar de hittat. Det dekrypterade medellandet
+en ledtråd talar om för spelaren att använda de ledtrådar de hittat. Det dekrypterade meddelandet
 sparas i databasen och läggs till i inventory.
 
 Spelaren antas nu gå tillbaka till start och försöka ta sig in i serverrummet.
@@ -101,7 +100,7 @@ konversatioen med förövaren skiljer sig och slut skärmen när spelet är avkl
 
 /proj/server/dialog_on alternativt /proj/server/dialog_two
 Förövaren ger ett svar tillbaka, möjlighet att plocka upp cd skivan finns fortfarande och en möjlighet
-att enteragera med datorn finns nu.
+att interagera med datorn finns nu.
 
 /proj/server/final
 Här är sista momentet i spelet och spelaren har nu möjlighet att använda cd skivan för att reboota
@@ -115,7 +114,9 @@ så önskas och då återställs även databasen för inventory och grades.
 Scrutinizer
 -----------------
 I denna verison av detta repo är de filer som inte har med Spelet "The Database Mystery" att göra 
-excluderats i scrutinizer badges avser alltså spelets kod.
+excluderats i scrutinizer badges avser alltså spelets kod. Jag har valt att inkludera filer för controllers samt databas filer då mina tester går emot dessa till viss del. Metrics och docs är uppdaterade men innehåller hela min
+kodbas.
+![SCRUTINIZER IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/scrutinizer.png)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Bjarnehall/MVC-Jonas-Bjarnehall/?branch=main)
 
