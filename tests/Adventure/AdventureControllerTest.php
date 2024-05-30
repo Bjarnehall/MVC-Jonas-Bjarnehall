@@ -4,11 +4,13 @@ namespace App\Test\Controller\ProjectController;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use App\Adventure\AdventureInventory;
+use App\Adventure\AdventureGrades;
+use App\Controller\AdventureController;
 use App\Entity\Adventure;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdventureControllerTest extends WebTestCase
 {
-
     public function testAdventureAddCdSecond(): void
     {
         $adventureInventoryMock = $this->createMock(AdventureInventory::class);
@@ -112,5 +114,28 @@ class AdventureControllerTest extends WebTestCase
                 $this->assertStringContainsString($notes, $client->getResponse()->getContent());
             }
         }
+    }
+    public function testProjClear(): void
+    {
+        $client = static::createClient();
+
+        $container = static::getContainer();
+
+        $mockAdventureInventory = $this->createMock(AdventureInventory::class);
+        $mockAdventureInventory->expects($this->once())
+            ->method('clearAdventures');
+        $mockAdventureInventory->expects($this->once())
+            ->method('getAllAdventures')
+            ->willReturn([]);
+
+        $mockAdventureGrades = $this->createMock(AdventureGrades::class);
+        $mockAdventureGrades->expects($this->once())
+            ->method('deleteAllGrades');
+
+        $container->set('App\Adventure\AdventureInventory', $mockAdventureInventory);
+        $container->set('App\Adventure\AdventureGrades', $mockAdventureGrades);
+        $client->request('GET', '/adventure/clear');
+
+        $this->assertEquals(Response::HTTP_OK, $client->getResponse()->getStatusCode());
     }
 }

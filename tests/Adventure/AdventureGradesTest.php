@@ -11,7 +11,7 @@ class AdventureGradesTest extends TestCase
 {
     /** @var \PHPUnit\Framework\MockObject\MockObject|EntityManagerInterface */
     private $entityManagerMock;
-     /** @var AdventureGrades */
+    /** @var AdventureGrades */
     private $adventureGrades;
 
     protected function setUp(): void
@@ -60,13 +60,13 @@ class AdventureGradesTest extends TestCase
     {
         $grade1 = new Grades();
         $grade1->setName('Johan Andersson')->setCourse('DATABASE')->setGrade('MVG');
-        
+
         $grade2 = new Grades();
         $grade2->setName('Anita Karlsson')->setCourse('DATABASE')->setGrade('VG');
 
         $grade3 = new Grades();
         $grade3->setName('Sture Snesteg')->setCourse('DATABASE')->setGrade('IG');
-        
+
         $expectedGrades = [$grade1, $grade2, $grade3];
 
         $repositoryMock = $this->createMock(\Doctrine\ORM\EntityRepository::class);
@@ -91,7 +91,7 @@ class AdventureGradesTest extends TestCase
     {
         $grade1 = new Grades();
         $grade1->setName('Johan Andersson')->setCourse('DATABASE')->setGrade('MVG');
-        
+
         $grade2 = new Grades();
         $grade2->setName('Anita Karlsson')->setCourse('DATABASE')->setGrade('VG');
 

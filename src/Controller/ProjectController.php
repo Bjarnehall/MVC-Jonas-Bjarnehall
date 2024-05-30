@@ -23,8 +23,7 @@ class ProjectController extends AbstractController
         AdventureMechanics $adventureMechanics,
         AdventureInventory $adventureInventory,
         AdventureGrades $adventureGrades
-    )
-    {
+    ) {
         $this->adventureMechanics = $adventureMechanics;
         $this->adventureInventory = $adventureInventory;
         $this->adventureGrades = $adventureGrades;

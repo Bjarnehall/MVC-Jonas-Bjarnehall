@@ -9,16 +9,16 @@ class AdventureMechanics
 {
     private string $correctPassword = 'mumintrollet';
     private AdventureInventory $adventureInventory;
-/**
- * Construktor
- */
+    /**
+     * Construktor
+     */
     public function __construct(AdventureInventory $adventureInventory)
     {
         $this->adventureInventory = $adventureInventory;
     }
-/**
- * Device mechanics for input string
- */
+    /**
+     * Device mechanics for input string
+     */
     public function handleInputString(Request $request): bool
     {
         $inputString = $request->request->get('inputString');
@@ -29,9 +29,9 @@ class AdventureMechanics
 
         return false;
     }
-/**
- * Function for checking password
- */
+    /**
+     * Function for checking password
+     */
     public function checkPassword(string $password): bool
     {
         return $password === $this->correctPassword;

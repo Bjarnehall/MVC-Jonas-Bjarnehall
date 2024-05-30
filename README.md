@@ -1,16 +1,27 @@
 THE DATABASE MYSTERY
 ---------------
 The database mystery är ett spel som skrivits i PHP med hjälp av ramverket Symfony. Spelet är ett 
-examinerande projekt för kursen MVC på Blekinge tekniska högskola. Nedan följer en beskrivning av
-hur spelet är uppbyggt.
+projekt för kursen MVC på Blekinge tekniska högskola. 
 
-OBS! Spelet är tänk att spelas på normal desktop på fullskärm det är inte mobilanpassat och fungerar
-dåligt i annat format.
+För att använda detta repo gör enligt följande:
+
+Se först till att du har Git installerat på din maskin.
+Clona repo:
+git clone https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall.git
+
+Köra local serrver:
+php -S localhost:8888 -t public
+
+
+Nedan följer en beskrivning av hur spelet är uppbyggt.
+
+OBS! Spelet är tänk att spelas på normal desktop vy på fullskärm det är inte mobilanpassat och fungerar
+dåligt på mindre skärmar.
 
 CSS
 -----
 Spelet har en egen css stil som utgår ifrån filen /project.css där tillhörande
-filer även impporteras.
+filer även importeras.
 
 Spelets logik
 ------------
@@ -27,7 +38,7 @@ I ett prototyp stadie utvecklades spelet enligt detta flöde och testades innan 
 
 ![FLOWCHART IMG](https://github.com/Bjarnehall/MVC-Jonas-Bjarnehall/blob/main/public/img/Flowchart3.png)
 
-Flödesschema i ett senare skede av utvecklingen där de största delen av spelet är helt klart uppdelat i två kapitel.
+Flödesschema i ett senare skede av utvecklingen där de största delen av spelet är klart uppdelat i två kapitel.
 
 Kapitel 1
 
@@ -41,7 +52,8 @@ Routes / spelets gång
 ----------
 
 /proj/about
-About sidan nås via "Om" i navbaren och beskriver kortfattat vad projektet handlar om.
+About sidan nås via "Om" i navbaren och beskriver kortfattat vad projektet handlar om, här finns även
+en länk till about/database som beskriver arbetet med databasen i mer detalj.
 
 /proj
 Landningsidan visar en bakrundsbild för spelet "The Database Mystery". Här finns möjlighet att
@@ -61,9 +73,9 @@ Om spelaren inte har lösenordet finns inget annat alternativ än att gå tillba
 
 /proj/secondroom
 Här är första rummet spelaren har accesses till, här finns en ledtråd skriven på väggen "Take out 
-the strash!//Jime" Genom ledtråden antas spelaren att leta i papperkorgen där den första ledtråden finns.
+the strash!//Jim" Genom ledtråden antas spelaren att leta i papperkorgen där den första ledtråden finns.
 Ledtråden består av en papperslapp med en obegriplig text på, om användaren försöker använda detta som
-lösenord till servern kommer den inte att komma in. Spelaren har möjlighet att gå genom ytterligare en
+lösenord till servern kommer den inte att lyckas. Spelaren har möjlighet att gå genom ytterligare en
 dörr där spelet fortsätter.
 
 /proj/thirdroom
@@ -79,10 +91,10 @@ Spelaren möts av ett formulär för "Secret Decrypting Device" där denne uppma
 en ledtråd talar om för spelaren att använda de ledtrådar de hittat. Det dekrypterade medellandet
 sparas i databasen och läggs till i inventory.
 
-Spelaren antas nu gå tillbaka till start och försöka ta sig in i serverrummet. Om spelaren lyckas.
+Spelaren antas nu gå tillbaka till start och försöka ta sig in i serverrummet.
 
 /proj/server/passed
-Inne i serverrummet möts vi av killen som försöker sabba databasen. Två olika val kan göras i form 
+Inne i serverrummet möts vi av killen som försöker sabotera databasen, två olika val kan göras i form 
 av att välja mellan två svar till förövaren. Det finns även en cd skiva som kan plockas upp och 
 läggas till i inventory. Valet spelaren tar i konversationen påverkar inte spelet mer än att 
 konversatioen med förövaren skiljer sig och slut skärmen när spelet är avklarat skiljer sig åt.
@@ -96,8 +108,8 @@ Här är sista momentet i spelet och spelaren har nu möjlighet att använda cd 
 sytemet och rädda databasen.
 
 /proj/end
-Här visas en slut bild med information om att databasen nu är räddad. Spelaren kan starta om spelet om
-så önskas och då återställs även databasen för inventory.
+Här visas en slutbild med information om att databasen nu är räddad. Spelaren kan starta om spelet om
+så önskas och då återställs även databasen för inventory och grades.
 
 
 Scrutinizer
