@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1717001714">
-  <project timestamp="1717001714">
+<coverage generated="1717052396">
+  <project timestamp="1717052396">
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Adventure/AdventureDevice.php">
       <class name="App\Adventure\AdventureDevice" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
@@ -13,8 +13,8 @@
       <class name="App\Adventure\AdventureGrades" namespace="global">
         <metrics complexity="11" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="33" coveredstatements="32" elements="38" coveredelements="36"/>
       </class>
-      <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="15"/>
-      <line num="15" type="stmt" count="15"/>
+      <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="16"/>
+      <line num="15" type="stmt" count="16"/>
       <line num="20" type="method" name="getPersons" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="22" type="stmt" count="1"/>
       <line num="23" type="stmt" count="1"/>
@@ -57,9 +57,9 @@
       <class name="App\Adventure\AdventureInventory" namespace="global">
         <metrics complexity="11" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="49" elements="56" coveredelements="56"/>
       </class>
-      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
-      <line num="16" type="stmt" count="12"/>
-      <line num="17" type="stmt" count="12"/>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
+      <line num="16" type="stmt" count="13"/>
+      <line num="17" type="stmt" count="13"/>
       <line num="24" type="method" name="getAllAdventures" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="26" type="stmt" count="1"/>
       <line num="27" type="stmt" count="1"/>
@@ -119,8 +119,8 @@
       <class name="App\Adventure\AdventureMechanics" namespace="global">
         <metrics complexity="5" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="2" elements="9" coveredelements="4"/>
       </class>
-      <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
-      <line num="17" type="stmt" count="14"/>
+      <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="15"/>
+      <line num="17" type="stmt" count="15"/>
       <line num="22" type="method" name="handleInputString" visibility="public" complexity="3" crap="12" count="0"/>
       <line num="24" type="stmt" count="0"/>
       <line num="26" type="stmt" count="0"/>
@@ -750,18 +750,18 @@
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/ProjectController.php">
       <class name="App\Controller\ProjectController" namespace="global">
-        <metrics complexity="23" methods="17" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="81" coveredstatements="41" elements="98" coveredelements="53"/>
+        <metrics complexity="23" methods="17" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="81" coveredstatements="42" elements="98" coveredelements="55"/>
       </class>
-      <line num="22" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
-      <line num="28" type="stmt" count="11"/>
-      <line num="29" type="stmt" count="11"/>
-      <line num="30" type="stmt" count="11"/>
+      <line num="22" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
+      <line num="28" type="stmt" count="12"/>
+      <line num="29" type="stmt" count="12"/>
+      <line num="30" type="stmt" count="12"/>
       <line num="35" type="method" name="proj_home" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="38" type="stmt" count="1"/>
       <line num="43" type="method" name="proj_about" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="46" type="stmt" count="1"/>
-      <line num="51" type="method" name="proj_about_database" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="54" type="stmt" count="0"/>
+      <line num="51" type="method" name="proj_about_database" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="54" type="stmt" count="1"/>
       <line num="59" type="method" name="proj_start" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="62" type="stmt" count="1"/>
       <line num="63" type="stmt" count="1"/>
@@ -850,7 +850,7 @@
       <line num="233" type="stmt" count="0"/>
       <line num="234" type="stmt" count="0"/>
       <line num="235" type="stmt" count="0"/>
-      <metrics loc="238" ncloc="190" classes="1" methods="17" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="81" coveredstatements="41" elements="98" coveredelements="53"/>
+      <metrics loc="238" ncloc="190" classes="1" methods="17" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="81" coveredstatements="42" elements="98" coveredelements="55"/>
     </file>
     <file name="/home/ssepheron/dbwebb-kurser/mvc/me/report/src/Controller/ReportTwig.php">
       <class name="App\Controller\ReportTwig" namespace="global">
@@ -1194,6 +1194,6 @@
       <line num="48" type="stmt" count="0"/>
       <metrics loc="77" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="38" loc="2889" ncloc="2268" classes="36" methods="179" coveredmethods="89" conditionals="0" coveredconditionals="0" statements="786" coveredstatements="356" elements="965" coveredelements="445"/>
+    <metrics files="38" loc="2889" ncloc="2268" classes="36" methods="179" coveredmethods="90" conditionals="0" coveredconditionals="0" statements="786" coveredstatements="357" elements="965" coveredelements="447"/>
   </project>
 </coverage>

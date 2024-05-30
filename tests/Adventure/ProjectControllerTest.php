@@ -8,6 +8,9 @@ use App\Entity\Adventure;
 
 class ProjectControllerTest extends WebTestCase
 {
+    /**
+     * Test home page
+     */
     public function testProjHome(): void
     {
         $client = static::createClient();
@@ -17,7 +20,20 @@ class ProjectControllerTest extends WebTestCase
 
         $this->assertSelectorTextContains('.buttonStart a', 'PLAY GAME');
     }
+    /**
+    * Test about database
+    */
+    public function testProjAboutDatabase(): void
+    {
+        $client = static::createClient();
+        $client->request('GET', '/proj/about/database');
 
+        $this->assertResponseIsSuccessful();
+        $this->assertSelectorTextContains('title', 'About database');
+    }
+    /**
+     * Test about page
+     */
     public function testProjAbout(): void
     {
         $client = static::createClient();
@@ -27,7 +43,9 @@ class ProjectControllerTest extends WebTestCase
 
         $this->assertSelectorTextContains('.about h2', 'Projekt examination MVC');
     }
-
+    /**
+     * Test game start page
+     */
     public function testProjStart(): void
     {
         $adventureInventoryMock = $this->createMock(AdventureInventory::class);
@@ -49,7 +67,9 @@ class ProjectControllerTest extends WebTestCase
             }
         }
     }
-
+    /**
+     * Test room in game
+     */
     public function testProjSecondRoom(): void
     {
         $adventureInventoryMock = $this->createMock(AdventureInventory::class);
@@ -71,7 +91,9 @@ class ProjectControllerTest extends WebTestCase
             }
         }
     }
-
+    /**
+     * Test room in game
+     */
     public function testProjThirdRoom(): void
     {
         $adventureInventoryMock = $this->createMock(AdventureInventory::class);
@@ -92,7 +114,9 @@ class ProjectControllerTest extends WebTestCase
             }
         }
     }
-
+    /**
+     * Test room in game
+     */
     public function testProjOpenCabin(): void
     {
         $adventureInventoryMock = $this->createMock(AdventureInventory::class);
@@ -113,7 +137,9 @@ class ProjectControllerTest extends WebTestCase
             }
         }
     }
-
+    /**
+     * Test room in game
+     */
     public function testProjServerPassed(): void
     {
         $adventureInventoryMock = $this->createMock(AdventureInventory::class);
